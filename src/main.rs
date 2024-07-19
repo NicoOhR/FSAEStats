@@ -1,14 +1,13 @@
 use std::convert::Infallible;
 use std::net::SocketAddr;
 
-use http_body_util::Full;
 use hyper::body::Bytes;
 use hyper::server::conn::http1;
 use hyper::service::service_fn;
-use hyper::{Request, Response};
+use hyper::{Request, Response, Method, StatusCode};
 use hyper_util::rt::TokioIo;
 use tokio::net::TcpListener;
-
+use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 async fn hello(_: Request<hyper::body::Incoming>) -> Result<Response<Full<Bytes>>, Infallible >{
     Ok(Response::new(Full::new(Bytes::from("Hello World!"))))
 }
@@ -20,7 +19,9 @@ async fn echo(
         (&Method::GET , "/") => Ok(Response::new(full(
             "Try POSTing Data to /echo",
         ))),
-        (&Method::GET, "/echo") => Ok(Response::new(req.into_body().boxed())),
+        (&Method::POST, "/echo") => {
+            Ok(Response::new(req.into_body().boxed()))
+        },
         _ => {
             let mut not_found = Response::new(empty());
             *not_found.status_mut() = StatusCode::NOT_FOUND;
