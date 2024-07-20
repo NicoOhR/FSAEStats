@@ -1,4 +1,4 @@
-
+use crate::request_parser;
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
@@ -11,10 +11,10 @@ pub async fn user_request(
 ) -> Result<Response<BoxBody<Bytes, hyper::Error>>, hyper::Error>{
     match (req.method(), req.uri().path()) {
         (&Method::GET , "/") => Ok(Response::new(full(
-            "Try POSTing Data to /user_request",
+            "GET the /team/year/event",
         ))),
-        (&Method::POST, "/user_request") => {
-            Ok(Response::new(req.into_body().boxed()))
+        (&Method::GET, request) => {
+            todo!()
         },
         _ => {
             let mut not_found = Response::new(empty());
