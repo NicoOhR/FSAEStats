@@ -1,25 +1,23 @@
-use std::convert::Infallible;
 use std::net::SocketAddr;
 
-use hyper::body::Bytes;
-use hyper::server::conn::http1;
-use hyper::service::service_fn;
-use hyper::{Request, Response, Method, StatusCode};
+use hyper::{body::Bytes,
+    server::conn::http1,
+    service::service_fn,
+    {Request, Response, Method, StatusCode}
+};
+
 use hyper_util::rt::TokioIo;
 use tokio::net::TcpListener;
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
-async fn hello(_: Request<hyper::body::Incoming>) -> Result<Response<Full<Bytes>>, Infallible >{
-    Ok(Response::new(Full::new(Bytes::from("Hello World!"))))
-}
 
-async fn echo(
+async fn user_request(
     req: Request<hyper::body::Incoming>
 ) -> Result<Response<BoxBody<Bytes, hyper::Error>>, hyper::Error>{
     match (req.method(), req.uri().path()) {
         (&Method::GET , "/") => Ok(Response::new(full(
-            "Try POSTing Data to /echo",
+            "Try POSTing Data to /user_request",
         ))),
-        (&Method::POST, "/echo") => {
+        (&Method::POST, "/user_request") => {
             Ok(Response::new(req.into_body().boxed()))
         },
         _ => {
@@ -52,7 +50,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
         let io = TokioIo::new(stream);
 
         tokio::task::spawn(async move {
-            if let Err(err) = http1::Builder::new().serve_connection(io, service_fn(echo)).await{
+            if let Err(err) = http1::Builder::new().serve_connection(io, service_fn(user_request)).await{
                 eprintln!("Error Serving Connection: {:?}", err);
             }
         });
