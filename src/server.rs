@@ -13,8 +13,11 @@ pub async fn user_request(
         (&Method::GET , "/") => Ok(Response::new(full(
             "GET the /team/year/event",
         ))),
-        (&Method::GET, request) => {
-            todo!()
+        (&Method::GET, _) => {
+            let base_request = request_parser::parse_request(req).await;
+            Ok(Response::new(full(
+                base_request.unwrap().to_string(),
+            )))
         },
         _ => {
             let mut not_found = Response::new(empty());
