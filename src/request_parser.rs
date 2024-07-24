@@ -4,7 +4,6 @@ use hyper::body::Incoming;
 use std::io::Result;
 
 
-//
 #[derive(Debug)]
 pub struct BasicRequest {
     team: String,
@@ -24,8 +23,8 @@ impl BasicRequest {
 }
 
 
-//return type should be made into a primitive
-pub async fn parse_request(req : Request<hyper::body::Incoming>) -> Result<BasicRequest>{
+//return type should be made into a request primitive
+pub async fn parse_request(req : Request<hyper::body::Incoming>) -> Result<BasicRequest>{ 
     //the query looks like team=TeamName&year=CompYear&event=WhatEvent
     let query = req.uri().query().unwrap();
     let mut query_iterator = query.split("&"); 

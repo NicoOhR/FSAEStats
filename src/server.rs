@@ -13,7 +13,7 @@ pub async fn user_request(
         (&Method::GET , "/") => Ok(Response::new(full(
             "GET the /team/year/event",
         ))),
-        (&Method::GET, _) => {
+        (&Method::GET, "/request") => {
             let base_request = request_parser::parse_request(req).await;
             Ok(Response::new(full(
                 base_request.unwrap().to_string(),
