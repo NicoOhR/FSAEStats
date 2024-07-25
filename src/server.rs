@@ -6,17 +6,15 @@ use hyper::{
 };
 
 
-pub async fn user_request(
-    req: Request<hyper::body::Incoming>
-) -> Result<Response<BoxBody<Bytes, hyper::Error>>, hyper::Error>{
+pub async fn user_request(req: Request<hyper::body::Incoming>) -> Result<Response<BoxBody<Bytes, hyper::Error>>, request_parser::ParseError>{
     match (req.method(), req.uri().path()) {
         (&Method::GET , "/") => Ok(Response::new(full(
             "GET the /team/year/event",
         ))),
         (&Method::GET, "/request") => {
-            let base_request = request_parser::parse_request(req).await;
+            let base_request = request_parser::parse_request(req).await.ok_or(request_parser::ParseError::EmptyParse)?;
             Ok(Response::new(full(
-                base_request.unwrap().to_string(),
+                base_request.to_string(),
             )))
         },
         _ => {

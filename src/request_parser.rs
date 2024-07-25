@@ -1,8 +1,16 @@
 use hyper::Request;
-use http::uri;
-use hyper::body::Incoming;
-use std::io::Result;
+use hyper::Error as HyperError;
+use thiserror::Error;
 
+
+//realistically, the combined error type should exist in server.rs
+#[derive(Debug, Error)]
+pub enum ParseError { 
+    #[error("Request must contain query")]
+    EmptyParse,
+    #[error("Hyper error: {0:?}")]
+    Hyper(#[from] HyperError)
+}
 
 #[derive(Debug)]
 pub struct BasicRequest {
@@ -24,13 +32,13 @@ impl BasicRequest {
 
 
 //return type should be made into a request primitive
-pub async fn parse_request(req : Request<hyper::body::Incoming>) -> Result<BasicRequest>{ 
+pub async fn parse_request(req : Request<hyper::body::Incoming>) -> Option<BasicRequest>{ 
     //the query looks like team=TeamName&year=CompYear&event=WhatEvent
-    let query = req.uri().query().unwrap();
+    let query = req.uri().query()?;
     let mut query_iterator = query.split("&"); 
     let team = String::from(query_iterator.next().unwrap());  
     let year= String::from(query_iterator.next().unwrap());  
     let event = String::from(query_iterator.next().unwrap());  
-    Ok(BasicRequest::new(team, year, event))
+    Some(BasicRequest::new(team, year, event))
 }
 
