@@ -49,16 +49,18 @@ impl BasicRequest {
     }
 }
 
-//not sure if this should be option or result
-pub async fn parse_request(req : Request<hyper::body::Incoming>) -> Option<HashMap<String, String>>{ 
+pub async fn parse_request(req : Request<hyper::body::Incoming>) -> Result<HashMap<String, String>, ParseError>{ 
     //the query looks like team=TeamName&year=CompYear&event=WhatEvent
-    let query = req.uri().query()?; 
+    let query = match req.uri().query() {
+        Some(value) => value,
+        None => return Err(ParseError::EmptyParse),
+    };
     let mut request_hash_map: HashMap<String, String> = HashMap::new();
     for param in query.split("&"){
         let mut _iter = param.split("=");
         request_hash_map.insert(_iter.next().unwrap().to_string(), _iter.next().unwrap().to_string());
     }
      
-    Some(request_hash_map)
+    Ok(request_hash_map)
 }
 
