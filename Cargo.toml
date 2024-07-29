@@ -13,3 +13,4 @@ http-body-util = "0.1"
 hyper-util = { version = "0.1", features = ["full"] }
 bytes = "1.6.0"
 thiserror = "1.0"
+itertools = "0.13.0"

@@ -12,9 +12,9 @@ pub async fn user_request(req: Request<hyper::body::Incoming>) -> Result<Respons
             "GET the /team/year/event",
         ))),
         (&Method::GET, "/request") => {
-            let base_request = request_parser::parse_request(req).await.ok_or(request_parser::ParseError::EmptyParse)?;
+            let mut base_request = request_parser::parse_request(req).await.ok_or(request_parser::ParseError::EmptyParse)?;
             Ok(Response::new(full(
-                base_request.to_string(),
+                request_parser::BasicRequest::from_hash(&mut base_request)?.to_string(),
             )))
         },
         _ => {
