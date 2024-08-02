@@ -15,13 +15,13 @@ pub enum ParseError {
 }
 
 #[derive(Debug)]
-pub struct BasicRequest {
+pub struct EventRequest {
     team: String,
     year : String,
     event : String //this should be an event sum type
 }
 
-impl BasicRequest {
+impl EventRequest {
     fn new(team: String, year: String, event: String ) -> Self {
         Self { team, year, event }
     }
