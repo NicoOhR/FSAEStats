@@ -14,7 +14,7 @@ pub async fn user_request(req: Request<hyper::body::Incoming>) -> Result<Respons
         (&Method::GET, "/request") => {
             let mut base_request = request_parser::parse_request(req).await?;
             Ok(Response::new(full(
-                request_parser::BasicRequest::from_hash(&mut base_request)?.to_string(),
+                request_parser::EventRequest::from_hash(&mut base_request)?.to_string(),
             )))
         },
         _ => {
