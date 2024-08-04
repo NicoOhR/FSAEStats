@@ -34,14 +34,6 @@ struct FinalResult{
     best_time: f32,
     score: f32
 }
-
-enum Events{
-    Autocross,
-    Accel,
-    Skidpad,
-    Endurance
-}
-
 enum EventResponse{
     Autocross(Vec<Option<AutocrossRun>>, Option<FinalResult>),
     Accel(Vec<Option<AccelerationRun>>, Option<FinalResult>),
@@ -51,16 +43,8 @@ enum EventResponse{
 }
 
 pub fn request_handler(event_request : EventRequest) -> Result<EventResponse, ParseError>{
-   let event = match event_request.event.to_lowercase().as_str() {
-        "autocross" => Events::Autocross,
-        "accel" | "acceleration" => Events::Accel, 
-        "skid" | "skidpad" => Events::Skidpad, 
-        "endurance" => Events::Endurance,
-        _ => {
-            return Err(ParseError::EventNotFound);
-        }
-    }; // done for the purpose of String -> Events type, should be handled on Parse :/
-    
+    todo!()    
     //from here, make calls to the database, parse, formulate into EventResponse
+    //Event Response serialized and served back to the user in server.rs
 
 }

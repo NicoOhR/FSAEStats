@@ -2,6 +2,7 @@ use hyper::Request;
 use hyper::Error as HyperError;
 use thiserror::Error;
 use std::collections::HashMap;
+use strum_macros::Display;
 
 //realistically, the combined error type should exist in server.rs
 #[derive(Debug, Error)]
@@ -16,15 +17,37 @@ pub enum ParseError {
     Hyper(#[from] HyperError)
 }
 
+#[derive(Debug, Display)]
+enum Event{
+    Autocross,
+    Accel,
+    Skidpad,
+    Endurance
+}
+
 #[derive(Debug)]
 pub struct EventRequest {
     pub team: String,
     pub year : String,
-    pub event : String //this should be an event sum type
+    pub event : Event //this should be an event sum type
+}
+
+impl Event{
+    pub fn from_string(string: String) -> Result<Self, ParseError>{ 
+        match string.to_lowercase().as_str() {
+            "autocross" => Ok(Event::Autocross),
+            "accel" | "acceleration" => Ok(Event::Accel), 
+            "skid" | "skidpad" => Ok(Event::Skidpad), 
+            "endurance" => Ok(Event::Endurance),
+            _ => {
+                return Err(ParseError::EventNotFound);
+            }
+        }
+    }
 }
 
 impl EventRequest {
-    fn new(team: String, year: String, event: String ) -> Self {
+    fn new(team: String, year: String, event: Event ) -> Self {
         Self { team, year, event }
     }
 
@@ -39,7 +62,7 @@ impl EventRequest {
             None => return Err(ParseError::IncorrectParse),
         };
        let event = match args_map.remove("event") {
-            Some(value) => value,
+            Some(value) => Event::from_string(value)?,
             None => return Err(ParseError::IncorrectParse),
         };
         Ok(Self {team, year, event})
