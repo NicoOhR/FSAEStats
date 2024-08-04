@@ -2,21 +2,20 @@ use crate::request_parser;
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
-    {Request, Response, Method, StatusCode}
+    {Method, Request, Response, StatusCode},
 };
 
-
-pub async fn user_request(req: Request<hyper::body::Incoming>) -> Result<Response<BoxBody<Bytes, hyper::Error>>, request_parser::ParseError>{
+pub async fn user_request(
+    req: Request<hyper::body::Incoming>,
+) -> Result<Response<BoxBody<Bytes, hyper::Error>>, request_parser::ParseError> {
     match (req.method(), req.uri().path()) {
-        (&Method::GET , "/") => Ok(Response::new(full(
-            "GET the /team/year/event",
-        ))),
+        (&Method::GET, "/") => Ok(Response::new(full("GET the /team/year/event"))),
         (&Method::GET, "/request") => {
             let mut base_request = request_parser::parse_request(req).await?;
             Ok(Response::new(full(
                 request_parser::EventRequest::from_hash(&mut base_request)?.to_string(),
             )))
-        },
+        }
         _ => {
             let mut not_found = Response::new(empty());
             *not_found.status_mut() = StatusCode::NOT_FOUND;
@@ -35,4 +34,3 @@ fn empty() -> BoxBody<Bytes, hyper::Error> {
         .map_err(|never| match never {})
         .boxed()
 }
-
