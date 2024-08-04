@@ -1,3 +1,5 @@
+use crate::request_parser::{self, EventRequest, ParseError};
+
 struct AutocrossRun{
     raw_time: f32,
     cones: Option<u8>,
@@ -33,7 +35,14 @@ struct FinalResult{
     score: f32
 }
 
-enum Result{
+enum Events{
+    Autocross,
+    Accel,
+    Skidpad,
+    Endurance
+}
+
+enum EventResponse{
     Autocross(Vec<Option<AutocrossRun>>, Option<FinalResult>),
     Accel(Vec<Option<AccelerationRun>>, Option<FinalResult>),
     Skidpad(Vec<Option<SkidpadRun>>, Option<FinalResult>),
@@ -41,10 +50,17 @@ enum Result{
 
 }
 
-struct EventResponse{
+pub fn request_handler(event_request : EventRequest) -> Result<EventResponse, ParseError>{
+   let event = match event_request.event.to_lowercase().as_str() {
+        "autocross" => Events::Autocross,
+        "accel" | "acceleration" => Events::Accel, 
+        "skid" | "skidpad" => Events::Skidpad, 
+        "endurance" => Events::Endurance,
+        _ => {
+            return Err(ParseError::EventNotFound);
+        }
+    }; // done for the purpose of String -> Events type, should be handled on Parse :/
+    
+    //from here, make calls to the database, parse, formulate into EventResponse
+
 }
-
-impl EventResponse {
-
-}
-

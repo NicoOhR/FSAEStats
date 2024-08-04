@@ -10,15 +10,17 @@ pub enum ParseError {
     EmptyParse,
     #[error("Request does not contian the matching keys")]
     IncorrectParse,
+    #[error("Event copuld not be found")]
+    EventNotFound,
     #[error("Hyper error: {0:?}")]
     Hyper(#[from] HyperError)
 }
 
 #[derive(Debug)]
 pub struct EventRequest {
-    team: String,
-    year : String,
-    event : String //this should be an event sum type
+    pub team: String,
+    pub year : String,
+    pub event : String //this should be an event sum type
 }
 
 impl EventRequest {
