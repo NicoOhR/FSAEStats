@@ -1,8 +1,9 @@
 use hyper::{server::conn::http1, service::service_fn};
 use hyper_util::rt::TokioIo;
+use sqlx::Row;
 use std::net::SocketAddr;
 use tokio::net::TcpListener;
-
+mod db_handler;
 mod event_request_handler;
 mod request_parser;
 mod server;
@@ -12,6 +13,17 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 
     let listener = TcpListener::bind(addr).await?;
 
+    let pool = db_handler::create_connection().await.unwrap();
+    let test_query = request_parser::EventRequest {
+        team: "Univ of Oklahoma".to_string(),
+        year: "Doesn't matter".to_string(),
+        event: request_parser::Event::Accel,
+    };
+
+    let row = db_handler::make_event_query(test_query, pool)
+        .await
+        .unwrap();
+    println!("{:?}", row.columns());
     loop {
         let (stream, _) = listener.accept().await?;
 
