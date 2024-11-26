@@ -1,7 +1,7 @@
-use crate::request_parser::{Event, EventRequest};
+use crate::request_parser::{self, Event, EventRequest};
 use sqlx::{database, query, sqlite::SqlitePool, Row};
-use tokio;
-pub async fn create_connection() -> Result<SqlitePool, sqlx::Error> {
+
+pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
     let database_url = "sqlite://race.db";
     Ok(SqlitePool::connect(database_url).await?)
 }

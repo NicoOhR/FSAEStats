@@ -1,5 +1,11 @@
-use crate::db_handler::*;
+use crate::db_handler::{self, *};
 use crate::request_parser::{self, EventRequest, ParseError};
+use sqlx::{
+    database, query,
+    sqlite::{SqlitePool, SqliteRow},
+    Row,
+};
+
 struct AutocrossRun {
     raw_time: f32,
     cones: Option<u8>,
@@ -34,15 +40,16 @@ struct FinalResult {
     best_time: f32,
     score: f32,
 }
-enum EventResponse {
+pub enum EventResponse {
     Autocross(Vec<Option<AutocrossRun>>, Option<FinalResult>),
     Accel(Vec<Option<AccelerationRun>>, Option<FinalResult>),
     Skidpad(Vec<Option<SkidpadRun>>, Option<FinalResult>),
     Endurance(Option<EnduranceEvent>),
 }
 
-pub fn request_handler(event_request: EventRequest) -> Result<EventResponse, ParseError> {
-    todo!()
-    //from here, make calls to the database, parse, formulate into EventResponse
-    //Event Response serialized and served back to the user in server.rs
+pub async fn request_handler(
+    request: EventRequest,
+    pool: SqlitePool,
+) -> Result<SqliteRow, ParseError> {
+    Ok(db_handler::make_event_query(request, pool).await.unwrap())
 }

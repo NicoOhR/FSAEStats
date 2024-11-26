@@ -13,7 +13,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 
     let listener = TcpListener::bind(addr).await?;
 
-    let pool = db_handler::create_connection().await.unwrap();
+    let pool = db_handler::create_pool().await.unwrap();
+
     let test_query = request_parser::EventRequest {
         team: "Univ of Oklahoma".to_string(),
         year: "Doesn't matter".to_string(),
@@ -23,6 +24,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let row = db_handler::make_event_query(test_query, pool)
         .await
         .unwrap();
+
     println!("{:?}", row.columns());
     loop {
         let (stream, _) = listener.accept().await?;
