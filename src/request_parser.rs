@@ -11,8 +11,10 @@ pub enum ParseError {
     EmptyParse,
     #[error("Request does not contian the matching keys")]
     IncorrectParse,
-    #[error("Event copuld not be found")]
+    #[error("Event could not be found")]
     EventNotFound,
+    #[error("Graph could not be found")]
+    GraphNotFound,
     #[error("Hyper error: {0:?}")]
     Hyper(#[from] HyperError),
 }
@@ -25,13 +27,34 @@ pub enum Event {
     Endurance,
 }
 
+//proof of concept
+#[derive(Debug)]
+pub enum Graph {
+    RunsLine,
+    Scatter,
+    Distribution,
+}
+
 #[derive(Debug)]
 pub struct EventRequest {
     pub team: String,
     pub year: String,
     pub event: Event, //this should be an event sum type
+    pub graph: Graph,
 }
 
+impl Graph {
+    pub fn from_string(string: String) -> Result<Self, ParseError> {
+        match string.to_lowercase().as_str() {
+            "scatter" => Ok(Graph::Scatter),
+            "runs" => Ok(Graph::RunsLine),
+            "distribution" => Ok(Graph::Distribution),
+            _ => {
+                return Err(ParseError::GraphNotFound);
+            }
+        }
+    }
+}
 impl Event {
     pub fn from_string(string: String) -> Result<Self, ParseError> {
         match string.to_lowercase().as_str() {
@@ -47,8 +70,13 @@ impl Event {
 }
 
 impl EventRequest {
-    fn new(team: String, year: String, event: Event) -> Self {
-        Self { team, year, event }
+    fn new(team: String, year: String, event: Event, graph: Graph) -> Self {
+        Self {
+            team,
+            year,
+            event,
+            graph,
+        }
     }
 
     // need to make macro for this :(
@@ -65,7 +93,16 @@ impl EventRequest {
             Some(value) => Event::from_string(value)?,
             None => return Err(ParseError::IncorrectParse),
         };
-        Ok(Self { team, year, event })
+        let graph = match args_map.remove("graph") {
+            Some(value) => Graph::from_string(value)?,
+            None => return Err(ParseError::IncorrectParse),
+        };
+        Ok(Self {
+            team,
+            year,
+            event,
+            graph,
+        })
     }
 
     pub fn to_string(self) -> String {
