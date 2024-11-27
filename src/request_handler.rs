@@ -1,5 +1,10 @@
-use crate::request_parser::{self, Event, EventRequest};
-use sqlx::{database, query, sqlite::SqlitePool, Row};
+use crate::request_parser::{self, Event, EventRequest, ParseError};
+
+use sqlx::{
+    database, query,
+    sqlite::{SqlitePool, SqliteRow},
+    Row,
+};
 
 pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
     let database_url = "sqlite://race.db";
@@ -21,5 +26,14 @@ pub async fn make_event_query(
         .bind(request.team)
         .fetch_one(&pool)
         .await?;
+    Ok(row)
+}
+
+pub async fn request_handler(
+    request: EventRequest,
+    pool: SqlitePool,
+) -> Result<SqliteRow, ParseError> {
+    let row = make_event_query(request, pool).await.unwrap();
+    println!("{:?}", row.columns());
     Ok(row)
 }
