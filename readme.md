@@ -1,4 +1,4 @@
-- [ ] Taking graph request
-- [ ] Creating graph with polars
-- [ ] Serving back via HTTP
+- [x] Taking graph request
+- [ ] Creating dataframe from SQLiteRow
+- [ ] Serve back with JSON
 

@@ -19,7 +19,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
         team: "Univ of Oklahoma".to_string(),
         year: "Doesn't matter".to_string(),
         event: request_parser::Event::Autocross,
-        graph: request_parser::Graph::Scatter,
+        graph: request_parser::Graph::RunsLine,
     };
 
     let row = request_handler::request_handler(test_query, pool)
