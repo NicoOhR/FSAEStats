@@ -1,17 +1,26 @@
-use crate::request_parser;
+use crate::{request_handler, request_parser};
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
     {Method, Request, Response, StatusCode},
 };
+use request_handler::*;
 
 pub async fn user_request(
     req: Request<hyper::body::Incoming>,
 ) -> Result<Response<BoxBody<Bytes, hyper::Error>>, request_parser::ParseError> {
+    let pool = request_handler::create_pool().await.unwrap();
+
     match (req.method(), req.uri().path()) {
         (&Method::GET, "/") => Ok(Response::new(full("GET the /team/year/event"))),
         (&Method::GET, "/request") => {
             let mut base_request = request_parser::parse_request(req).await?;
+            let request_struct = request_parser::EventRequest::from_hash(&mut base_request)?;
+
+            println!("{:?}", request_struct);
+
+            let _ = request_handler(request_struct, pool).await?;
+
             Ok(Response::new(full(
                 request_parser::EventRequest::from_hash(&mut base_request)?.to_string(),
             )))

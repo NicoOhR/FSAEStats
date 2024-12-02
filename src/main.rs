@@ -13,19 +13,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 
     let listener = TcpListener::bind(addr).await?;
 
-    let pool = request_handler::create_pool().await.unwrap();
-
-    let test_query = request_parser::EventRequest {
-        team: "Univ of Oklahoma".to_string(),
-        year: "Doesn't matter".to_string(),
-        event: request_parser::Event::Autocross,
-        graph: request_parser::Graph::RunsLine,
-    };
-
-    let row = request_handler::request_handler(test_query, pool)
-        .await
-        .unwrap();
-
     loop {
         let (stream, _) = listener.accept().await?;
 

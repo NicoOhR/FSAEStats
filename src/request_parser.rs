@@ -28,7 +28,7 @@ pub enum Event {
 }
 
 //proof of concept
-#[derive(Debug)]
+#[derive(Debug, Display)]
 pub enum Graph {
     RunsLine,
     Scatter,
@@ -55,6 +55,7 @@ impl Graph {
         }
     }
 }
+
 impl Event {
     pub fn from_string(string: String) -> Result<Self, ParseError> {
         match string.to_lowercase().as_str() {
@@ -107,8 +108,8 @@ impl EventRequest {
 
     pub fn to_string(self) -> String {
         let req_as_string: String = format!(
-            "team : {}, year : {}, event : {}",
-            self.team, self.year, self.event
+            "team : {}, year : {}, event : {}, graph : {}",
+            self.team, self.year, self.event, self.graph
         );
         req_as_string
     }
@@ -127,7 +128,7 @@ pub async fn parse_request(
         let mut _iter = param.split("=");
         request_hash_map.insert(
             _iter.next().unwrap().to_string(),
-            _iter.next().unwrap().to_string(),
+            _iter.next().unwrap().to_string().replace("%20", " "),
         );
     }
 
