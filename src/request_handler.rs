@@ -1,5 +1,6 @@
 use crate::db_structs;
 use crate::request_parser::{self, Event, EventRequest, ParseError};
+use serde::Serialize;
 use sqlx::{
     database, query,
     sqlite::{SqlitePool, SqliteRow},
@@ -29,7 +30,8 @@ where
     Ok(row)
 }
 
-#[derive(Debug)]
+//I dislike this
+#[derive(Debug, Serialize)]
 pub enum EventResult {
     Autocross(db_structs::AutocrossResults),
     Accel(db_structs::AccelResults),

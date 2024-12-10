@@ -11,6 +11,8 @@ dependencies = [
  "http-body-util",
  "hyper",
  "hyper-util",
+ "serde",
+ "serde_json",
  "sqlx",
  "strum",
  "strum_macros",

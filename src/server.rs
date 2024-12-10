@@ -5,6 +5,7 @@ use hyper::{
     {Method, Request, Response, StatusCode},
 };
 use request_handler::*;
+use serde_json;
 
 pub async fn user_request(
     req: Request<hyper::body::Incoming>,
@@ -18,6 +19,8 @@ pub async fn user_request(
             let request_struct = request_parser::EventRequest::from_hash(&mut base_request)?;
 
             let sqlite_row = request_handler(request_struct.clone(), pool).await?;
+
+            println!("{:?}", serde_json::to_string(&sqlite_row));
 
             Ok(Response::new(full(request_struct.clone().to_string())))
         }

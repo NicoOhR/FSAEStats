@@ -1,6 +1,7 @@
+use serde::Serialize;
 use sqlx::FromRow;
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct AutocrossResults {
     pub place: Option<String>,
     pub carnum: Option<i32>,
@@ -26,7 +27,7 @@ pub struct AutocrossResults {
     pub score: Option<f64>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct EnduranceLapResults {
     pub school: Option<String>,
     pub car: Option<i32>,
@@ -43,7 +44,7 @@ pub struct EnduranceLapResults {
     pub lap11: Option<f64>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct AccelResults {
     pub place: Option<String>,
     pub carnum: Option<i32>,
@@ -65,7 +66,7 @@ pub struct AccelResults {
     pub score: Option<f64>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct TeamInformationResults {
     pub carnum: Option<String>,
     pub team: Option<String>,
@@ -76,7 +77,7 @@ pub struct TeamInformationResults {
     pub weightlbs: Option<f64>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct SkidResults {
     pub place: Option<String>,
     pub carnum: Option<i32>,
@@ -103,7 +104,7 @@ pub struct SkidResults {
     pub score: Option<f64>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct OverallResults {
     pub place: Option<f64>,
     pub carnum: Option<i32>,
@@ -120,7 +121,7 @@ pub struct OverallResults {
     pub totalscore: Option<String>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct EfficiencyResults {
     pub place: Option<String>,
     pub carnum: Option<String>,
@@ -135,7 +136,7 @@ pub struct EfficiencyResults {
     pub fuelefficiencyscore: Option<String>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct DesignResults {
     pub place: Option<String>,
     pub carnum: Option<i32>,
@@ -147,7 +148,7 @@ pub struct DesignResults {
     pub score: Option<f64>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct CostResults {
     pub place: Option<f64>,
     pub carnum: Option<i32>,
@@ -161,7 +162,7 @@ pub struct CostResults {
     pub score: Option<f64>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct PresentationResults {
     pub place: Option<String>,
     pub carnum: Option<i32>,
@@ -171,7 +172,7 @@ pub struct PresentationResults {
     pub score: Option<f64>,
 }
 
-#[derive(FromRow, Debug)]
+#[derive(FromRow, Debug, Serialize)]
 pub struct EnduranceResults {
     pub place: Option<f64>,
     pub carnum: Option<i32>,
