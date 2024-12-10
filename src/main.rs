@@ -4,9 +4,12 @@ use sqlx::Row;
 use sqlx::*;
 use std::net::SocketAddr;
 use tokio::net::TcpListener;
+
+mod db_structs;
 mod request_handler;
 mod request_parser;
 mod server;
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let addr = SocketAddr::from(([127, 0, 0, 1], 3000));

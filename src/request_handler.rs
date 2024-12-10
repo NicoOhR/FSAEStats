@@ -1,9 +1,9 @@
+use crate::db_structs;
 use crate::request_parser::{self, Event, EventRequest, ParseError};
-
 use sqlx::{
     database, query,
     sqlite::{SqlitePool, SqliteRow},
-    Row,
+    FromRow, Row,
 };
 
 pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
@@ -11,10 +11,10 @@ pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
     Ok(SqlitePool::connect(database_url).await?)
 }
 
-pub async fn make_event_query(
-    request: EventRequest,
-    pool: SqlitePool,
-) -> Result<sqlx::sqlite::SqliteRow, sqlx::Error> {
+pub async fn make_event_query<T>(request: EventRequest, pool: SqlitePool) -> Result<T, sqlx::Error>
+where
+    T: for<'r> FromRow<'r, sqlx::sqlite::SqliteRow> + Send + Unpin,
+{
     let table = match request.event {
         Event::Autocross => "autocross_results",
         Event::Accel => "accel_results",
@@ -22,18 +22,43 @@ pub async fn make_event_query(
         Event::Skidpad => "skipad_results",
     };
     let query = format!("SELECT * FROM {} WHERE Team = ?", table);
-    let row = sqlx::query(&query)
+    let row = sqlx::query_as::<_, T>(&query)
         .bind(request.team)
         .fetch_one(&pool)
         .await?;
     Ok(row)
 }
 
+#[derive(Debug)]
+pub enum EventResult {
+    Autocross(db_structs::AutocrossResults),
+    Accel(db_structs::AccelResults),
+    Endurance(db_structs::EnduranceResults),
+    Skidpad(db_structs::SkidResults),
+}
+
 pub async fn request_handler(
     request: EventRequest,
     pool: SqlitePool,
-) -> Result<SqliteRow, ParseError> {
-    let row = make_event_query(request, pool).await.unwrap();
-    //println!("{:?}", row.columns());
-    Ok(row)
+) -> Result<EventResult, ParseError> {
+    match request.event {
+        Event::Autocross => {
+            let result: db_structs::AutocrossResults =
+                make_event_query(request, pool).await.unwrap();
+            Ok(EventResult::Autocross(result))
+        }
+        Event::Accel => {
+            let result: db_structs::AccelResults = make_event_query(request, pool).await.unwrap();
+            Ok(EventResult::Accel(result))
+        }
+        Event::Endurance => {
+            let result: db_structs::EnduranceResults =
+                make_event_query(request, pool).await.unwrap();
+            Ok(EventResult::Endurance(result))
+        }
+        Event::Skidpad => {
+            let result: db_structs::SkidResults = make_event_query(request, pool).await.unwrap();
+            Ok(EventResult::Skidpad(result))
+        }
+    }
 }
