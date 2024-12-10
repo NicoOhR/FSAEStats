@@ -34,6 +34,6 @@ pub async fn request_handler(
     pool: SqlitePool,
 ) -> Result<SqliteRow, ParseError> {
     let row = make_event_query(request, pool).await.unwrap();
-    println!("{:?}", row.columns());
+    //println!("{:?}", row.columns());
     Ok(row)
 }

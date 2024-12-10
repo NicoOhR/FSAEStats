@@ -19,7 +19,7 @@ pub enum ParseError {
     Hyper(#[from] HyperError),
 }
 
-#[derive(Debug, Display)]
+#[derive(Debug, Display, Clone)]
 pub enum Event {
     Autocross,
     Accel,
@@ -28,14 +28,14 @@ pub enum Event {
 }
 
 //proof of concept
-#[derive(Debug, Display)]
+#[derive(Debug, Display, Clone)]
 pub enum Graph {
     RunsLine,
     Scatter,
     Distribution,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct EventRequest {
     pub team: String,
     pub year: String,

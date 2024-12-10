@@ -17,13 +17,9 @@ pub async fn user_request(
             let mut base_request = request_parser::parse_request(req).await?;
             let request_struct = request_parser::EventRequest::from_hash(&mut base_request)?;
 
-            println!("{:?}", request_struct);
+            let sqlite_row = request_handler(request_struct.clone(), pool).await?;
 
-            let _ = request_handler(request_struct, pool).await?;
-
-            Ok(Response::new(full(
-                request_parser::EventRequest::from_hash(&mut base_request)?.to_string(),
-            )))
+            Ok(Response::new(full(request_struct.clone().to_string())))
         }
         _ => {
             let mut not_found = Response::new(empty());
