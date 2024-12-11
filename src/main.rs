@@ -1,6 +1,5 @@
 use hyper::{server::conn::http1, service::service_fn};
 use hyper_util::rt::TokioIo;
-use sqlx::Row;
 use sqlx::*;
 use std::net::SocketAddr;
 use tokio::net::TcpListener;

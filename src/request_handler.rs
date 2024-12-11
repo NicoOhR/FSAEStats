@@ -5,7 +5,7 @@ use sqlx::{sqlite::SqlitePool, FromRow};
 
 pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
     let database_url = "sqlite://race.db";
-    Ok(SqlitePool::connect(database_url).await?)
+    SqlitePool::connect(database_url).await
 }
 
 pub async fn make_event_query<T>(request: EventRequest, pool: SqlitePool) -> Result<T, sqlx::Error>
@@ -26,9 +26,8 @@ where
     Ok(row)
 }
 
-//I dislike this
 #[derive(Debug, Serialize)]
-pub enum EventResult {
+pub enum QueryResponse {
     Autocross(db_structs::AutocrossResults),
     Accel(db_structs::AccelResults),
     Endurance(db_structs::EnduranceResults),
@@ -38,23 +37,23 @@ pub enum EventResult {
 pub async fn request_handler(
     request: EventRequest,
     pool: SqlitePool,
-) -> Result<EventResult, Box<dyn std::error::Error + Send + Sync>> {
+) -> Result<QueryResponse, Box<dyn std::error::Error + Send + Sync>> {
     match request.event {
         Event::Autocross => {
             let result: db_structs::AutocrossResults = make_event_query(request, pool).await?;
-            Ok(EventResult::Autocross(result))
+            Ok(QueryResponse::Autocross(result))
         }
         Event::Accel => {
             let result: db_structs::AccelResults = make_event_query(request, pool).await?;
-            Ok(EventResult::Accel(result))
+            Ok(QueryResponse::Accel(result))
         }
         Event::Endurance => {
             let result: db_structs::EnduranceResults = make_event_query(request, pool).await?;
-            Ok(EventResult::Endurance(result))
+            Ok(QueryResponse::Endurance(result))
         }
         Event::Skidpad => {
             let result: db_structs::SkidResults = make_event_query(request, pool).await?;
-            Ok(EventResult::Skidpad(result))
+            Ok(QueryResponse::Skidpad(result))
         }
     }
 }

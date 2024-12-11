@@ -50,7 +50,7 @@ impl Graph {
             "runs" => Ok(Graph::RunsLine),
             "distribution" => Ok(Graph::Distribution),
             _ => {
-                return Err(ParseError::GraphNotFound);
+                Err(ParseError::GraphNotFound)
             }
         }
     }
@@ -64,7 +64,7 @@ impl Event {
             "skid" | "skidpad" => Ok(Event::Skidpad),
             "endurance" => Ok(Event::Endurance),
             _ => {
-                return Err(ParseError::EventNotFound);
+                Err(ParseError::EventNotFound)
             }
         }
     }
