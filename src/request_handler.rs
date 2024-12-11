@@ -1,11 +1,7 @@
 use crate::db_structs;
-use crate::request_parser::{self, Event, EventRequest, ParseError};
+use crate::request_parser::{Event, EventRequest};
 use serde::Serialize;
-use sqlx::{
-    database, query,
-    sqlite::{SqlitePool, SqliteRow},
-    FromRow, Row,
-};
+use sqlx::{sqlite::SqlitePool, FromRow};
 
 pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
     let database_url = "sqlite://race.db";
@@ -42,24 +38,22 @@ pub enum EventResult {
 pub async fn request_handler(
     request: EventRequest,
     pool: SqlitePool,
-) -> Result<EventResult, ParseError> {
+) -> Result<EventResult, Box<dyn std::error::Error + Send + Sync>> {
     match request.event {
         Event::Autocross => {
-            let result: db_structs::AutocrossResults =
-                make_event_query(request, pool).await.unwrap();
+            let result: db_structs::AutocrossResults = make_event_query(request, pool).await?;
             Ok(EventResult::Autocross(result))
         }
         Event::Accel => {
-            let result: db_structs::AccelResults = make_event_query(request, pool).await.unwrap();
+            let result: db_structs::AccelResults = make_event_query(request, pool).await?;
             Ok(EventResult::Accel(result))
         }
         Event::Endurance => {
-            let result: db_structs::EnduranceResults =
-                make_event_query(request, pool).await.unwrap();
+            let result: db_structs::EnduranceResults = make_event_query(request, pool).await?;
             Ok(EventResult::Endurance(result))
         }
         Event::Skidpad => {
-            let result: db_structs::SkidResults = make_event_query(request, pool).await.unwrap();
+            let result: db_structs::SkidResults = make_event_query(request, pool).await?;
             Ok(EventResult::Skidpad(result))
         }
     }

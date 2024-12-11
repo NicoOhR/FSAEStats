@@ -9,7 +9,7 @@ use serde_json;
 
 pub async fn user_request(
     req: Request<hyper::body::Incoming>,
-) -> Result<Response<BoxBody<Bytes, hyper::Error>>, request_parser::ParseError> {
+) -> Result<Response<BoxBody<Bytes, hyper::Error>>, Box<dyn std::error::Error + Send + Sync>> {
     let pool = request_handler::create_pool().await.unwrap();
 
     match (req.method(), req.uri().path()) {
@@ -20,9 +20,11 @@ pub async fn user_request(
 
             let sqlite_row = request_handler(request_struct.clone(), pool).await?;
 
-            println!("{:?}", serde_json::to_string(&sqlite_row));
+            println!("{}", serde_json::to_string_pretty(&sqlite_row).unwrap());
 
-            Ok(Response::new(full(request_struct.clone().to_string())))
+            Ok(Response::new(full(
+                serde_json::to_string(&sqlite_row).unwrap(),
+            )))
         }
         _ => {
             let mut not_found = Response::new(empty());
