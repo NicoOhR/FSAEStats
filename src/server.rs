@@ -1,4 +1,4 @@
-use crate::{request_handler, request_parser};
+use crate::{request_handler, request_parser, request_parser::RequestTrait};
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
@@ -16,7 +16,7 @@ pub async fn user_request(
         (&Method::GET, "/request") => {
             let mut base_request = request_parser::parse_request(req).await?;
             let request_struct = request_parser::EventRequest::from_hash(&mut base_request)?;
-            let sqlite_row = request_handler(request_struct.clone(), pool).await?;
+            let sqlite_row = request_handler(*request_struct.clone(), pool).await?;
 
             println!("{}", serde_json::to_string_pretty(&sqlite_row).unwrap());
 
