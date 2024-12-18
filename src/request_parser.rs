@@ -1,5 +1,8 @@
+use crate::db_structs;
 use hyper::Error as HyperError;
 use hyper::Request;
+use serde::Serialize;
+use sqlx::{sqlite::SqlitePool, FromRow};
 use std::collections::HashMap;
 use strum_macros::Display;
 use thiserror::Error;
@@ -33,11 +36,19 @@ pub enum Graph {
     Distribution,
 }
 
+#[derive(Debug, Serialize)]
+pub enum Response {
+    Autocross(db_structs::AutocrossResults),
+    Accel(db_structs::AccelResults),
+    Endurance(db_structs::EnduranceResults),
+    Skidpad(db_structs::SkidResults),
+}
+
 #[derive(Debug, Clone)]
 pub struct EventRequest {
     pub team: String,
     pub year: String,
-    pub event: Event, //this should be an event sum type
+    pub event: Event,
 }
 
 #[derive(Debug, Clone)]
@@ -48,27 +59,8 @@ pub struct GraphRequest {
     pub graph: Graph,
 }
 
-impl Graph {
-    pub fn from_string(string: String) -> Result<Self, ParseError> {
-        match string.to_lowercase().as_str() {
-            "scatter" => Ok(Graph::Scatter),
-            "runs" => Ok(Graph::RunsLine),
-            "distribution" => Ok(Graph::Distribution),
-            _ => Err(ParseError::GraphNotFound),
-        }
-    }
-}
-
-impl Event {
-    pub fn from_string(string: String) -> Result<Self, ParseError> {
-        match string.to_lowercase().as_str() {
-            "autocross" => Ok(Event::Autocross),
-            "accel" | "acceleration" => Ok(Event::Accel),
-            "skid" | "skidpad" => Ok(Event::Skidpad),
-            "endurance" => Ok(Event::Endurance),
-            _ => Err(ParseError::EventNotFound),
-        }
-    }
+trait FromString {
+    fn from_string(string: String) -> Result<Box<Self>, ParseError>;
 }
 
 pub trait RequestTrait {
@@ -77,9 +69,128 @@ pub trait RequestTrait {
     fn from_hash(args_map: &mut HashMap<String, String>) -> Result<Box<Self>, ParseError>;
 
     fn to_string(self) -> String;
+
+    async fn handle(
+        self,
+        pool: SqlitePool,
+    ) -> Result<Response, Box<dyn std::error::Error + Send + Sync>>;
+}
+
+impl FromString for Graph {
+    fn from_string(string: String) -> Result<Box<Self>, ParseError> {
+        match string.to_lowercase().as_str() {
+            "scatter" => Ok(Box::new(Graph::Scatter)),
+            "runs" => Ok(Box::new(Graph::RunsLine)),
+            "distribution" => Ok(Box::new(Graph::Distribution)),
+            _ => Err(ParseError::GraphNotFound),
+        }
+    }
+}
+
+impl FromString for Event {
+    fn from_string(string: String) -> Result<Box<Self>, ParseError> {
+        match string.to_lowercase().as_str() {
+            "autocross" => Ok(Box::new(Event::Autocross)),
+            "accel" | "acceleration" => Ok(Box::new(Event::Accel)),
+            "skid" | "skidpad" => Ok(Box::new(Event::Skidpad)),
+            "endurance" => Ok(Box::new(Event::Endurance)),
+            _ => Err(ParseError::EventNotFound),
+        }
+    }
+}
+
+impl RequestTrait for GraphRequest {
+    fn new(team: String, year: String, event: Event, graph: Graph) -> Self {
+        Self {
+            team,
+            year,
+            event,
+            graph,
+        }
+    }
+
+    fn from_hash(args_map: &mut HashMap<String, String>) -> Result<Box<Self>, ParseError> {
+        let team = match args_map.remove("team") {
+            Some(value) => value,
+            None => return Err(ParseError::IncorrectParse),
+        };
+        let year = match args_map.remove("year") {
+            Some(value) => value,
+            None => return Err(ParseError::IncorrectParse),
+        };
+        let event = match args_map.remove("event") {
+            Some(value) => *Event::from_string(value)?,
+            None => return Err(ParseError::EventNotFound),
+        };
+        let graph = match args_map.remove("graph") {
+            Some(value) => *Graph::from_string(value)?,
+            None => return Err(ParseError::GraphNotFound),
+        };
+        Ok(Box::new(Self {
+            team,
+            year,
+            event,
+            graph,
+        }))
+    }
+    fn to_string(self) -> String {
+        let req_as_string: String = format!(
+            "team : {}, year : {}, event : {}, graph : {}",
+            self.team, self.year, self.event, self.graph
+        );
+        req_as_string
+    }
+    async fn handle(
+        self,
+        pool: SqlitePool,
+    ) -> Result<Response, Box<dyn std::error::Error + Send + Sync>> {
+        todo!()
+    }
 }
 
 impl RequestTrait for EventRequest {
+    async fn handle(
+        self,
+        pool: SqlitePool,
+    ) -> Result<Response, Box<dyn std::error::Error + Send + Sync>> {
+        let query = match self.event {
+            Event::Autocross => {
+                let query = "SELECT * FROM autocross_results WHERE Team = ?";
+                let row = sqlx::query_as::<_, db_structs::AutocrossResults>(query)
+                    .bind(&self.team)
+                    .fetch_one(&pool)
+                    .await?;
+                Response::Autocross(row)
+            }
+            Event::Accel => {
+                let query = "SELECT * FROM accel_results WHERE Team = ?";
+                let row = sqlx::query_as::<_, db_structs::AccelResults>(query)
+                    .bind(&self.team)
+                    .fetch_one(&pool)
+                    .await?;
+                Response::Accel(row)
+            }
+            Event::Endurance => {
+                let query = "SELECT * FROM endurance_results WHERE Team = ?";
+                let row = sqlx::query_as::<_, db_structs::EnduranceResults>(query)
+                    .bind(&self.team)
+                    .fetch_one(&pool)
+                    .await?;
+                Response::Endurance(row)
+            }
+            Event::Skidpad => {
+                let query = "SELECT * FROM skidpad_results WHERE Team = ?";
+                let row = sqlx::query_as::<_, db_structs::SkidResults>(query)
+                    .bind(&self.team)
+                    .fetch_one(&pool)
+                    .await?;
+                Response::Skidpad(row)
+            }
+        };
+
+        Ok(query)
+    }
+
     fn new(team: String, year: String, event: Event, graph: Graph) -> Self {
         Self { team, year, event }
     }
@@ -94,7 +205,7 @@ impl RequestTrait for EventRequest {
             None => return Err(ParseError::IncorrectParse),
         };
         let event = match args_map.remove("event") {
-            Some(value) => Event::from_string(value)?,
+            Some(value) => *Event::from_string(value)?,
             None => return Err(ParseError::IncorrectParse),
         };
         Ok(Box::new(Self { team, year, event }))
