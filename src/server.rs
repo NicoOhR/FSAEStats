@@ -1,4 +1,3 @@
-use crate::{request_parser, request_parser::RequestTrait};
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
@@ -6,6 +5,8 @@ use hyper::{
 };
 use serde::Serialize;
 use sqlx::{sqlite::SqlitePool, FromRow};
+
+use crate::requests::*;
 
 pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
     let database_url = "sqlite://race.db";
@@ -20,26 +21,19 @@ pub async fn user_request(
     match (req.method(), req.uri().path()) {
         (&Method::GET, "/") => Ok(Response::new(full("GET the /team/year/event"))),
         (&Method::GET, "/event") => {
-            let mut base_request = request_parser::parse_request(req).await?;
-            let request_struct = request_parser::EventRequest::from_hash(&mut base_request)?;
-            let row = request_struct.handle(pool).await?;
+            let mut request = parse_request(req).await?;
+            let response = EventRequest::from_hash(&mut request)?.handle(pool).await?;
 
-            println!("request {}", serde_json::to_string_pretty(&row).unwrap());
+            println!(
+                "request {}",
+                serde_json::to_string_pretty(&response).unwrap()
+            );
 
-            Ok(Response::new(full(serde_json::to_string(&row).unwrap())))
+            Ok(Response::new(full(
+                serde_json::to_string(&response).unwrap(),
+            )))
         }
         (&Method::GET, "/graph") => {
-            /*
-                        let mut base_request = request_parser::parse_request(req).await?;
-                        let request_struct = request_parser::GraphRequest::from_hash(&mut base_request)?;
-                        let sqlite_row = request_handler(*request_struct.clone(), pool).await?;
-
-                        println!("{}", serde_json::to_string_pretty(&sqlite_row).unwrap());
-
-                        Ok(Response::new(full(
-                            serde_json::to_string(&sqlite_row).unwrap(),
-                        )))
-            */
             todo!()
         }
         _ => {

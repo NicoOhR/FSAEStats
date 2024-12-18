@@ -5,7 +5,7 @@ use std::net::SocketAddr;
 use tokio::net::TcpListener;
 
 mod db_structs;
-mod request_parser;
+mod requests;
 mod server;
 
 #[tokio::main]
