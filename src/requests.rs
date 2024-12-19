@@ -2,6 +2,7 @@ use crate::db_structs;
 use hyper::Error as HyperError;
 use hyper::Request;
 use serde::Serialize;
+use serde_json::Value;
 use sqlx::{sqlite::SqlitePool, FromRow};
 use std::collections::HashMap;
 use strum_macros::Display;
@@ -42,6 +43,9 @@ pub enum Response {
     Accel(db_structs::AccelResults),
     Endurance(db_structs::EnduranceResults),
     Skidpad(db_structs::SkidResults),
+    Runs(HashMap<String, f64>),
+    Scatter(HashMap<String, f64>),
+    Distribution(HashMap<String, f64>),
 }
 
 #[derive(Debug, Clone)]
@@ -144,7 +148,27 @@ impl RequestTrait for GraphRequest {
         self,
         pool: SqlitePool,
     ) -> Result<Response, Box<dyn std::error::Error + Send + Sync>> {
-        todo!()
+        let event_query = EventRequest {
+            team: self.team,
+            year: self.year,
+            event: self.event,
+        };
+
+        let query = match self.graph {
+            Graph::RunsLine => {
+                let response = event_query.handle(pool).await?;
+                let serialized = serde_json::to_value(response)
+                    .expect("Could not turn to JSON")
+                    .to_string();
+                println!("{}", serialized);
+                todo!()
+            }
+
+            Graph::Scatter => Ok(Response::Scatter(HashMap::new())),
+            Graph::Distribution => Ok(Response::Distribution(HashMap::new())),
+        };
+
+        query
     }
 }
 
