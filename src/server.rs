@@ -9,7 +9,7 @@ use sqlx::{sqlite::SqlitePool, FromRow};
 use crate::requests::*;
 
 pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
-    let database_url = "sqlite://race.db";
+    let database_url = "sqlite:///data/race.db";
     SqlitePool::connect(database_url).await
 }
 

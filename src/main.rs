@@ -1,16 +1,21 @@
 use hyper::{server::conn::http1, service::service_fn};
 use hyper_util::rt::TokioIo;
 use sqlx::*;
+use std::env::var;
 use std::net::SocketAddr;
 use tokio::net::TcpListener;
-
 mod db_structs;
 mod requests;
 mod server;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
+    let port: u16 = std::env::var("PORT")
+        .unwrap_or_else(|_| "3000".to_string())
+        .parse()
+        .expect("Invalid port number");
+
+    let addr = SocketAddr::from(([0, 0, 0, 0], port));
 
     let listener = TcpListener::bind(addr).await?;
 
