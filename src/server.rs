@@ -33,18 +33,6 @@ pub async fn user_request(
                 serde_json::to_string(&response).unwrap(),
             )))
         }
-        (&Method::GET, "/graph") => {
-            let mut request = parse_request(req).await?;
-            let response = GraphRequest::from_hash(&mut request)?.handle(pool).await?;
-            println!(
-                "request {}",
-                serde_json::to_string_pretty(&response).unwrap()
-            );
-
-            Ok(Response::new(full(
-                serde_json::to_string(&response).unwrap(),
-            )))
-        }
         _ => {
             let mut not_found = Response::new(empty());
             *not_found.status_mut() = StatusCode::NOT_FOUND;
