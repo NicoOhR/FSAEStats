@@ -1,10 +1,13 @@
 use crate::db_structs;
 use hyper::Error as HyperError;
 use hyper::Request;
+use serde::de::Error;
 use serde::Serialize;
 use serde_json::Value;
 use sqlx::{sqlite::SqlitePool, FromRow};
 use std::collections::HashMap;
+use std::hash::Hash;
+use struct_iterable::Iterable;
 use strum_macros::Display;
 use thiserror::Error;
 
@@ -33,19 +36,15 @@ pub enum Event {
 #[derive(Debug, Display, Clone)]
 pub enum Graph {
     RunsLine,
-    Scatter,
-    Distribution,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Clone)]
 pub enum Response {
     Autocross(db_structs::AutocrossResults),
     Accel(db_structs::AccelResults),
     Endurance(db_structs::EnduranceResults),
     Skidpad(db_structs::SkidResults),
     Runs(HashMap<String, f64>),
-    Scatter(HashMap<String, f64>),
-    Distribution(HashMap<String, f64>),
 }
 
 #[derive(Debug, Clone)]
@@ -83,9 +82,9 @@ pub trait RequestTrait {
 impl FromString for Graph {
     fn from_string(string: String) -> Result<Box<Self>, ParseError> {
         match string.to_lowercase().as_str() {
-            "scatter" => Ok(Box::new(Graph::Scatter)),
+            //"scatter" => Ok(Box::new(Graph::Scatter)),
             "runs" => Ok(Box::new(Graph::RunsLine)),
-            "distribution" => Ok(Box::new(Graph::Distribution)),
+            //"distribution" => Ok(Box::new(Graph::Distribution)),
             _ => Err(ParseError::GraphNotFound),
         }
     }
@@ -157,19 +156,38 @@ impl RequestTrait for GraphRequest {
         let query = match self.graph {
             Graph::RunsLine => {
                 let response = event_query.handle(pool).await?;
-                let serialized = serde_json::to_value(response)
+                let serialized = serde_json::to_value(response.clone())
                     .expect("Could not turn to JSON")
                     .to_string();
                 println!("{}", serialized);
-                todo!()
+                match response {
+                    Response::Autocross(data) => Ok(Response::Runs(get_times(data))),
+                    Response::Accel(data) => Ok(Response::Runs(get_times(data))),
+                    Response::Endurance(data) => Ok(Response::Runs(get_times(data))),
+                    Response::Skidpad(data) => Ok(Response::Runs(get_times(data))),
+                    _ => Err(Box::new(ParseError::GraphNotFound)),
+                }
             }
-
-            Graph::Scatter => Ok(Response::Scatter(HashMap::new())),
-            Graph::Distribution => Ok(Response::Distribution(HashMap::new())),
+            _ => Err(Box::new(ParseError::GraphNotFound)),
         };
-
-        query
+        Ok(query?)
     }
+}
+
+fn get_times<T: Iterable>(data: T) -> HashMap<String, f64> {
+    let mut times: HashMap<String, f64> = HashMap::new();
+    for (field, value) in data.iter() {
+        if field.contains("time") {
+            let time_values = value
+                .downcast_ref::<Option<f64>>()
+                .copied()
+                .unwrap()
+                .unwrap_or(0.0);
+            times.insert(field.to_string(), time_values);
+            println!("{:?}", value);
+        }
+    }
+    times
 }
 
 impl RequestTrait for EventRequest {
