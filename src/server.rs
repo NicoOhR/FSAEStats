@@ -1,37 +1,29 @@
+use duckdb::{Connection, Result as DkResult};
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
     {Method, Request, Response, StatusCode},
 };
 use serde::Serialize;
-use sqlx::{sqlite::SqlitePool, FromRow};
 
 use crate::requests::*;
-
-pub async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
-    let database_url = "sqlite:///data/race.db";
-    SqlitePool::connect(database_url).await
-}
 
 pub async fn user_request(
     req: Request<hyper::body::Incoming>,
 ) -> Result<Response<BoxBody<Bytes, hyper::Error>>, Box<dyn std::error::Error + Send + Sync>> {
-    let pool = create_pool().await.unwrap();
+    let conn = Connection::open("")?;
+    conn.execute("INSTALL sqlite_scanner; LOAD sqlite_scanner;", [])?;
+    conn.execute("ATTACH 'app.db' (TYPE sqlite);", [])?;
 
     match (req.method(), req.uri().path()) {
         (&Method::GET, "/") => Ok(Response::new(full("GET the /team/year/event"))),
         (&Method::GET, "/event") => {
             let mut request = parse_request(req).await?;
-            let response = EventRequest::from_hash(&mut request)?.handle(pool).await?;
+            let response = UserRequest::from_hash(&mut request)?.handle(conn).await?;
 
-            println!(
-                "request {}",
-                serde_json::to_string_pretty(&response).unwrap()
-            );
+            println!("request {response}");
 
-            Ok(Response::new(full(
-                serde_json::to_string(&response).unwrap(),
-            )))
+            Ok(Response::new(full(response.to_string())))
         }
         _ => {
             let mut not_found = Response::new(empty());
