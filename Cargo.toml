@@ -23,3 +23,5 @@ polars      = { version = "0.45", features = ["lazy"] }
 duckdb      = "0.10"          # duckdb‑rs
 arrow2      = "0.18"
 chrono = "=0.4.38"
+polars-arrow = "0.46.0"
+base64 = "0.22.1"

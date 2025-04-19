@@ -1,10 +1,12 @@
-use duckdb::{Connection, Result as DkResult};
 use hyper::Error as HyperError;
 use hyper::Request;
 use polars::prelude::*;
 use serde::de::Error;
 use serde::Serialize;
-use serde_json::Value;
+use serde_json::{Map, Value};
+use sqlx;
+use sqlx::SqlitePool;
+use sqlx::{Column, QueryBuilder, Row, Sqlite};
 use std::collections::HashMap;
 use std::hash::Hash;
 use struct_iterable::Iterable;
@@ -40,10 +42,11 @@ pub trait RequestTrait {
     fn from_hash(args_map: &mut HashMap<String, String>) -> Result<Box<Self>, ParseError>;
 
     fn to_string(self) -> String;
+
     async fn handle(
         self,
-        conn: Connection,
-    ) -> Result<DataFrame, Box<dyn std::error::Error + Send + Sync>>;
+        pool: SqlitePool,
+    ) -> sqlx::Result<Vec<sqlx::sqlite::SqliteRow>, Box<dyn std::error::Error + Send + Sync>>;
 }
 
 impl UserRequest {
@@ -69,9 +72,15 @@ impl RequestTrait for UserRequest {
     }
     async fn handle(
         self,
-        conn: Connection,
-    ) -> Result<DataFrame, Box<dyn std::error::Error + Send + Sync>> {
-        todo!()
+        pool: SqlitePool,
+    ) -> sqlx::Result<Vec<sqlx::sqlite::SqliteRow>, Box<dyn std::error::Error + Send + Sync>> {
+        let mut qb: QueryBuilder<Sqlite> = QueryBuilder::new(format!(
+            "SELECT * FROM {} WHERE Team = ",
+            quote_ident(&self.event)
+        ));
+        qb.push_bind(&self.team); // still placeholder‑safe
+        let rows = qb.build().fetch_all(&pool).await?;
+        Ok(rows)
     }
 }
 
@@ -92,4 +101,9 @@ pub async fn parse_request(
     }
 
     Ok(request_hash_map)
+}
+
+fn quote_ident(raw: &str) -> String {
+    let escaped = raw.replace('"', "\"\"");
+    format!("\"{escaped}\"")
 }
