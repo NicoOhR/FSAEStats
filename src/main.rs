@@ -4,7 +4,6 @@ use sqlx::*;
 use std::env::var;
 use std::net::SocketAddr;
 use tokio::net::TcpListener;
-mod db_structs;
 mod requests;
 mod server;
 

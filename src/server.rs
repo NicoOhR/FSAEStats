@@ -10,8 +10,9 @@ use serde_json::{Map, Number, Value};
 use sqlx::{
     query,
     sqlite::{SqliteRow, SqliteValueRef},
-    Column, FromRow, Row, SqlitePool, TypeInfo, ValueRef,
+    Column, Decode, FromRow, Row, SqlitePool, TypeInfo, ValueRef,
 };
+use std::error::Error;
 
 async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
     let database_url = "sqlite://./data/race.db";
@@ -56,14 +57,7 @@ fn empty() -> BoxBody<Bytes, hyper::Error> {
         .boxed()
 }
 
-pub fn row_to_json(row: &SqliteRow) -> sqlx::Result<Value> {
-    let mut obj = Map::with_capacity(row.len()); // row.len() == #cols :contentReference[oaicite:2]{index=2}
-    for (i, col) in row.columns().iter().enumerate() {
-        let v: Value = row.try_get(i)?;
-        obj.insert(col.name().into(), v);
-    }
-    Ok(Value::Object(obj))
-}
+//should impl for SqliteRow
 
 pub fn dump_row(row: &SqliteRow) -> sqlx::Result<()> {
     for (i, col) in row.columns().iter().enumerate() {
@@ -77,4 +71,34 @@ pub fn dump_row(row: &SqliteRow) -> sqlx::Result<()> {
         println!("{} = {}", col.name(), s);
     }
     Ok(())
+}
+pub fn row_to_json(row: &SqliteRow) -> Result<Value, Box<dyn Error + Send + Sync>> {
+    let mut map = Map::new();
+    for (i, col) in row.columns().iter().enumerate() {
+        let v = match col.type_info().name().to_uppercase().as_str() {
+            "INTEGER" | "INT" | "INT8" | "BIGINT" => {
+                let val: i64 = row.try_get(i)?;
+                Value::Number(Number::from(val))
+            }
+            "REAL" | "FLOAT" | "DOUBLE" => {
+                let val: f64 = row.try_get(i)?;
+                match Number::from_f64(val) {
+                    Some(num) => Value::Number(num),
+                    None => Value::Null,
+                }
+            }
+            "TEXT" | "CHAR" | "CLOB" | "VARCHAR" => {
+                let val: String = row.try_get(i)?;
+                Value::String(val)
+            }
+            "BLOB" => {
+                let bytes: Vec<u8> = row.try_get(i)?;
+                Value::String(base64::encode(bytes))
+            }
+            _ => Value::Null,
+        };
+
+        map.insert(col.name().to_string(), v);
+    }
+    Ok(Value::Object(map))
 }
