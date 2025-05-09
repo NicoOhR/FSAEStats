@@ -58,8 +58,8 @@ fn empty() -> BoxBody<Bytes, hyper::Error> {
 }
 
 //should impl for SqliteRow
-
 pub fn dump_row(row: &SqliteRow) -> sqlx::Result<()> {
+    //debugging command to print the members of a SqliteRow
     for (i, col) in row.columns().iter().enumerate() {
         let s: String = match col.type_info().name().to_uppercase().as_str() {
             "INTEGER" | "INT" | "INT8" | "BIGINT" => row.try_get::<i64, _>(i)?.to_string(),
@@ -73,6 +73,7 @@ pub fn dump_row(row: &SqliteRow) -> sqlx::Result<()> {
     Ok(())
 }
 pub fn row_to_json(row: &SqliteRow) -> Result<Value, Box<dyn Error + Send + Sync>> {
+    //trying to map SqliteRow to a JsonValue
     let mut map = Map::new();
     for (i, col) in row.columns().iter().enumerate() {
         let v = match col.type_info().name().to_uppercase().as_str() {
