@@ -59,7 +59,7 @@ impl RequestTrait for UserRequest {
         req_as_string
     }
     async fn handle(self, conn: duckdb::Connection) -> Result<Vec<RecordBatch>> {
-        let query: String = format!("FROM {} SELECT {}", self.event, self.team);
+        let query: String = format!("SELECT * FROM {} WHERE Team = '{}'", self.event, self.team);
         let mut stmt = conn.prepare(&query)?;
         let rbs = stmt.query_arrow([])?.collect();
         Ok(rbs)
