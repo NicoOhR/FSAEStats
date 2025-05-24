@@ -1,17 +1,16 @@
 use crate::requests::*;
-use duckdb::arrow::datatypes::Schema;
-use duckdb::arrow::record_batch::RecordBatch;
-use duckdb::arrow::util::pretty::*;
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
     {Method, Request, Response, StatusCode},
-};
-use hyper_util::client::legacy::connect::Connection;
-use serde_json::to_string_pretty;
+
 use serde_json::{Map, Number, Value};
 use sqlx::{sqlite::SqliteRow, Column, Row, SqlitePool, TypeInfo, ValueRef};
 use std::{error::Error, io::Cursor};
+use duckdb::arrow::record_batch::RecordBatch;
+use duckdb::arrow::ipc::writer::StreamWriter;
+use duckdb::arrow::datatypes::Schema;
+
 async fn create_pool() -> Result<duckdb::Connection, duckdb::Error> {
     let conn = duckdb::Connection::open("./data/race.duckdb")?;
     Ok(conn)
@@ -27,8 +26,10 @@ pub async fn user_request(
         (&Method::GET, "/event") => {
             let mut request = parse_request(req).await?;
             let response = UserRequest::from_hash(&mut request)?.handle(pool).await?;
-            let strings = pretty_format_batches(&response[..])?.to_string();
-            Ok(Response::new(full(strings)))
+            let mut buff = Cursor::new(Vec::new());
+            let schm = response[0].schema().as_ref();
+            let mut writer = StreamWriter::try_new(&mut buff, schm)?;
+            Ok(Response::new(full(bytes)))
         }
         _ => {
             let mut not_found = Response::new(empty());
