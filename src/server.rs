@@ -1,7 +1,5 @@
 use crate::requests::*;
-use duckdb::arrow::datatypes::Schema;
-use duckdb::arrow::record_batch::RecordBatch;
-use duckdb::arrow::util::pretty::*;
+use duckdb;
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
@@ -16,6 +14,8 @@ async fn create_pool() -> Result<duckdb::Connection, duckdb::Error> {
     let conn = duckdb::Connection::open("./data/race.duckdb")?;
     Ok(conn)
 }
+use arrow::json::writer;
+use arrow::record_batch::RecordBatch;
 
 pub async fn user_request(
     req: Request<hyper::body::Incoming>,
@@ -27,7 +27,12 @@ pub async fn user_request(
         (&Method::GET, "/event") => {
             let mut request = parse_request(req).await?;
             let response = UserRequest::from_hash(&mut request)?.handle(pool).await?;
-            let strings = pretty_format_batches(&response[..])?.to_string();
+            let mut buf = Vec::new();
+            let mut writer = arrow::json::LineDelimitedWriter::new(&mut buf);
+            response.iter().for_each(|x| writer.write(x).unwrap());
+            writer.finish()?;
+            let strings = format!("{}", String::from_utf8(buf)?);
+            //println!("{}", strings);
             Ok(Response::new(full(strings)))
         }
         _ => {

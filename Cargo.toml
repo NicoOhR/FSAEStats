@@ -21,5 +21,5 @@ struct_iterable = "0.1.1"
 polars      = { version = "0.45", features = ["lazy"] }
 duckdb      = {version = "*"}
 chrono  = "=0.4.39"
-arrow = { version = "*", default-features = false, features = ["prettyprint"] }
+arrow = { version = "=51.0.0",  features = ["prettyprint"] }
 base64 = "0.22.1"

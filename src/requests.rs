@@ -1,9 +1,10 @@
-use duckdb::arrow::record_batch::RecordBatch;
+use duckdb::*;
 use duckdb::{Connection, Result};
 use hyper::Error as HyperError;
 use hyper::Request;
 use std::collections::HashMap;
 use thiserror::Error;
+
 #[derive(Debug, Error)]
 pub enum ParseError {
     #[error("Request must contain query")]
@@ -34,7 +35,7 @@ pub trait RequestTrait {
 
     fn to_string(self) -> String;
 
-    async fn handle(self, conn: duckdb::Connection) -> Result<Vec<RecordBatch>>;
+    async fn handle(self, conn: duckdb::Connection) -> Result<Vec<arrow::array::RecordBatch>>;
 }
 
 impl UserRequest {
@@ -58,7 +59,7 @@ impl RequestTrait for UserRequest {
         );
         req_as_string
     }
-    async fn handle(self, conn: duckdb::Connection) -> Result<Vec<RecordBatch>> {
+    async fn handle(self, conn: duckdb::Connection) -> Result<Vec<arrow::array::RecordBatch>> {
         let query: String = format!("SELECT * FROM {} WHERE Team = '{}'", self.event, self.team);
         let mut stmt = conn.prepare(&query)?;
         let rbs = stmt.query_arrow([])?.collect();
