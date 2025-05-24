@@ -13,15 +13,13 @@ http-body-util = "0.1"
 hyper-util = { version = "0.1", features = ["full"] }
 bytes = "1.6.0"
 thiserror = "1.0"
-strum = "0.24.1" #lazyness :^)
 strum_macros = "0.24.1"
 sqlx = { version = "0.8.2", features = ["sqlite", "runtime-tokio-native-tls"]}
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 struct_iterable = "0.1.1"
 polars      = { version = "0.45", features = ["lazy"] }
-duckdb      = "0.10"          # duckdb‑rs
-arrow2      = "0.18"
-chrono = "=0.4.38"
-polars-arrow = "0.46.0"
+duckdb      = "0.10"          
+chrono  = "=0.4.39"
 base64 = "0.22.1"
+arrow = "=53.2.0" 

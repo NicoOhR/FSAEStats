@@ -1,0 +1,120 @@
+,Place,CarNum,Team,DPoecnualt ym ent,RawScore,LatePenalty,Status,Score
+1,1,145,Instituto Maua de Tecnologia,,150,,Final,150
+2,2,38,North Carolina State Univ - Raleigh,,147,,Final,147
+3,3,135,Univ of Wisconsin - Madison,,145,,Final,145
+4,4,3,The Ohio State University,,144,,Final,144
+5,5,68,AGH Univ of Science and Technology,,132,,Final,132
+6,6,84,Univ of British Columbia,,125,,Final,125
+7,7 T,30,Univ of Calif - Berkeley,,130,10,Final,120
+8,7 T,109,Temple Univ,,120,,Final,120
+9,9,45,California State Univ - Northridge,,119,,Final,119
+10,10,107,Virginia Tech,,105,,Final,105
+11,11 T,6,California Polytechnic State Univ-SLO,,100,,,100
+12,11 T,7,Georgia Institute of Technology,,100,,,100
+13,11 T,8,Purdue Univ - W Lafayette,,100,,,100
+14,11 T,9,Univ of North Carolina - Charlotte,,100,,,100
+15,11 T,16,Villanova Univ,,100,,,100
+16,11 T,20,Univ of Victoria,,100,,,100
+17,11 T,23,Kansas State Univ,,100,,,100
+18,11 T,25,California State Poly Univ - Pomona,,100,,,100
+19,11 T,29,Univ of Texas - Austin,,100,,,100
+20,11 T,35,Texas A & M Univ - College Station,,100,,,100
+21,11 T,53,Clemson Univ,,100,,,100
+22,11 T,57,Oakland University,,100,,,100
+23,11 T,76,Univ of Alabama - Tuscaloosa,,100,,,100
+24,11 T,86,Univ of Akron,,100,,,100
+25,11 T,98,Univ of Nebraska - Lincoln,,100,,,100
+26,11 T,101,Minnesota State University - Mankato,,100,,,100
+27,11 T,105,Univ of Southern California,,100,,,100
+28,11 T,126,Arizona State Univ - Tempe,,100,,,100
+29,11 T,127,Univ of Connecticut,,100,,,100
+30,30 T,49,Univ of Maryland - College Park,5,100,,,95
+31,30 T,67,Univ of Minnesota - Twin Cities,5,100,,,95
+32,32,104,Washington Univ - St Louis,,100,10,,90
+33,33 T,14,Univ of Cincinnati,,80,,,80
+34,33 T,18,Kennesaw State University,,80,,,80
+35,33 T,24,Brown Univ,,80,,,80
+36,33 T,27,Carleton Univ,,80,,,80
+37,33 T,31,Liberty Univ,,80,,,80
+38,33 T,32,Colorado School of Mines,,80,,,80
+39,33 T,40,Universite de Sherbrooke,,80,,,80
+40,33 T,46,York College of Pennsylvania,,80,,,80
+41,33 T,48,Univ of Central Florida,,80,,,80
+42,33 T,63,Duke Univ,,80,,,80
+1,33 T,66,Univ of Michigan - Dearborn,,80,,,80
+2,33 T,71,Univ of Hartford,,80,,,80
+3,33 T,73,Univ of Puerto Rico-Mayaquez,,80,,,80
+4,33 T,80,California State Univ - Fullerton,,80,,,80
+5,33 T,90,Texas Tech Univ,,80,,,80
+6,33 T,91,Mississippi State Univ,,80,,,80
+7,33 T,100,Kettering Univ,,80,,,80
+8,33 T,102,Missouri University of Science and Tech,,80,,,80
+9,33 T,110,Michigan Tech Univ,,80,,,80
+10,52 T,47,Univ of Kentucky,5,80,,,75
+11,52 T,65,Hope College,5,80,,,75
+12,52 T,93,South Dakota State Univ,5,80,,,75
+13,52 T,94,Univ of Colorado - Boulder,5,80,,,75
+14,52 T,111,Florida International Univ,5,80,,,75
+15,57 T,42,Univ of Oklahoma,10,80,,,70
+16,57 T,99,Univ of North Florida,,80,10,,70
+17,59,122,South Dakota School of Mines & Tech,5,80,10,,65
+18,60 T,19,Purdue Univ - Northwest,,60,,,60
+19,60 T,21,Oklahoma State Univ,,60,,,60
+20,60 T,22,Sacramento State Univ,,60,,,60
+21,60 T,26,Univ of Wisconsin - Platteville,,60,,,60
+22,60 T,33,Rose Hulman Inst of Tech,,60,,,60
+23,60 T,44,Univ of Texas - Dallas,,60,,,60
+24,60 T,55,Univ of Missouri,,60,,,60
+25,60 T,60,Univ of Illinois - Chicago,,60,,,60
+26,60 T,61,Wayne State Univ,,60,,,60
+27,60 T,64,West Virginia Univ,,60,,,60
+28,60 T,77,Vanderbilt Univ,,60,,,60
+29,60 T,83,Univ of South Florida,,60,,,60
+30,60 T,87,Univ of Georgia,,60,,,60
+31,60 T,89,Southern Illinois Univ - Carbondale,,60,,,60
+32,60 T,92,Clarkson University,,60,,,60
+33,60 T,114,Lehigh Univ,,60,,,60
+34,60 T,118,Univ of Manitoba,,60,,,60
+35,60 T,120,Oregon Inst of Tech,,60,,,60
+36,60 T,131,Univ of Ottawa,,60,,,60
+37,79 T,17,Florida Atlantic Univ,5,60,,,55
+38,79 T,62,Washington State Univ,5,60,,,55
+39,81 T,34,Colorado Mesa University,10,60,,,50
+40,81 T,116,Saginaw Valley State Univ,10,60,,,50
+41,81 T,121,Univ of Saskatchewan,10,60,,,50
+42,84,36,Colorado State University,15,60,,,45
+1,85 T,15,Tennessee Tech Univ,,40,,,40
+2,85 T,58,Syracuse Univ,,40,,,40
+3,85 T,74,Drexel Univ,,40,,,40
+4,85 T,106,Embry-Riddle Aero Univ - Daytona Beach,,80,40,,40
+5,85 T,108,Lawrence Technological Univ,,40,,,40
+6,85 T,119,California Baptist University,,60,20,,40
+7,85 T,128,St Cloud State Univ,,40,,,40
+8,92,95,Univ of Toledo,5,40,,,35
+9,93 T,52,California State Univ - Chico,,40,10,,30
+10,93 T,69,Bradley Univ,,40,10,,30
+11,95 T,43,Universidad Panamericana Sede Guadalajar,,20,,,20
+12,95 T,103,Penn State Univ - Harrisburg,,40,20,,20
+13,95 T,117,Pellissippi State Community College,,20,,,20
+14,95 T,133,Universidad Autonoma Estado Mexico,,20,,,20
+15,95 T,136,Univ of Minnesota-Duluth,,20,,,20
+16,100 T,79,Univ of Texas - San Antonio,5,20,,,15
+17,100 T,113,US Air Force Academy,5,20,,,15
+18,100 T,125,Northern Arizona Univ,5,40,20,,15
+19,103 T,54,Instituto Tecnologico de Chihuahua,,20,10,,10
+20,103 T,72,Univ of Delaware,10,20,,,10
+21,103 T,130,Northern Illinois Univ,,20,10,,10
+22,103 T,138,Universidad Autonoma de Baja California,,20,10,,10
+23,,37,Univ of Arizona,,,,,
+24,,41,Univ of Houston - Houston,,,,,
+25,,50,Missouri State University,,,,,
+26,,51,ITESM - Campus Cuernavaca,,,,,
+27,,56,Iowa State Univ,,,,,
+28,,59,Univ of Calif - Irvine,,,,,
+29,,78,Univ of the Pacific,,,,,
+30,,82,Western Michigan Univ,,,,,
+31,,88,UP Aguascalientes,,,,,
+32,,97,Univ of Massachusetts - Lowell,,,,,
+33,,124,Alabama A & M Univ,,,,,
+34,,140,North Dakota State Univ,,,,,
+35,,142,Lamar Univ,,,,,

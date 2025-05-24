@@ -1,17 +1,11 @@
 use crate::requests::*;
-use base64::{engine::general_purpose, Engine as _};
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
     body::Bytes,
     {Method, Request, Response, StatusCode},
 };
-use serde::Serialize;
 use serde_json::{Map, Number, Value};
-use sqlx::{
-    query,
-    sqlite::{SqliteRow, SqliteValueRef},
-    Column, Decode, FromRow, Row, SqlitePool, TypeInfo, ValueRef,
-};
+use sqlx::{sqlite::SqliteRow, Column, Row, SqlitePool, TypeInfo, ValueRef};
 use std::error::Error;
 
 async fn create_pool() -> Result<SqlitePool, sqlx::Error> {
@@ -31,7 +25,7 @@ pub async fn user_request(
             let response = UserRequest::from_hash(&mut request)?.handle(pool).await?;
 
             for row in &response {
-                dump_row(&row);
+                dump_row(row);
             }
 
             let json_row: Result<Vec<_>, _> = response.iter().map(row_to_json).collect();
@@ -78,10 +72,12 @@ pub fn row_to_json(row: &SqliteRow) -> Result<Value, Box<dyn Error + Send + Sync
     for (i, col) in row.columns().iter().enumerate() {
         let v = match col.type_info().name().to_uppercase().as_str() {
             "INTEGER" | "INT" | "INT8" | "BIGINT" => {
+                println!("{col:?}, Integer");
                 let val: i64 = row.try_get(i)?;
                 Value::Number(Number::from(val))
             }
             "REAL" | "FLOAT" | "DOUBLE" => {
+                println!("{col:?} float");
                 let val: f64 = row.try_get(i)?;
                 match Number::from_f64(val) {
                     Some(num) => Value::Number(num),
@@ -89,10 +85,12 @@ pub fn row_to_json(row: &SqliteRow) -> Result<Value, Box<dyn Error + Send + Sync
                 }
             }
             "TEXT" | "CHAR" | "CLOB" | "VARCHAR" => {
+                println!("{col:?} text");
                 let val: String = row.try_get(i)?;
                 Value::String(val)
             }
             "BLOB" => {
+                println!("blob");
                 let bytes: Vec<u8> = row.try_get(i)?;
                 Value::String(base64::encode(bytes))
             }

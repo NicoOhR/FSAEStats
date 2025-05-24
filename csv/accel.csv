@@ -1,0 +1,120 @@
+Place,CarNum,Team,Run1 Time,Run1 Cones,Run1 AdjTime,Run2 Time,Run2 Cones,Run2 AdjTime,Run3 Time,Run3 Cones,Run3 AdjTime,Run4 Time,Run4 Cones,Run4 AdjTime,BestTime,Penalty,Score
+1,35,Texas A & M Univ - College Station,4.236,,4.236,4.263,,4.263,4.206,,4.206,4.209,,4.209,4.206,,100
+2,3,The Ohio State University,4.368,,4.368,4.434,,4.434,4.290,,4.290,4.271,,4.271,4.271,,95.68
+3,83,Univ of South Florida,4.385,,4.385,4.275,,4.275,,,DNA,,,DNA,4.275,,95.44
+4,106,Embry-Riddle Aero Univ - Daytona Beach,4.412,,4.412,4.275,,4.275,,,DNA,,,DNA,4.275,,95.39
+5,76,Univ of Alabama - Tuscaloosa,4.511,,4.511,4.395,,4.395,4.344,,4.344,4.277,,4.277,4.277,,95.27
+6,42,Univ of Oklahoma,4.661,,4.661,4.303,,4.303,4.716,,4.716,4.819,,4.819,4.303,,93.57
+7,38,North Carolina State Univ - Raleigh,4.308,,4.308,,,DNF,16.845,,16.845,8.361,,8.361,4.308,,93.25
+8,127,Univ of Connecticut,9.899,,9.899,4.837,,4.837,4.337,,4.337,4.607,,4.607,4.337,,91.35
+9,145,Instituto Maua de Tecnologia,4.427,,4.427,4.388,,4.388,4.364,,4.364,4.395,,4.395,4.364,,89.65
+10,23,Kansas State Univ,5.154,,5.154,4.370,,4.370,4.525,,4.525,4.435,,4.435,4.370,,89.27
+11,101,Minnesota State University - Mankato,4.462,,4.462,4.399,,4.399,4.458,,4.458,4.422,,4.422,4.399,,87.45
+12,98,Univ of Nebraska - Lincoln,4.488,,4.488,4.400,,4.400,,,DNA,,,DNA,4.400,,87.39
+13,45,California State Univ - Northridge,4.608,,4.608,4.665,,4.665,4.407,,4.407,4.411,,4.411,4.407,,86.98
+14,18,Kennesaw State University,4.824,,4.824,4.708,,4.708,4.490,,4.490,4.456,,4.456,4.456,,83.95
+15,49,Univ of Maryland - College Park,4.925,,4.925,4.979,,4.979,4.564,,4.564,4.465,,4.465,4.465,,83.43
+16,16,Villanova Univ,4.720,,4.720,4.493,,4.493,4.738,,4.738,4.498,,4.498,4.493,,81.76
+17,67,Univ of Minnesota - Twin Cities,4.708,,4.708,4.511,,4.511,4.593,,4.593,4.527,,4.527,4.511,,80.64
+18,47,Univ of Kentucky,4.837,,4.837,4.728,,4.728,4.535,,4.535,4.720,,4.720,4.535,,79.24
+19,68,AGH Univ of Science and Technology,4.645,,4.645,4.759,,4.759,4.725,,4.725,4.560,,4.560,4.560,,77.79
+20,135,Univ of Wisconsin - Madison,4.562,,4.562,4.812,,4.812,5.246,,5.246,,,DNA,4.562,,77.66
+21,40,Universite de Sherbrooke,4.764,,4.764,4.722,,4.722,4.709,,4.709,4.575,,4.575,4.575,,76.92
+22 T,8,Purdue Univ - W Lafayette,4.686,,4.686,4.920,,4.920,4.597,,4.597,4.697,,4.697,4.597,,75.64
+22 T,80,California State Univ - Fullerton,4.597,,4.597,4.684,,4.684,,,DNA,,,DNA,4.597,,75.64
+24,102,Missouri University of Science and Tech,5.015,,5.015,4.644,,4.644,5.022,,5.022,4.612,,4.612,4.612,,74.83
+25,21,Oklahoma State Univ,4.686,,4.686,4.640,,4.640,4.690,,4.690,4.613,,4.613,4.613,,74.73
+26,60,Univ of Illinois - Chicago,4.671,,4.671,4.619,,4.619,4.859,,4.859,4.660,,4.660,4.619,,74.42
+27,91,Mississippi State Univ,5.012,,5.012,4.637,,4.637,5.057,,5.057,4.844,,4.844,4.637,,73.39
+28,94,Univ of Colorado - Boulder,,,DNF,4.852,,4.852,4.641,,4.641,,,DNA,4.641,,73.17
+29,25,California State Poly Univ - Pomona,4.645,,4.645,,,DNA,,,DNA,,,DNA,4.645,,72.97
+30,6,California Polytechnic State Univ-SLO,4.792,,4.792,4.647,,4.647,4.764,,4.764,4.855,,4.855,4.647,,72.82
+31,65,Hope College,4.952,,4.952,4.865,,4.865,4.775,,4.775,4.663,,4.663,4.663,,71.98
+32,86,Univ of Akron,,,DNF,5.009,,5.009,4.663,,4.663,,,DNA,4.663,,71.96
+33,104,Washington Univ - St Louis,5.161,,5.161,4.917,,4.917,4.981,,4.981,4.664,,4.664,4.664,,71.9
+34,73,Univ of Puerto Rico-Mayaquez,4.928,,4.928,4.940,,4.940,4.905,,4.905,4.665,,4.665,4.665,,71.83
+35,121,Univ of Saskatchewan,4.676,,4.676,4.715,,4.715,5.616,,5.616,6.298,,6.298,4.676,,71.24
+36,108,Lawrence Technological Univ,4.915,,4.915,4.694,,4.694,4.918,,4.918,5.641,,5.641,4.694,,70.26
+37,57,Oakland University,4.765,,4.765,5.380,,5.380,5.529,,5.529,4.705,,4.705,4.705,,69.67
+38,109,Temple Univ,4.832,,4.832,4.726,,4.726,5.155,,5.155,4.714,,4.714,4.714,,69.18
+39,20,Univ of Victoria,4.764,,4.764,5.907,,5.907,4.829,,4.829,4.724,,4.724,4.724,,68.63
+40,46,York College of Pennsylvania,5.023,,5.023,4.726,,4.726,4.857,,4.857,4.861,,4.861,4.726,,68.52
+41,107,Virginia Tech,4.762,,4.762,4.749,,4.749,4.824,,4.824,4.749,,4.749,4.749,,67.28
+42,119,California Baptist University,4.762,,4.762,4.839,,4.839,,,DNA,,,DNA,4.762,,66.57
+43,14,Univ of Cincinnati,5.543,,5.543,19.620,,19.620,4.922,,4.922,4.782,,4.782,4.782,,65.51
+44,105,Univ of Southern California,4.798,,4.798,6.223,,6.223,,,DNA,,,DNA,4.798,,64.66
+45,126,Arizona State Univ - Tempe,4.867,,4.867,4.877,,4.877,4.808,,4.808,4.823,,4.823,4.808,,64.14
+46,9,Univ of North Carolina - Charlotte,4.843,,4.843,4.811,,4.811,4.906,,4.906,5.041,,5.041,4.811,,64.0
+47,22,Sacramento State Univ,5.407,,5.407,4.816,,4.816,,,DNA,,,DNA,4.816,,63.75
+48,99,Univ of North Florida,5.399,,5.399,4.819,,4.819,5.236,,5.236,4.845,,4.845,4.819,,63.57
+49,17,Florida Atlantic Univ,5.464,,5.464,4.893,,4.893,6.173,,6.173,5.553,,5.553,4.893,,59.8
+50,44,Univ of Texas - Dallas,5.043,,5.043,4.899,,4.899,5.642,,5.642,5.289,,5.289,4.899,,59.49
+51,55,Univ of Missouri,5.711,,5.711,4.954,,4.954,5.732,,5.732,5.166,,5.166,4.954,,56.79
+52,63,Duke Univ,4.987,,4.987,7.756,,7.756,,,DNA,,,DNA,4.987,,55.17
+53,30,Univ of Calif - Berkeley,4.992,,4.992,5.035,,5.035,,,DNA,,,DNA,4.992,,54.9
+54,87,Univ of Georgia,5.491,,5.491,5.163,,5.163,5.206,,5.206,5.032,,5.032,5.032,,52.99
+55,92,Clarkson University,5.055,,5.055,5.041,,5.041,5.337,,5.337,5.778,,5.778,5.041,,52.59
+56,89,Southern Illinois Univ - Carbondale,6.141,,6.141,5.044,,5.044,7.268,,7.268,6.710,,6.710,5.044,,52.45
+57,26,Univ of Wisconsin - Platteville,5.185,,5.185,5.047,,5.047,5.239,,5.239,5.105,,5.105,5.047,,52.28
+58,62,Washington State Univ,7.066,,7.066,22.702,,22.702,5.310,,5.310,5.081,,5.081,5.081,,50.69
+59,15,Tennessee Tech Univ,5.275,,5.275,5.433,,5.433,5.145,,5.145,5.623,,5.623,5.145,,47.75
+60,29,Univ of Texas - Austin,5.154,,5.154,,,DNF,,,DNA,,,DNA,5.154,,47.35
+61,27,Carleton Univ,6.007,,6.007,6.010,,6.010,5.185,,5.185,5.159,,5.159,5.159,,47.12
+62,77,Vanderbilt Univ,5.597,,5.597,30.321,,30.321,5.636,,5.636,5.272,,5.272,5.272,,42.11
+63,24,Brown Univ,5.353,,5.353,5.803,,5.803,,,DNA,,,DNA,5.353,,38.62
+64,95,Univ of Toledo,5.999,,5.999,5.359,,5.359,,,DNA,,,DNA,5.359,,38.4
+65,114,Lehigh Univ,5.760,,5.760,5.367,,5.367,,,DNA,,,DNA,5.367,,38.07
+66,66,Univ of Michigan - Dearborn,7.145,,7.145,5.369,,5.369,,,DNA,,,DNA,5.369,,37.98
+67,93,South Dakota State Univ,5.445,,5.445,5.570,,5.570,13.398,,13.398,21.716,,21.716,5.445,,34.85
+68,110,Michigan Tech Univ,5.834,,5.834,5.453,,5.453,,,DNA,,,DNA,5.453,,34.5
+69 T,120,Oregon Inst of Tech,6.604,,6.604,6.795,,6.795,7.032,,7.032,6.742,,6.742,6.604,,4.5
+69 T,32,Colorado School of Mines,6.718,,6.718,,,DNA,,,DNA,,,DNA,6.718,,4.5
+69 T,113,US Air Force Academy,7.414,,7.414,6.808,,6.808,,,DNA,,,DNA,6.808,,4.5
+,7,Georgia Institute of Technology,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,19,Purdue Univ - Northwest,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,31,Liberty Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,33,Rose Hulman Inst of Tech,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,34,Colorado Mesa University,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,36,Colorado State University,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,37,Univ of Arizona,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,41,Univ of Houston - Houston,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,43,Universidad Panamericana Sede Guadalajar,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,48,Univ of Central Florida,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,50,Missouri State University,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,51,ITESM - Campus Cuernavaca,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,52,California State Univ - Chico,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,53,Clemson Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,54,Instituto Tecnologico de Chihuahua,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,56,Iowa State Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,58,Syracuse Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,59,Univ of Calif - Irvine,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,61,Wayne State Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,64,West Virginia Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,69,Bradley Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,71,Univ of Hartford,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,72,Univ of Delaware,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,74,Drexel Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,78,Univ of the Pacific,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,79,Univ of Texas - San Antonio,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,82,Western Michigan Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,84,Univ of British Columbia,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,88,UP Aguascalientes,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,90,Texas Tech Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,97,Univ of Massachusetts - Lowell,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,100,Kettering Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,103,Penn State Univ - Harrisburg,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,111,Florida International Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,116,Saginaw Valley State Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,117,Pellissippi State Community College,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,118,Univ of Manitoba,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,122,South Dakota School of Mines & Tech,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,124,Alabama A & M Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,125,Northern Arizona Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,128,St Cloud State Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,130,Northern Illinois Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,131,Univ of Ottawa,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,133,Universidad Autonoma Estado Mexico,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,136,Univ of Minnesota-Duluth,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,138,Universidad Autonoma de Baja California,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,140,North Dakota State Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,
+,142,Lamar Univ,,,DNA,,,DNA,,,DNA,,,DNA,DNA,,

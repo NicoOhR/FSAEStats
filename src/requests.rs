@@ -1,18 +1,9 @@
+use duckdb::arrow::record_batch::RecordBatch;
+use duckdb::{Connection, Result};
 use hyper::Error as HyperError;
 use hyper::Request;
-use polars::prelude::*;
-use serde::de::Error;
-use serde::Serialize;
-use serde_json::{Map, Value};
-use sqlx;
-use sqlx::SqlitePool;
-use sqlx::{Column, QueryBuilder, Row, Sqlite};
 use std::collections::HashMap;
-use std::hash::Hash;
-use struct_iterable::Iterable;
-use strum_macros::Display;
 use thiserror::Error;
-
 #[derive(Debug, Error)]
 pub enum ParseError {
     #[error("Request must contain query")]
@@ -43,10 +34,7 @@ pub trait RequestTrait {
 
     fn to_string(self) -> String;
 
-    async fn handle(
-        self,
-        pool: SqlitePool,
-    ) -> sqlx::Result<Vec<sqlx::sqlite::SqliteRow>, Box<dyn std::error::Error + Send + Sync>>;
+    async fn handle(self, conn: duckdb::Connection) -> Result<Vec<RecordBatch>>;
 }
 
 impl UserRequest {
@@ -70,17 +58,11 @@ impl RequestTrait for UserRequest {
         );
         req_as_string
     }
-    async fn handle(
-        self,
-        pool: SqlitePool,
-    ) -> sqlx::Result<Vec<sqlx::sqlite::SqliteRow>, Box<dyn std::error::Error + Send + Sync>> {
-        let mut qb: QueryBuilder<Sqlite> = QueryBuilder::new(format!(
-            "SELECT * FROM {} WHERE Team = ",
-            quote_ident(&self.event)
-        ));
-        qb.push_bind(&self.team); // still placeholder‑safe
-        let rows = qb.build().fetch_all(&pool).await?;
-        Ok(rows)
+    async fn handle(self, conn: duckdb::Connection) -> Result<Vec<RecordBatch>> {
+        let query: String = format!("FROM {} SELECT {}", self.event, self.team);
+        let mut stmt = conn.prepare(&query)?;
+        let rbs = stmt.query_arrow([])?.collect();
+        Ok(rbs)
     }
 }
 
