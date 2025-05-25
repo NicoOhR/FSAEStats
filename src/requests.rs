@@ -1,5 +1,5 @@
+use duckdb::Result;
 use duckdb::*;
-use duckdb::{Connection, Result};
 use hyper::Error as HyperError;
 use hyper::Request;
 use std::collections::HashMap;
@@ -84,9 +84,4 @@ pub async fn parse_request(
     }
 
     Ok(request_hash_map)
-}
-
-fn quote_ident(raw: &str) -> String {
-    let escaped = raw.replace('"', "\"\"");
-    format!("\"{escaped}\"")
 }
