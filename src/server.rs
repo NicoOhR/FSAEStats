@@ -1,3 +1,5 @@
+use std::io::Cursor;
+
 use crate::requests::*;
 use http_body_util::{combinators::BoxBody, BodyExt, Empty, Full};
 use hyper::{
@@ -26,6 +28,20 @@ pub async fn user_request(
             writer.finish()?;
             let strings = (String::from_utf8(buf)?).to_string();
             Ok(Response::new(full(strings)))
+        }
+        (&Method::GET, "/event_arrow") => {
+            let mut request = parse_request(req).await?;
+            let response = UserRequest::from_hash(&mut request)?.handle(pool).await?;
+            let mut buf = Cursor::new(Vec::new());
+            {
+                let mut writer =
+                    arrow::ipc::writer::StreamWriter::try_new(&mut buf, &*response[0].schema())?;
+
+                response.iter().for_each(|x| writer.write(x).unwrap());
+
+                writer.finish()?;
+            }
+            Ok(Response::new(full(buf.into_inner())))
         }
         _ => {
             let mut not_found = Response::new(empty());
