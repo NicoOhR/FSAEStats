@@ -1,0 +1,120 @@
+Place,CarNum,Team,Status,RawScore,Penalty,Score
+1,2,Univ of North Carolina - Charlotte,Final,75,,75
+2,34,Duke Univ,Final,71.3,,71.3
+3,10,Kansas State Univ,Final,70.6,,70.6
+4,4,Univ of Connecticut,Final,69.0,,69.0
+5,32,Embry-Riddle Aero Univ - Daytona Beach,Final,68.9,,68.9
+6,98,Missouri University of Science and Tech,Final,67.8,,67.8
+7,148,CEFET-MG,Final,67.7,,67.7
+8,56,Univ of Maryland - College Park,Final,67.6,,67.6
+9,75,Mississippi State Univ,Final,66.9,,66.9
+10,5,Texas A & M Univ - College Station,Final,66.4,,66.4
+11,59,Univ of Georgia,Final,64.4,,64.4
+12,67,California State Univ - Fullerton,Final,61.0,,61.0
+13,138,Oakland University,,60.0,,60.0
+14,30,Brown Univ,,59.7,,59.7
+15,3,Univ of Calif - Berkeley,,59.5,,59.5
+16,48,Univ of Alabama - Tuscaloosa,,59.4,,59.4
+17,9,Villanova Univ,,59.3,,59.3
+18,74,Virginia Tech,,58.2,,58.2
+19,108,Temple Univ,,58.1,,58.1
+20,41,Pellissippi State Community College,,56.3,,56.3
+21,115,Univ of Illinois - Chicago,,55.6,,55.6
+22,43,Univ of Nebraska - Lincoln,,55.0,,55.0
+23,7,Instituto Maua de Tecnologia,,54.3,,54.3
+24,73,Washington State Univ,,54.2,,54.2
+25,58,Clemson Univ,,53.9,,53.9
+26,97,Wayne State Univ,,53.0,,53.0
+27,104,Univ of Texas - Austin,,52.4,,52.4
+28,117,Oklahoma State Univ,,51.8,,51.8
+29,49,Arizona State Univ - Tempe,,51.5,,51.5
+30,26,Univ of Texas - Dallas,,51.3,,51.3
+31,77,Univ of North Florida,,51.3,,51.3
+32,100,Univ of Arizona,,51.0,,51.0
+33,22,Univ of Missouri,,50.4,,50.4
+33,65,Universidad Politecnica de Valencia,,50.4,,50.4
+35,101,Univ of Manitoba,,50.2,,50.2
+36,122,Trinity Univ,,48.6,,48.6
+37,124,Univ of Wisconsin - Madison,,48.3,,48.3
+38,61,Univ of Wisconsin - Platteville,,46.5,,46.5
+39,51,Universite de Sherbrooke,,46.4,,46.4
+40,33,Lakehead Univ,,45.9,,45.9
+41,120,Univ of Saskatchewan,,44.1,,44.1
+42,29,Univ of Victoria,,43.9,,43.9
+43,38,Georgia Institute of Technology,,43.8,,43.8
+44,45,Minnesota State University - Mankato,,43.1,,43.1
+45,111,Universidad Panamericana Sede Guadalajar,,42.6,,42.6
+46,103,Univ of Colorado - Boulder,,42.0,,42.0
+47,8,Purdue Univ - W Lafayette,,41.8,,41.8
+48,81,Univ of Texas - Arlington,,41.3,,41.3
+49,53,Univ of Houston - Houston,,41.2,,41.2
+50,87,Univ of Ottawa,,40.7,,40.7
+51,66,West Virginia Univ,,40.1,,40.1
+52,84,California State Univ - Northridge,,38.9,,38.9
+53,23,Colorado School of Mines,,38.2,,38.2
+54,55,Carleton Univ,,38.0,,38.0
+55,128,North Carolina State Univ - Raleigh,,37.1,,37.1
+56,106,Iowa State Univ,,35.4,,35.4
+57,60,Univ of Cincinnati,,34.7,,34.7
+58,95,Purdue Univ - Northwest,,34.0,,34.0
+59,78,Missouri State University,,32.8,,32.8
+60,131,Univ of Southern California,,29.7,,29.7
+61,72,Northern Arizona Univ,,29.1,,29.1
+62,123,Univ of Massachusetts - Lowell,,28.1,,28.1
+63,125,Southern Illinois Univ - Carbondale,,25.2,,25.2
+64,80,South Dakota School of Mines & Tech,,25.0,,25.0
+65,40,Montana State Univ - Bozeman,,20.0,,20.0
+65,83,Penn State Univ - Harrisburg,,20.0,,20.0
+65,121,Univ of Colorado - Colorado Springs,,20.0,,20.0
+65,127,Univ of Minnesota-Duluth,,20.0,,20.0
+65,130,Vanderbilt Univ,,20.0,,20.0
+65,133,New York University,,20.0,,20.0
+71,92,Univ of Michigan - Dearborn,,19.7,,19.7
+72,88,Univ of Kentucky,,19.6,,19.6
+72,91,Univ of the Pacific,,19.6,,19.6
+74,69,Lawrence Technological Univ,,19.6,,19.6
+75,44,Colorado State University,,19.1,,19.1
+75,64,Grand Valley State Univ,,19.1,,19.1
+77,24,Univ of British Columbia,,19.1,,19.1
+78,54,Tennessee Tech Univ,,18.9,,18.9
+78,107,Univ of Hartford,,18.9,,18.9
+80,79,Florida Atlantic Univ,,18.8,,18.8
+81,35,Univ of Calif - Irvine,,18.5,,18.5
+81,135,Alabama A & M Univ,,18.5,,18.5
+83,50,Clarkson University,,18.5,,18.5
+84,37,Old Dominion Univ,,18.2,,18.2
+84,89,California State Poly Univ - Pomona,,18.2,,18.2
+86,46,Univ of Oklahoma,,17.7,,17.7
+86,96,Univ of Toledo,,17.7,,17.7
+88,114,Southern Illinois Univ - Edwardville,,17.6,,17.6
+89,31,Lehigh Univ,,17.6,,17.6
+90,63,Drexel Univ,,17.1,,17.1
+91,86,Univ of Delaware,,17.0,,17.0
+92,42,Universidad Metropolitana,,16.6,,16.6
+93,57,Florida International Univ,,16.5,,16.5
+94,113,Grand Canyon University,,16.1,,16.1
+94,141,St Cloud State Univ,,16.1,,16.1
+96,52,Sacramento State Univ,,15.9,,15.9
+97,76,Washington Univ - St Louis,,15.9,,15.9
+97,119,Kennesaw State University,,15.9,,15.9
+99,136,Syracuse Univ,,15.4,,15.4
+100,112,Universidad Autonoma Estado Mexico,,15.0,,15.0
+101,82,South Dakota State Univ,,14.8,,14.8
+102,129,California State Univ - Chico,,14.3,,14.3
+103,39,Univ of Central Florida,,14.3,,14.3
+104,71,Univ of South Florida,,14.2,,14.2
+104,93,Michigan Tech Univ,,14.2,,14.2
+106,70,US Naval Academy,,14.2,,14.2
+107,118,Liberty Univ,,14.1,,14.1
+108,105,Northern Illinois Univ,,13.3,,13.3
+109,144,Calvin College,,13.3,,13.3
+110,116,North Dakota State Univ,,12.0,,12.0
+111,27,Kettering Univ,,11.9,,11.9
+111,132,Wichita State Univ,,11.9,,11.9
+113,62,York College of Pennsylvania,,11.6,,11.6
+114,109,UP Aguascalientes,,10.9,,10.9
+115,126,ITESM - Campus Cuernavaca,,10.0,,10.0
+116,36,Saginaw Valley State Univ,,6.6,,6.6
+117,99,Colorado Mesa University,,5.0,,5.0
+117,134,Instituto Tecnologico de Estudios Superi,,5.0,,5.0
+119,25,Instituto Tecnologico de Chihuahua,,2.5,,2.5

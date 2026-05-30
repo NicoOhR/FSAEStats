@@ -1,0 +1,122 @@
+Place,CarNum,Team,DocumentPenalty,RawScore,LatePenalty,Status,Score
+1,8,Purdue Univ - W Lafayette,,150,,Final,150
+2,148,CEFET-MG,,139,,Final,139
+3,124,Univ of Wisconsin - Madison,,135,,Final,135
+4,65,Universidad Politecnica de Valencia,,133,,Final,133
+5,7,Instituto Maua de Tecnologia,,129,,Final,129
+6,131,Univ of Southern California,,121,,Final,121
+7,48,Univ of Alabama - Tuscaloosa,,116,,Final,116
+8,5,Texas A & M Univ - College Station,,113,,Final,113
+9,2,Univ of North Carolina - Charlotte,,111,,Final,111
+10,81,Univ of Texas - Arlington,,105,,Final,105
+11,3,Univ of Calif - Berkeley,,100,,,100
+11,4,Univ of Connecticut,,100,,,100
+11,10,Kansas State Univ,,100,,,100
+11,24,Univ of British Columbia,,100,,,100
+11,29,Univ of Victoria,,100,,,100
+11,30,Brown Univ,,100,,,100
+11,38,Georgia Institute of Technology,,100,,,100
+11,43,Univ of Nebraska - Lincoln,,100,,,100
+11,51,Universite de Sherbrooke,,100,,,100
+11,56,Univ of Maryland - College Park,,100,,,100
+11,74,Virginia Tech,,100,,,100
+11,84,California State Univ - Northridge,,100,,,100
+11,89,California State Poly Univ - Pomona,,100,,,100
+11,93,Michigan Tech Univ,,100,,,100
+11,98,Missouri University of Science and Tech,,100,,,100
+11,104,Univ of Texas - Austin,,100,,,100
+11,128,North Carolina State Univ - Raleigh,,100,,,100
+28,49,Arizona State Univ - Tempe,,100,10,,90
+29,9,Villanova Univ,,80,,,80
+29,22,Univ of Missouri,,80,,,80
+29,23,Colorado School of Mines,,80,,,80
+29,32,Embry-Riddle Aero Univ - Daytona Beach,,80,,,80
+29,34,Duke Univ,,80,,,80
+29,39,Univ of Central Florida,,80,,,80
+29,45,Minnesota State University - Mankato,,80,,,80
+29,52,Sacramento State Univ,,80,,,80
+29,55,Carleton Univ,,80,,,80
+29,58,Clemson Univ,,80,,,80
+29,59,Univ of Georgia,,80,,,80
+29,60,Univ of Cincinnati,,80,,,80
+29,61,Univ of Wisconsin - Platteville,,80,,,80
+29,71,Univ of South Florida,,80,,,80
+29,76,Washington Univ - St Louis,,80,,,80
+29,92,Univ of Michigan - Dearborn,,80,,,80
+29,97,Wayne State Univ,,80,,,80
+29,103,Univ of Colorado - Boulder,,80,,,80
+29,106,Iowa State Univ,,80,,,80
+29,108,Temple Univ,,80,,,80
+29,119,Kennesaw State University,,80,,,80
+29,138,Oakland University,,80,,,80
+51,75,Mississippi State Univ,5,80,,,75
+51,77,Univ of North Florida,5,80,,,75
+51,101,Univ of Manitoba,5,80,,,75
+54,27,Kettering Univ,,60,,,60
+54,31,Lehigh Univ,,60,,,60
+54,35,Univ of Calif - Irvine,,60,,,60
+54,44,Colorado State University,,60,,,60
+54,46,Univ of Oklahoma,,60,,,60
+54,47,Oregon Inst of Tech,,60,,,60
+54,50,Clarkson University,,60,,,60
+54,54,Tennessee Tech Univ,,60,,,60
+54,62,York College of Pennsylvania,,60,,,60
+54,64,Grand Valley State Univ,,60,,,60
+54,66,West Virginia Univ,,60,,,60
+54,67,California State Univ - Fullerton,,60,,,60
+54,70,US Naval Academy,,60,,,60
+54,79,Florida Atlantic Univ,,60,,,60
+54,80,South Dakota School of Mines & Tech,,60,,,60
+54,87,Univ of Ottawa,,60,,,60
+54,88,Univ of Kentucky,,60,,,60
+54,95,Purdue Univ - Northwest,,60,,,60
+54,107,Univ of Hartford,,60,,,60
+54,117,Oklahoma State Univ,,60,,,60
+54,118,Liberty Univ,,60,,,60
+54,132,Wichita State Univ,,60,,,60
+76,73,Washington State Univ,5,60,,,55
+77,36,Saginaw Valley State Univ,15,60,,,45
+78,33,Lakehead Univ,,40,,,40
+78,41,Pellissippi State Community College,,40,,,40
+78,42,Universidad Metropolitana,,40,,,40
+78,53,Univ of Houston - Houston,,40,,,40
+78,69,Lawrence Technological Univ,,40,,,40
+78,72,Northern Arizona Univ,,40,,,40
+78,78,Missouri State University,,40,,,40
+78,82,South Dakota State Univ,,40,,,40
+78,86,Univ of Delaware,,40,,,40
+78,96,Univ of Toledo,,40,,,40
+78,99,Colorado Mesa University,,40,,,40
+78,100,Univ of Arizona,,40,,,40
+78,115,Univ of Illinois - Chicago,,40,,,40
+78,141,St Cloud State Univ,,40,,,40
+92,57,Florida International Univ,5,40,,,35
+92,120,Univ of Saskatchewan,5,40,,,35
+92,125,Southern Illinois Univ - Carbondale,5,40,,,35
+95,113,Grand Canyon University,,40,10,,30
+96,40,Montana State Univ - Bozeman,,20,,,20
+96,105,Northern Illinois Univ,,20,,,20
+96,116,North Dakota State Univ,,20,,,20
+96,134,Instituto Tecnologico de Estudios Superi,,20,,,20
+96,142,Univ of Maine,,20,,,20
+101,109,UP Aguascalientes,5,20,,,15
+102,111,Universidad Panamericana Sede Guadalajar,,20,10,,10
+102,122,Trinity Univ,,20,10,,10
+102,123,Univ of Massachusetts - Lowell,,20,10,,10
+102,126,ITESM - Campus Cuernavaca,,30,20,,10
+,25,Instituto Tecnologico de Chihuahua,,,,,
+,26,Univ of Texas - Dallas,,,,,
+,37,Old Dominion Univ,,,,,
+,63,Drexel Univ,,,,,
+,83,Penn State Univ - Harrisburg,,,,,
+,91,Univ of the Pacific,,,,,
+,112,Universidad Autonoma Estado Mexico,,,,,
+,114,Southern Illinois Univ - Edwardville,,,,,
+,121,Univ of Colorado - Colorado Springs,,,,,
+,127,Univ of Minnesota-Duluth,,,,,
+,129,California State Univ - Chico,,,,,
+,130,Vanderbilt Univ,,,,,
+,133,New York University,,,,,
+,135,Alabama A & M Univ,,,,,
+,136,Syracuse Univ,,,,,
+,144,Calvin College,,,,,

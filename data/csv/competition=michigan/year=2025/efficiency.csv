@@ -1,0 +1,60 @@
+Place,CarNum,Team,AvgLapAdjTime,CompletedLaps,FuelUsed_L,CO2_kg,CO2PerLap,FuelType,FuelEfficiency,Score
+1,31,Lehigh Univ,152.430,10,3.496,5.768,0.5768,E85,0.815,100
+2,96,Univ of Toledo,165.220,10,2.396,5.534,0.5534,93,0.784,94.1
+3,124,Univ of Wisconsin - Madison,149.560,10,4.103,6.769,0.6769,E85,0.708,79.6
+4,2,Univ of North Carolina - Charlotte,149.308,10,3.079,7.112,0.7112,100,0.675,73.4
+5,3,Univ of Calif - Berkeley,155.195,10,4.449,7.340,0.7340,E85,0.629,64.7
+6,65,Universidad Politecnica de Valencia,131.686,10,5.256,8.672,0.8672,E85,0.628,64.4
+7,81,Univ of Texas - Arlington,148.656,10,4.713,7.776,0.7776,E85,0.620,62.9
+8,84,California State Univ - Northridge,142.879,10,3.617,8.355,0.8355,100,0.600,59.2
+9,61,Univ of Wisconsin - Platteville,151.626,10,3.482,8.043,0.8043,100,0.588,56.8
+10,51,Universite de Sherbrooke,139.734,10,3.790,8.754,0.8754,93,0.586,56.4
+11,103,Univ of Colorado - Boulder,157.100,10,3.412,7.881,0.7881,93,0.579,55.1
+12,7,Instituto Maua de Tecnologia,164.521,10,4.696,7.748,0.7748,E85,0.562,52.0
+13,101,Univ of Manitoba,159.993,10,3.452,7.974,0.7974,93,0.562,51.9
+14,38,Georgia Institute of Technology,129.530,10,4.269,9.861,0.9861,93,0.561,51.7
+15,34,Duke Univ,142.990,10,3.974,9.179,0.9179,100,0.546,48.9
+16,10,Kansas State Univ,132.540,10,6.012,9.919,0.9919,E85,0.545,48.7
+17,107,Univ of Hartford,169.766,10,3.373,7.791,0.7791,93,0.542,48.1
+18,23,Colorado School of Mines,151.178,10,5.402,8.913,0.8913,E85,0.532,46.2
+19,60,Univ of Cincinnati,158.041,5,1.919,4.432,0.8864,93,0.512,42.3
+20,118,Liberty Univ,153.964,10,3.957,9.140,0.9140,93,0.509,41.9
+21,138,Oakland University,141.309,10,4.332,10.006,1.0006,93,0.507,41.4
+22,92,Univ of Michigan - Dearborn,150.113,10,5.782,9.540,0.9540,E85,0.501,40.2
+23,48,Univ of Alabama - Tuscaloosa,138.707,10,4.504,10.404,1.0404,100,0.497,39.5
+24,106,Iowa State Univ,133.535,10,4.689,10.831,1.0831,93,0.496,39.3
+25,5,Texas A & M Univ - College Station,133.234,10,4.726,10.917,1.0917,93,0.493,38.7
+26,52,Sacramento State Univ,150.638,10,4.192,9.683,0.9683,100,0.491,38.5
+27,74,Virginia Tech,147.880,10,4.342,10.030,1.0030,100,0.483,36.9
+28,30,Brown Univ,141.719,10,4.554,10.519,1.0519,100,0.481,36.5
+29,80,South Dakota School of Mines & Tech,154.947,10,5.922,9.771,0.9771,E85,0.473,35.1
+30,4,Univ of Connecticut,133.325,6,2.981,6.886,1.1477,93,0.468,34.1
+31,32,Embry-Riddle Aero Univ - Daytona Beach,142.535,10,4.743,10.956,1.0956,100,0.459,32.3
+32,98,Missouri University of Science and Tech,152.886,10,4.532,10.468,1.0468,100,0.448,30.2
+33,43,Univ of Nebraska - Lincoln,144.808,10,6.792,11.206,1.1206,E85,0.442,29.0
+34,8,Purdue Univ - W Lafayette,140.196,10,7.025,11.591,1.1591,E85,0.441,28.9
+35,125,Southern Illinois Univ - Carbondale,164.259,10,4.360,10.071,1.0071,93,0.433,27.4
+36,77,Univ of North Florida,165.834,10,4.374,10.103,1.0103,93,0.428,26.4
+37,29,Univ of Victoria,143.304,10,5.062,11.693,1.1693,93,0.428,26.4
+38,45,Minnesota State University - Mankato,160.150,10,4.187,9.671,1.0746,93,0.417,24.3
+39,131,Univ of Southern California,177.092,10,4.213,9.732,0.9732,100,0.416,24.1
+40,22,Univ of Missouri,149.264,10,5.018,11.591,1.1591,93,0.414,23.8
+41,54,Tennessee Tech Univ,177.380,7,2.957,6.830,0.9757,100,0.414,23.8
+42,89,California State Poly Univ - Pomona,158.635,10,6.649,10.970,1.0970,E85,0.412,23.4
+43,115,Univ of Illinois - Chicago,173.800,10,4.413,10.194,1.0194,93,0.405,22.0
+44,9,Villanova Univ,170.948,10,4.494,10.381,1.0381,100,0.404,21.9
+45,59,Univ of Georgia,163.456,10,4.765,11.007,1.1007,93,0.398,20.8
+46,56,Univ of Maryland - College Park,163.571,10,4.944,11.420,1.1420,93,0.384,18.0
+47,86,Univ of Delaware,184.989,10,4.793,11.071,1.1071,93,0.350,11.6
+48,97,Wayne State Univ,186.405,9,4.836,11.171,1.1284,100,0.341,9.9
+,116,North Dakota State Univ,251.202,9,2.505,5.786,0.5844,100,,
+,57,Florida International Univ,208.669,6,1.791,4.137,0.6895,100,,
+,64,Grand Valley State Univ,188.384,10,3.350,7.738,0.7738,93,,
+,99,Colorado Mesa University,208.054,8,3.449,7.967,0.9959,93,,
+,24,Univ of British Columbia,192.736,7,5.251,8.664,1.2377,E85,,
+,117,Oklahoma State Univ,164.971,10,6.624,15.301,1.5301,93,,
+,132,Wichita State Univ,220.699,10,7.084,16.364,1.6364,93,,
+,79,Florida Atlantic Univ,221.797,10,7.203,16.638,1.6638,100,,
+,46,Univ of Oklahoma,160.006,5,3.641,8.410,1.6820,100,,
+,76,Washington Univ - St Louis,150.295,9,6.753,15.599,1.7332,93,,
+,120,Univ of Saskatchewan,211.625,10,8.168,18.868,1.8868,93,,
