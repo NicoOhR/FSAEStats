@@ -1,10 +1,11 @@
 use hyper::{server::conn::http1, service::service_fn};
 use hyper_util::rt::TokioIo;
-use sqlx::*;
 use std::net::SocketAddr;
 use tokio::net::TcpListener;
-mod requests;
+mod pipeline;
+mod request;
 mod server;
+mod validate;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
