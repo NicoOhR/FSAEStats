@@ -16,7 +16,7 @@ struct PipelineRequest {
 }
 
 impl PipelineRequest {
-    pub fn validate(body: hyper::body::Incoming) -> Vec<ValidationError> {
+    pub fn validate(self) -> Vec<ValidationError> {
         todo!()
     }
 }
