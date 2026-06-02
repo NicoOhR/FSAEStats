@@ -1,11 +1,13 @@
 use hyper::{server::conn::http1, service::service_fn};
 use hyper_util::rt::TokioIo;
-use std::net::SocketAddr;
+use std::{net::SocketAddr, sync::OnceLock};
 use tokio::net::TcpListener;
 mod pipeline;
 mod request;
 mod server;
 mod validate;
+
+pub static YEARS_RANGE: (u16, u16) = (2024, 2025);
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {

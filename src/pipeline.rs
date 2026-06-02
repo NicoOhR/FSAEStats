@@ -1,10 +1,10 @@
 use crate::validate::Validate;
 use enum_dispatch::enum_dispatch;
+
 use serde::Deserialize;
 
 #[derive(Deserialize)]
 #[serde(tag = "op", rename_all = "snake_case")]
-#[enum_dispatch(Validate)]
 pub enum PipeLineOp {
     // Transform Ops
     Filter(FilterOp),
@@ -32,14 +32,24 @@ pub struct SelectOp {
 }
 
 #[derive(Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum GroupAgg {
+    Sum,
+    Mean,
+    Max,
+    Min,
+    Count,
+}
+
+#[derive(Deserialize)]
 pub struct GroupOp {
     pub by: Vec<String>,
-    pub agg: String,
+    pub agg: GroupAgg,
 }
 
 #[derive(Deserialize)]
 pub struct JoinOp {
-    pub view: String,
+    pub view: View,
     pub on: String,
 }
 
@@ -50,16 +60,38 @@ pub struct SortOp {
 }
 
 #[derive(Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum NormMethod {
+    Zscore,
+    PctGap,
+}
+
+#[derive(Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum NormWithin {
+    Year,
+    Competition,
+}
+
+#[derive(Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum RankWithin {
+    Year,
+    Competition,
+    Event,
+}
+
+#[derive(Deserialize)]
 pub struct NormOp {
     pub column: String,
-    pub method: String,
-    pub within: String,
+    pub method: NormMethod,
+    pub within: NormWithin,
 }
 
 #[derive(Deserialize)]
 pub struct RankOp {
     pub column: String,
-    pub within: String,
+    pub within: RankWithin,
 }
 
 #[derive(Deserialize)]
@@ -83,8 +115,20 @@ pub enum Comps {
 pub struct Pipeline(pub Vec<PipeLineOp>);
 
 #[derive(Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum View {
+    CompetitionResults,
+    OverallStandings,
+    DynamicEvents,
+    StaticEvents,
+    EnduranceLaps,
+    TeamProfile,
+    FieldSummary,
+}
+
+#[derive(Deserialize)]
 pub struct Source {
-    pub view: String,
+    pub view: View,
     pub years: Vec<u16>,
     pub competitions: Vec<Comps>,
 }
