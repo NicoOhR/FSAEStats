@@ -1,5 +1,5 @@
 use crate::{
-    pipeline::{Pipeline, PipelineOp, Source},
+    pipeline::{Pipeline, Source},
     validate::{Validate, ValidationError},
 };
 use serde::Deserialize;
@@ -16,16 +16,15 @@ pub struct PipelineRequest {
 }
 
 impl PipelineRequest {
-    pub fn validate(self) -> Vec<ValidationError> {
+    pub fn validate(&self) -> Vec<ValidationError> {
+        let mut available: Vec<String> = self.src.view.columns()
+            .iter()
+            .map(|s| s.to_string())
+            .collect();
         self.ops
             .0
             .iter()
-            .flat_map(|o| match o {
-                PipelineOp::Filter(op) => op.validate(),
-                PipelineOp::Select(op) => op.validate(),
-                PipelineOp::Group(op) => op.validate(),
-                _ => vec![],
-            })
+            .flat_map(|op| op.validate(&mut available))
             .collect()
     }
 }
@@ -88,5 +87,84 @@ mod tests {
             r#"[{"op": "normalize", "column": "TotalScore", "method": "bad", "within": "year"}]"#,
         );
         assert!(serde_json::from_str::<PipelineRequest>(&json).is_err());
+    }
+
+    fn validate(view: &str, ops: &str) -> Vec<ValidationError> {
+        let json = request(view, ops);
+        serde_json::from_str::<PipelineRequest>(&json)
+            .expect("request should deserialize")
+            .validate()
+    }
+
+    fn has_unknown_column(errs: &[ValidationError], name: &str) -> bool {
+        errs.iter()
+            .any(|e| matches!(e, ValidationError::UnknownColumn(c) if c == name))
+    }
+
+    #[test]
+    fn select_known_column_is_valid() {
+        let errs = validate("overall_standings", r#"[{"op": "select", "columns": ["TotalScore"]}]"#);
+        assert!(errs.is_empty(), "unexpected errors: {errs:?}");
+    }
+
+    #[test]
+    fn select_unknown_column_is_rejected() {
+        let errs = validate("overall_standings", r#"[{"op": "select", "columns": ["Nope"]}]"#);
+        assert!(has_unknown_column(&errs, "Nope"));
+    }
+
+    #[test]
+    fn column_validation_is_view_aware() {
+        // TotalScore exists in the overall views but not in the projected dynamic_events view.
+        let errs = validate("dynamic_events", r#"[{"op": "select", "columns": ["TotalScore"]}]"#);
+        assert!(has_unknown_column(&errs, "TotalScore"));
+    }
+
+    #[test]
+    fn sort_unknown_column_is_rejected() {
+        let errs = validate("overall_standings", r#"[{"op": "sort", "by": "Bogus"}]"#);
+        assert!(has_unknown_column(&errs, "Bogus"));
+    }
+
+    #[test]
+    fn partition_columns_are_selectable() {
+        let errs = validate("overall_standings", r#"[{"op": "select", "columns": ["year", "competition"]}]"#);
+        assert!(errs.is_empty(), "unexpected errors: {errs:?}");
+    }
+
+    #[test]
+    fn normalized_column_is_selectable_downstream() {
+        let errs = validate(
+            "overall_standings",
+            r#"[
+                {"op": "normalize", "column": "TotalScore", "method": "zscore", "within": "year"},
+                {"op": "select", "columns": ["TotalScore_zscore"]}
+            ]"#,
+        );
+        assert!(errs.is_empty(), "unexpected errors: {errs:?}");
+    }
+
+    #[test]
+    fn ranked_column_is_selectable_downstream() {
+        let errs = validate(
+            "overall_standings",
+            r#"[
+                {"op": "ranked", "column": "TotalScore", "within": "year"},
+                {"op": "select", "columns": ["TotalScore_rank"]}
+            ]"#,
+        );
+        assert!(errs.is_empty(), "unexpected errors: {errs:?}");
+    }
+
+    #[test]
+    fn derived_column_not_available_before_op() {
+        let errs = validate(
+            "overall_standings",
+            r#"[
+                {"op": "select", "columns": ["TotalScore_zscore"]},
+                {"op": "normalize", "column": "TotalScore", "method": "zscore", "within": "year"}
+            ]"#,
+        );
+        assert!(has_unknown_column(&errs, "TotalScore_zscore"));
     }
 }

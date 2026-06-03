@@ -6,6 +6,7 @@ use strum_macros::{Display, EnumString};
 
 #[derive(Deserialize)]
 #[serde(tag = "op", rename_all = "snake_case")]
+#[enum_dispatch(Validate)]
 pub enum PipelineOp {
     // Transform Ops
     Filter(FilterOp),
@@ -126,15 +127,15 @@ pub enum View {
     EnduranceLaps,
     TeamProfile,
     FieldSummary,
-    // Raw event views
-    Accel,
-    SkidPad,
-    Autocross,
-    Endurance,
-    Efficiency,
-    Design,
-    Presentation,
-    Cost,
+    // Event detail views
+    AccelDetail,
+    SkidPadDetail,
+    AutocrossDetail,
+    EnduranceDetail,
+    EfficiencyDetail,
+    DesignDetail,
+    PresentationDetail,
+    CostDetail,
 }
 
 #[derive(Deserialize)]
@@ -142,6 +143,91 @@ pub struct Source {
     pub view: View,
     pub years: Vec<i32>,
     pub competitions: Vec<Comps>,
+}
+
+impl View {
+    /// Columns present in the `LazyFrame` produced by [`Source::create_frame`] for
+    /// this view. This is the authoritative schema that pipeline ops are validated
+    /// against. Keep it in sync with `create_frame` — the invariant is
+    /// `View::columns() == schema of create_frame's output`.
+    ///
+    /// Column names mirror those written by `data/main.py` (`EVENT_COLS`). The
+    /// `year` and `competition` partition columns are surfaced by the parquet scan,
+    /// so they're listed for every view *except* the projected ones
+    /// (`DynamicEvents`/`StaticEvents`), whose `.select` drops them.
+    pub fn columns(&self) -> &'static [&'static str] {
+        match self {
+            View::CompetitionResults | View::OverallStandings | View::FieldSummary => &[
+                "Place", "CarNum", "Team", "Penalty", "CostScore", "PresentationScore",
+                "DesignScore", "AccelerationScore", "SkidPadScore", "AutocrossScore",
+                "EnduranceScore", "EfficiencyScore", "TotalScore", "year", "competition",
+            ],
+            View::DynamicEvents => &[
+                "Place", "CarNum", "Team", "AccelerationScore", "SkidPadScore",
+                "AutocrossScore", "EnduranceScore", "EfficiencyScore",
+            ],
+            View::StaticEvents => &[
+                "Place", "CarNum", "Team", "CostScore", "PresentationScore", "DesignScore",
+            ],
+            View::EnduranceLaps => &[
+                "Team", "CarNum", "Lap1", "Lap2", "Lap3", "Lap4", "Lap5", "Lap6", "Lap7",
+                "Lap8", "Lap9", "Lap10", "Lap11", "year", "competition",
+            ],
+            View::TeamProfile => &[
+                "CarNum", "Team", "Country", "EngineCylinders", "Displacement_cc",
+                "Weight_kg", "Weight_lbs", "year", "competition",
+            ],
+            View::AccelDetail => &[
+                "Place", "CarNum", "Team",
+                "Run1_Time", "Run1_Cones", "Run1_AdjTime",
+                "Run2_Time", "Run2_Cones", "Run2_AdjTime",
+                "Run3_Time", "Run3_Cones", "Run3_AdjTime",
+                "Run4_Time", "Run4_Cones", "Run4_AdjTime",
+                "BestTime", "Penalty", "Score", "year", "competition",
+            ],
+            View::SkidPadDetail => &[
+                "Place", "CarNum", "Team",
+                "D1R1_Right", "D1R1_Left", "D1R1_Cones", "D1R1_AdjTime",
+                "D1R2_Right", "D1R2_Left", "D1R2_Cones", "D1R2_AdjTime",
+                "D2R1_Right", "D2R1_Left", "D2R1_Cones", "D2R1_AdjTime",
+                "D2R2_Right", "D2R2_Left", "D2R2_Cones", "D2R2_AdjTime",
+                "BestTime", "Penalty", "Score", "year", "competition",
+            ],
+            View::AutocrossDetail => &[
+                "Place", "CarNum", "Team",
+                "Run1_Time", "Run1_Cones", "Run1_OffCourse", "Run1_AdjTime",
+                "Run2_Time", "Run2_Cones", "Run2_OffCourse", "Run2_AdjTime",
+                "Run3_Time", "Run3_Cones", "Run3_OffCourse", "Run3_AdjTime",
+                "Run4_Time", "Run4_Cones", "Run4_OffCourse", "Run4_AdjTime",
+                "BestTime", "Penalty", "Score", "year", "competition",
+            ],
+            View::EnduranceDetail => &[
+                "Place", "CarNum", "Team", "Time", "Laps", "Cones", "OffCourse",
+                "OtherPenalty", "AdjTime", "TimeScore", "LapScore", "EnduranceScore",
+                "year", "competition",
+            ],
+            View::EfficiencyDetail => &[
+                "Place", "CarNum", "Team", "AvgLapAdjTime", "CompletedLaps", "FuelUsed_L",
+                "CO2_kg", "CO2PerLap", "FuelType", "FuelEfficiency", "Score",
+                "year", "competition",
+            ],
+            View::DesignDetail => &[
+                "Place", "CarNum", "Team", "DocumentPenalty", "RawScore", "LatePenalty",
+                "Status", "Score", "year", "competition",
+            ],
+            // `Status` only appears in the 7-column presentation variant; some years
+            // have 6 columns and omit it.
+            View::PresentationDetail => &[
+                "Place", "CarNum", "Team", "Status", "RawScore", "Penalty", "Score",
+                "year", "competition",
+            ],
+            View::CostDetail => &[
+                "Place", "CarNum", "Team", "AdjustedCost", "PriceScore", "CostAccuracy",
+                "EngineeringDesign", "ScenarioScore", "Penalty", "Score",
+                "year", "competition",
+            ],
+        }
+    }
 }
 
 impl Source {
@@ -187,14 +273,14 @@ impl Source {
             ]),
             View::EnduranceLaps => scan("data/parquet/**/enduranceLap.parquet")?,
             View::TeamProfile => scan("data/parquet/**/team_information.parquet")?,
-            View::Accel => scan("data/parquet/**/accel.parquet")?,
-            View::SkidPad => scan("data/parquet/**/skid.parquet")?,
-            View::Autocross => scan("data/parquet/**/autocross.parquet")?,
-            View::Endurance => scan("data/parquet/**/endurance.parquet")?,
-            View::Efficiency => scan("data/parquet/**/efficiency.parquet")?,
-            View::Design => scan("data/parquet/**/design.parquet")?,
-            View::Presentation => scan("data/parquet/**/presentation.parquet")?,
-            View::Cost => scan("data/parquet/**/cost.parquet")?,
+            View::AccelDetail => scan("data/parquet/**/accel.parquet")?,
+            View::SkidPadDetail => scan("data/parquet/**/skid.parquet")?,
+            View::AutocrossDetail => scan("data/parquet/**/autocross.parquet")?,
+            View::EnduranceDetail => scan("data/parquet/**/endurance.parquet")?,
+            View::EfficiencyDetail => scan("data/parquet/**/efficiency.parquet")?,
+            View::DesignDetail => scan("data/parquet/**/design.parquet")?,
+            View::PresentationDetail => scan("data/parquet/**/presentation.parquet")?,
+            View::CostDetail => scan("data/parquet/**/cost.parquet")?,
         };
 
         Ok(lf)
