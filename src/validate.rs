@@ -1,5 +1,5 @@
 use crate::pipeline::{
-    FilterOp, GroupOp, JoinOp, NormOp, PipeLineOp, RankOp, SelectOp, SortOp, Source, WeaknessOp,
+    FilterOp, GroupOp, JoinOp, NormOp, PipelineOp, RankOp, SelectOp, SortOp, Source, WeaknessOp,
     YearDeltaOp,
 };
 use enum_dispatch::enum_dispatch;
@@ -72,9 +72,15 @@ mod tests {
 
     #[test]
     fn filter_all_none_is_invalid() {
-        let op = FilterOp { teams: None, years: None, events: None };
+        let op = FilterOp {
+            teams: None,
+            years: None,
+            events: None,
+        };
         let errs = op.validate();
-        assert!(errs.iter().any(|e| matches!(e, ValidationError::AllEmptyArgs)));
+        assert!(errs
+            .iter()
+            .any(|e| matches!(e, ValidationError::AllEmptyArgs)));
     }
 
     #[test]
@@ -105,32 +111,46 @@ mod tests {
             events: None,
         };
         let errs = op.validate();
-        assert!(errs.iter().any(|e| matches!(e, ValidationError::YearsOutOfRange)));
+        assert!(errs
+            .iter()
+            .any(|e| matches!(e, ValidationError::YearsOutOfRange)));
     }
 
     #[test]
     fn select_empty_columns_is_invalid() {
         let op = SelectOp { columns: vec![] };
         let errs = op.validate();
-        assert!(errs.iter().any(|e| matches!(e, ValidationError::RequiredArgIsEmpty)));
+        assert!(errs
+            .iter()
+            .any(|e| matches!(e, ValidationError::RequiredArgIsEmpty)));
     }
 
     #[test]
     fn select_with_columns_is_valid() {
-        let op = SelectOp { columns: vec!["Team".into()] };
+        let op = SelectOp {
+            columns: vec!["Team".into()],
+        };
         assert!(op.validate().is_empty());
     }
 
     #[test]
     fn group_empty_by_is_invalid() {
-        let op = GroupOp { by: vec![], agg: GroupAgg::Sum };
+        let op = GroupOp {
+            by: vec![],
+            agg: GroupAgg::Sum,
+        };
         let errs = op.validate();
-        assert!(errs.iter().any(|e| matches!(e, ValidationError::RequiredArgIsEmpty)));
+        assert!(errs
+            .iter()
+            .any(|e| matches!(e, ValidationError::RequiredArgIsEmpty)));
     }
 
     #[test]
     fn group_with_by_is_valid() {
-        let op = GroupOp { by: vec!["year".into()], agg: GroupAgg::Mean };
+        let op = GroupOp {
+            by: vec!["year".into()],
+            agg: GroupAgg::Mean,
+        };
         assert!(op.validate().is_empty());
     }
 }

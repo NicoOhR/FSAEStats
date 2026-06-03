@@ -1,6 +1,6 @@
 use crate::{
-    pipeline::{Pipeline, Source},
-    validate::ValidationError,
+    pipeline::{Pipeline, PipelineOp, Source},
+    validate::{Validate, ValidationError},
 };
 use serde::Deserialize;
 
@@ -17,7 +17,16 @@ pub struct PipelineRequest {
 
 impl PipelineRequest {
     pub fn validate(self) -> Vec<ValidationError> {
-        todo!()
+        self.ops
+            .0
+            .iter()
+            .flat_map(|o| match o {
+                PipelineOp::Filter(op) => op.validate(),
+                PipelineOp::Select(op) => op.validate(),
+                PipelineOp::Group(op) => op.validate(),
+                _ => vec![],
+            })
+            .collect()
     }
 }
 

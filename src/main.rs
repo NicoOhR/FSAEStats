@@ -7,8 +7,6 @@ mod request;
 mod server;
 mod validate;
 
-pub static YEARS_RANGE: (u16, u16) = (2024, 2025);
-
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let port: u16 = std::env::var("PORT")

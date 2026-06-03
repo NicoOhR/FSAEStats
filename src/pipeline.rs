@@ -5,7 +5,7 @@ use serde::Deserialize;
 
 #[derive(Deserialize)]
 #[serde(tag = "op", rename_all = "snake_case")]
-pub enum PipeLineOp {
+pub enum PipelineOp {
     // Transform Ops
     Filter(FilterOp),
     Select(SelectOp),
@@ -112,7 +112,7 @@ pub enum Comps {
 }
 
 #[derive(Deserialize)]
-pub struct Pipeline(pub Vec<PipeLineOp>);
+pub struct Pipeline(pub Vec<PipelineOp>);
 
 #[derive(Deserialize)]
 #[serde(rename_all = "snake_case")]
