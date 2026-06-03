@@ -1,7 +1,8 @@
 use crate::validate::Validate;
 use enum_dispatch::enum_dispatch;
-
+use polars::prelude::*;
 use serde::Deserialize;
+use strum_macros::{Display, EnumString};
 
 #[derive(Deserialize)]
 #[serde(tag = "op", rename_all = "snake_case")]
@@ -105,7 +106,8 @@ pub struct WeaknessOp {
     pub team: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Display, Deserialize, EnumString, Debug)]
+#[strum(serialize_all = "snake_case")]
 pub enum Comps {
     MichiganIc,
     MichiganEv,
@@ -124,11 +126,77 @@ pub enum View {
     EnduranceLaps,
     TeamProfile,
     FieldSummary,
+    // Raw event views
+    Accel,
+    SkidPad,
+    Autocross,
+    Endurance,
+    Efficiency,
+    Design,
+    Presentation,
+    Cost,
 }
 
 #[derive(Deserialize)]
 pub struct Source {
     pub view: View,
-    pub years: Vec<u16>,
+    pub years: Vec<i32>,
     pub competitions: Vec<Comps>,
+}
+
+impl Source {
+    pub fn create_frame(&self) -> PolarsResult<LazyFrame> {
+        let years = Series::new("".into(), self.years.as_slice());
+        let comps = Series::new(
+            "".into(),
+            self.competitions
+                .iter()
+                .map(|c| c.to_string())
+                .collect::<Vec<String>>(),
+        );
+
+        let scan = |path: &str| -> PolarsResult<LazyFrame> {
+            Ok(
+                LazyFrame::scan_parquet(path.into(), ScanArgsParquet::default())?
+                    .filter(col("year").is_in(lit(years.clone()), false))
+                    .filter(col("competition").is_in(lit(comps.clone()), false)),
+            )
+        };
+
+        let lf = match self.view {
+            View::CompetitionResults | View::OverallStandings | View::FieldSummary => {
+                scan("data/parquet/**/overall.parquet")?
+            }
+            View::DynamicEvents => scan("data/parquet/**/overall.parquet")?.select([
+                col("Place"),
+                col("CarNum"),
+                col("Team"),
+                col("AccelerationScore"),
+                col("SkidPadScore"),
+                col("AutocrossScore"),
+                col("EnduranceScore"),
+                col("EfficiencyScore"),
+            ]),
+            View::StaticEvents => scan("data/parquet/**/overall.parquet")?.select([
+                col("Place"),
+                col("CarNum"),
+                col("Team"),
+                col("CostScore"),
+                col("PresentationScore"),
+                col("DesignScore"),
+            ]),
+            View::EnduranceLaps => scan("data/parquet/**/enduranceLap.parquet")?,
+            View::TeamProfile => scan("data/parquet/**/team_information.parquet")?,
+            View::Accel => scan("data/parquet/**/accel.parquet")?,
+            View::SkidPad => scan("data/parquet/**/skid.parquet")?,
+            View::Autocross => scan("data/parquet/**/autocross.parquet")?,
+            View::Endurance => scan("data/parquet/**/endurance.parquet")?,
+            View::Efficiency => scan("data/parquet/**/efficiency.parquet")?,
+            View::Design => scan("data/parquet/**/design.parquet")?,
+            View::Presentation => scan("data/parquet/**/presentation.parquet")?,
+            View::Cost => scan("data/parquet/**/cost.parquet")?,
+        };
+
+        Ok(lf)
+    }
 }
