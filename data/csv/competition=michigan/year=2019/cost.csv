@@ -1,0 +1,121 @@
+Place,CarNum,Team,AdjustedCost,PriceScore,CostAccuracy,EngineeringDesign,ScenarioScore,Penalty,Score
+1,51,Universidad Simon Bolivar,"$8,939",26.4,-5,38,20,,79.37
+2,7,Carleton Univ,"$11,137",19,,38,20,,76.96
+3,89,Tennessee Tech Univ,"$6,559",40,-6,27.5,15,,76.5
+4,44,IPN - UPIITA,"$8,808",26.9,-3,36,16,,75.93
+5,65,Lehigh Univ,"$10,003",22.4,-4,37.1,20,,75.47
+6,86,Wayne State Univ,"$11,102",19.1,,36,20,,75.05
+7,41,Grand Valley State Univ,"$9,837",22.9,-5,34,20,,71.94
+8,71,Univ of Puerto Rico-Mayaquez,"$12,549",15.6,,36,20,,71.57
+9,120,Universidad Autonoma Estado Mexico,"$8,485",28.4,-8,34,17,,71.38
+10,5,Ecole De Technologie Superieure,"$14,098",12.6,,37.8,20,,70.42
+11,16,Kookmin Univ,"$11,164",18.9,-2,33.5,20,,70.38
+12,10,AGH Univ of Science and Technology,"$16,198",9.5,,40,20,,69.54
+13,34,Univ of Central Florida,"$13,644",13.4,,36,20,,69.42
+14,37,Univ of Illinois - Urbana Champaign,"$12,734",15.2,,34,20,,69.18
+15,47,Ryerson Univ,"$11,442",18.2,-4,34,20,,68.15
+16,24,Univ of Toledo,"$12,526",15.6,,33.5,19,,68.11
+17,12,Purdue Univ - W Lafayette,"$16,039",9.7,,38,20,,67.74
+18,139,CEFET-MG,"$12,484",15.7,-4,36,20,,67.7
+19,113,Dalhousie Univ,"$13,295",14.1,,33.5,20,,67.56
+20,118,Cooper Union,"$16,210",9.5,,38,20,,67.52
+21,39,Univ of Missouri,"$13,404",13.9,,33.5,20,,67.36
+22,56,National Univ of Singapore,"$15,739",10.1,,37.1,20,,67.24
+23,1,Universitat Stuttgart,"$15,027",11.2,,40,16,,67.15
+24,46,San Jose State University,"$13,433",13.8,,38,15,,66.8
+25,14,Polytechnique Montréal,"$14,618",11.8,,36,19,,66.78
+26,62,Univ of Minnesota - Twin Cities,"$15,714",10.2,,36.6,20,,66.77
+27,111,Lakehead Univ,"$13,648",13.4,,33.1,20,,66.51
+28,123,Villanova Univ,"$9,722",23.3,-8,33.1,20,,66.44
+29,77,Oakland University,"$12,686",15.3,,33.1,18,,66.37
+30,119,Duke Univ,"$14,159",12.5,,33.5,20,,66.02
+31,49,Univ of Louisiana - Lafayette,"$10,799",19.9,-5,36,15,,65.9
+32,84,Univ of Toronto,"$12,140",16.5,-3,35.1,17,,65.57
+33,82,Univ of North Florida,"$14,876",11.4,,37.1,17,,65.48
+34,50,Univ of Michigan - Dearborn,"$14,765",11.5,,35.5,18,,65.05
+35,122,Florida Atlantic Univ,"$13,583",13.5,,31.5,20,,65.03
+36,43,Minnesota State University - Mankato,"$11,955",16.9,-3,36,15,,64.89
+37,26,Purdue Univ - Northwest,"$14,566",11.9,,38,15,,64.86
+38,63,Washington Univ - St Louis,"$14,969",11.2,,33.5,20,,64.74
+39,78,Temple Univ,"$11,811",17.2,-4,31.5,20,,64.74
+40,68,Penn State Univ - University Park,"$12,836",15,,33.5,16,,64.47
+41,58,Kennesaw State University,"$9,166",25.4,-3,38,4,,64.44
+42,107,Univ of South Florida,"$13,531",13.6,,30.8,20,,64.42
+43,124,Univ of Nebraska - Lincoln,"$13,382",13.9,,33.5,17,,64.4
+44,55,Rutgers Univ,"$15,624",10.3,,34,20,,64.3
+45,76,Hope College,"$14,007",12.8,,31.5,20,,64.28
+46,36,Missouri University of Science and Tech,"$15,520",10.4,,33.5,20,,63.94
+47,93,Universite Du Quebec a Trois-Rivieres,"$11,018",19.3,-6,31.5,19,,63.78
+48,104,South Dakota School of Mines & Tech,"$15,360",10.7,,33.1,20,,63.77
+49,66,Univ of Waterloo,"$18,780",6.7,,38,19,,63.69
+50,42,Univ of Kentucky,"$12,752",15.1,,33.5,15,,63.64
+51,67,Univ of Guelph,"$13,823",13.1,,33.5,17,,63.6
+52,8,Univ of Wisconsin - Madison,"$14,296",12.3,,33.3,18,,63.59
+53,117,Columbia Univ,"$13,635",13.4,,36,14,,63.43
+54,9,Univ of Michigan - Ann Arbor,"$14,564",11.9,,31.5,20,,63.36
+55,52,Western Michigan Univ,"$14,619",11.8,,34,17,,62.77
+56,11,Michigan State Univ,"$14,372",12.2,,33.5,17,,62.67
+57,99,York College of Pennsylvania,"$16,203",9.5,,33.1,20,,62.63
+58,126,Univ of Kansas - Lawrence,"$16,436",9.2,,33,20,,62.24
+59,100,Clarkson University,"$15,349",10.7,,31.5,20,,62.18
+60,108,Colorado Mesa University,"$12,917",14.8,-5,36,16,,61.8
+61,90,Coburg University of Applied Sciences,"$17,750",7.7,,34,20,,61.72
+62,38,Brown Univ,"$15,715",10.2,,31.5,20,,61.67
+63,23,Rensselaer Polytechnic Inst,"$14,510",11.9,,31.5,18,,61.45
+64,97,Washington State Univ,"$12,940",14.8,,29.5,17,,61.25
+65,125,South Dakota State Univ,"$10,353",21.2,-10,33.5,16,,60.74
+66,54,Michigan Tech Univ,"$16,959",8.6,,34,18,,60.6
+67,6,Univ of Akron,"$16,238",9.5,,34,17,,60.48
+68,91,Georgia Institute of Technology,"$15,856",10,,31.5,19,,60.48
+69,106,Kettering Univ,"$11,135",19,-10,31.5,20,,60.46
+70,132,Univ of Pittsburgh - Pittsburgh,"$17,159",8.4,,34,18,,60.38
+71,2,Graz Technical Univ,"$19,966",5.6,,35.5,19,,60.12
+72,21,Univ of Florida,"$17,977",7.5,,33.5,19,,59.98
+73,70,Penn State Univ - Harrisburg,"$11,379",18.3,-5,31.5,15,,59.82
+74,73,Louisiana State Univ,"$13,591",13.5,,26,20,,59.51
+75,94,Saginaw Valley State Univ,"$12,445",15.8,,29.5,14,,59.29
+76,98,Universidad Metropolitana,"$11,431",18.2,-5,31.1,15,,59.28
+77,81,Northwestern Univ,"$18,292",7.2,,35.1,17,,59.26
+78,92,Univ of Victoria,"$16,663",9,,31.1,19,,59.06
+79,101,Mississippi State Univ,"$14,064",12.7,,31.3,15,,58.98
+80,19,North Carolina State Univ - Raleigh,"$15,043",11.1,,30.5,17,,58.63
+81,75,Old Dominion Univ,"$13,875",13,,31.5,14,,58.51
+82,114,Binghamton Univ,"$13,990",12.8,,29.5,16,,58.31
+83,105,Worcester Polytechnic Inst,"$14,504",12,,31.3,15,,58.26
+84,109,US Air Force Academy,"$10,275",21.5,-8,29.5,15,,57.99
+85,33,Oregon State Univ,"$23,880",2.9,,35,20,,57.87
+86,83,Univ of British Columbia - Okanagan,"$16,945",8.6,,31.1,18,,57.72
+87,80,Virginia Tech,"$22,996",3.4,,34,20,,57.41
+88,29,Univ of Cincinnati,"$14,868",11.4,,29,17,,57.39
+89,72,Florida International Univ,"$14,027",12.7,,29.5,15,,57.24
+90,79,Georgia Southern Univ,"$12,607",15.4,,31.5,10,,56.94
+91,18,Univ of Alabama - Tuscaloosa,"$18,034",7.4,,31.5,18,,56.92
+92,115,Univ of British Columbia,"$19,630",5.9,,31.5,19,,56.41
+93,35,Kansas State Univ,"$16,897",8.7,,29.5,18,,56.18
+94,69,Univ of Connecticut,"$12,570",15.5,-9,31.5,18,,56.02
+95,85,Wroclaw University of Technology,"$23,142",3.3,,32,20,,55.31
+96,64,Univ of Maryland - College Park,"$20,823",4.9,,31.9,18,,54.83
+97,110,US Naval Academy,"$17,700",7.8,,32,15,,54.78
+98,20,Florida Inst of Tech,"$12,482",15.7,-9,33.5,14,,54.21
+99,32,Pellissippi State Community College,"$17,933",7.5,,31.5,15,,54.03
+100,103,Texas Tech Univ,"$16,396",9.3,,29.5,15,,53.79
+101,48,Vaughn College of Aeronautics,"$11,472",18.1,,33.5,,,51.58
+102,102,Lawrence Technological Univ,"$14,300",12.3,-8,26.5,20,,50.79
+103,88,The Ohio State University,"$20,016",5.6,,27.5,17,,50.08
+104,74,Rochester Institute of Technology,"$20,568",5.1,,27.5,17,,49.63
+105,40,Clemson Univ,"$16,576",9.1,,23.5,17,,49.56
+106,30,Univ of New Hampshire,"$23,505",3.1,,33.5,12,,48.59
+107,17,Bradley Univ,"$11,284",18.6,-8,27.5,8,,46.06
+108,131,Polytechnic Univ of Puerto Rico,"$29,993",,,23.5,20,,43.5
+,15,Embry-Riddle Aero Univ - Daytona Beach,,,,,,,
+,22,Auburn Univ,,,,,,,
+,25,Florida A&M Univ/Florida State Univ,,,,,,,
+,53,Ferris State University,,,,,,,
+,59,Warsaw University of Technology,,,,,,,
+,61,Queen's Univ,,,,,,,
+,87,California State Poly Univ - Pomona,,,,,,,
+,95,Univ of Louisville,,,,,,,
+,96,Central Michigan Univ,,,,,,,
+,112,Alabama A & M Univ,,,,,,,
+,116,West Virginia Univ,,,,,,,
+,129,California State Univ - Fullerton,,,,,,,

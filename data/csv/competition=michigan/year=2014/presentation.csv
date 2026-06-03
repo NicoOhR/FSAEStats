@@ -1,0 +1,121 @@
+Place,CarNum,Team,Score
+1,114,Virginia Tech,75
+2,9,Michigan State Univ,74.5
+3,77,Rochester Institute of Technology,74.4
+4,14,Karlsruhe Institute of Technology,74.4
+5,66,Fachhochschule Hamburg,74.2
+6,10,Univ of Florida,74.2
+7,1,Universitat Stuttgart,72.9
+8,101,Clemson Univ,72.8
+9,24,Universidad Central de Venezuela,71.6
+10,38,National Univ of Singapore,70.4
+11,111,Univ of Manitoba,70.1
+12,16,Kettering Univ,69.5
+13,20,Univ of South Florida,69.4
+14,59,Dalhousie Univ,69.1
+15,113,Univ of Wisconsin - Madison,66.5
+16,116,Lafayette College,65.8
+17,15,Univ of Kansas - Lawrence,65.6
+18,13,Missouri University of Science and Tech,65.5
+19,50,Saginaw Valley State Univ,64.8
+20,32,Univ of Minnesota - Twin Cities,63.7
+21,64,Duke Univ,63.5
+22,108,Louisiana State Univ,63.3
+23,37,Univ of New Hampshire,63.2
+24,52,Univ of North Florida,62.9
+25,125,Northwestern Univ,62.9
+26,39,Univ of Toronto,62.6
+27,22,California State Poly Univ - Pomona,62.2
+28,44,Ohio State Univ,62.2
+29,49,Minnesota State University - Mankato,62.1
+30,89,Penn State Univ - University Park,62.0
+31,112,FH - Joanneum Graz,61.8
+32,21,Technical Univ of Munich,61.7
+33,84,Purdue Univ - W Lafayette,61.7
+34,25,Universidad Simon Bolivar,61.5
+35,17,Univ of Illinois - Urbana Champaign,59.8
+36,99,Florida Atlantic Univ,59.3
+37,80,Kookmin Univ,59.1
+38,88,California Polytechnic State Univ-SLO,59.0
+38,121,Concordia University,59.0
+40,123,MADI State Tech Univ,58.8
+41,8,Centro Universitario Da FEI,58.5
+42,87,Kansas State Univ,58.4
+43,31,Georgia Institute of Technology,58.0
+44,100,Vanderbilt Univ,57.9
+45,82,Univ of Connecticut,57.3
+46,78,Western Michigan Univ,57.1
+47,73,Universite Du Quebec-Chicoutimi,57.0
+48,60,Univ of Western Ontario,57.0
+49,90,Texas Tech Univ,56.7
+50,41,Univ of Pittsburgh - Pittsburgh,56.6
+51,62,Univ of Missouri,56.5
+52,105,Mississippi State Univ,56.5
+53,43,San Jose State University,56.0
+54,36,Univ of Michigan - Ann Arbor,54.7
+55,55,Cooper Union,53.8
+56,46,Michigan Tech Univ,52.7
+57,85,Rensselaer Polytechnic Inst,51.8
+58,6,Cornell Univ,51.8
+59,83,Recinto Univ De Mayaguez,51.5
+60,42,Villanova Univ,51.4
+61,5,Université Laval,50.8
+62,98,Rose Hulman Inst of Tech,50.7
+63,12,Auburn Univ,50.5
+64,3,Univ of Akron,50.0
+65,65,Universite Du Quebec a Trois-Rivieres,49.1
+66,47,Univ of Michigan - Dearborn,48.8
+67,56,Univ of Oklahoma,48.1
+68,4,Ecole De Technologie Superieure,47.3
+69,11,Instituto Maua de Tecnologia,47.0
+70,81,Georgia Southern Univ,46.6
+71,53,Queen's Univ - Ontario Canada,46.6
+72,93,York College of Pa,46.3
+73,126,Univ of Waterloo,45.2
+74,23,Oregon State Univ,44.6
+75,103,Univ of Evansville,44.6
+76,48,Oakland University,43.5
+77,86,Southern Illinois Univ - Carbondale,43.0
+78,115,Ryerson Univ,42.8
+79,122,Rutgers Univ,42.8
+80,97,Lakehead Univ,42.6
+81,120,Bradley Univ,42.0
+82,34,Carleton Univ,41.8
+83,68,Univ of Alabama - Tuscaloosa,41.5
+84,30,Brown Univ,41.2
+85,27,US Air Force Academy,41.2
+86,40,Kumoh National Institute of Technology,40.8
+87,57,Univ of Toledo,40.8
+88,74,Cegep du Vieux - Montreal,38.9
+89,61,Univ of Illinois - Chicago,38.7
+90,94,West Virginia Univ,38.4
+91,79,Old Dominion Univ,38.2
+92,58,Lawrence Technological Univ,36.7
+93,76,Ferris State University,35.3
+94,54,Florida Inst of Tech,35.1
+95,45,Oklahoma State Univ,34.2
+96,71,Florida International Univ,33.9
+97,92,California State Univ - Long Beach,33.4
+98,102,North Carolina State Univ - Raleigh,33.1
+99,96,Lehigh Univ,32.1
+100,117,Tennessee Tech Univ,30.5
+101,124,Univ of Guelph,29.6
+102,33,Yeungnam Univ,27.5
+103,63,Clarkson University,24.6
+104,70,Univ of Hartford,24.5
+105,67,Washington Univ - St Louis,23.4
+106,26,US Naval Academy,21.0
+107,106,North Dakota State Univ,19.5
+,18,UAS Esslingen,
+,19,Univ of Cincinnati,
+,29,Universidad Fermin Toro,
+,51,Univ of Central Florida,
+,69,Universidad Iberoamericana,
+,72,Univ of Utah,
+,91,Bits Pilani-Dubai,
+,95,Univ of Kentucky,
+,104,South Dakota Sch of Mines & Tech,
+,107,American Univ of Sharjah,
+,109,Northern Illinois Univ,
+,110,Temple Univ,
+,119,Washington State Univ,

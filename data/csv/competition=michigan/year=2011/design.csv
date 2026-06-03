@@ -1,0 +1,122 @@
+Place,CarNum,Team,Status,Score
+1,1,Oregon State Univ,Final,150
+2,3,Graz Univ of Technology,Final,145
+3,11,Univ of Stuttgart,Final,140
+4,7,Technical Univ of Munich,Final,135
+5,5,Rochester Institute of Technology,Final,125
+6,70,Univ of Applied Sciences - Graz,Final,120
+7,2,Univ of Michigan - Ann Arbor,Semi,115
+7,45,Univ of Wisconsin - Madison,Semi,115
+9,9,Cornell Univ,Semi,110
+9,24,Karlsruhe Institute of Technology,Semi,110
+9,27,Univ of Applied Sciences Amberg-Weiden,Semi,110
+9,41,University of Applied Sciences Zwickau,Semi,110
+13,17,Universidad Simon Bolivar,Semi,105
+13,62,Virginia Tech,Semi,105
+15,13,Centro Universitario Da FEI,,100
+15,20,Oxford Brookes Univ,,100
+15,22,Univ of Evansville,,100
+15,23,Georgia Institute of Technology,,100
+15,31,Oakland University,,100
+15,32,Universite de Sherbrooke,,100
+15,33,South Dakota Sch of Mines & Tech,,100
+15,35,Brown Univ,,100
+15,46,Univ of Pennsylvania,,100
+15,51,Michigan State Univ,,100
+15,64,Duke Univ,,100
+15,65,McGill Univ,,100
+15,67,Florida Atlantic Univ,,100
+15,73,Univ of Akron,,100
+15,74,Michigan Tech Univ,,100
+15,80,Universite Laval,,100
+15,83,Minnesota State University - Mankato,,100
+15,95,Univ of Manitoba,,100
+15,103P,enn State Univ - University Park,,100
+15,116C,olorado State University,,100
+15,928U,niv of Florida,,100
+36,75,Univ of Illinois - Urbana Champaign,,90
+37,10,Kookmin Univ,,80
+37,15,US Naval Academy,,80
+37,18,Dalhousie Univ,,80
+37,19,Northwestern Univ,,80
+37,29,National Univ of Singapore,,80
+37,30,Univ of Toledo,,80
+37,34,Saginaw Valley State Univ,,80
+37,36,Univ of Kansas - Lawrence,,80
+37,44,Queen's Univ - Ontario Canada,,80
+37,48,Univ of Ontario Institute of Tech,,80
+37,49,Purdue Univ - W Lafayette,,80
+37,53,Rose Hulman Inst of Tech,,80
+37,55,Worcester Polytechnic Inst,,80
+37,56,Clarkson University,,80
+37,59,Rensselaer Polytechnic Inst,,80
+37,63,Rutgers Univ,,80
+37,68,Univ of Toronto,,80
+37,72,Universite Du Quebec-Chicoutimi,,80
+37,81,Auburn Univ,,80
+37,92,Univ of Minnesota - Twin Cities,,80
+37,96,Univ of Connecticut,,80
+37,110N,orthern Illinois Univ,,80
+37,112U,niv of Texas - San Antonio,,80
+37,115O,klahoma State Univ,,80
+37,117N,orth Carolina State Univ - Raleigh,,80
+37,124U,niv of Western Ontario,,80
+63,12,San Jose State University,,70
+63,40,California State Poly Univ - Pomona,,70
+63,66,Villanova Univ,,70
+63,93,Lawrence Technological Univ,,70
+67,16,US Air Force Academy,,60
+67,37,IUPUI,,60
+67,39,Carnegie Mellon Univ,,60
+67,42,Washington Univ - St Louis,,60
+67,47,Univ of Louisville,,60
+67,50,Western Michigan Univ,,60
+67,52,Lakehead Univ,,60
+67,57,York College of Pa,,60
+67,58,Louisiana State Univ,,60
+67,69,Univ of New Hampshire,,60
+67,71,Univ of Pittsburgh - Pittsburgh,,60
+67,76,Bradley Univ,,60
+67,82,Univ of Central Florida,,60
+67,84,Clemson Univ,,60
+67,86,Georgia Southern Univ,,60
+67,89,Kumoh National Institute of Technology,,60
+67,90,Lehigh Univ,,60
+67,97,Turabo Univ,,60
+67,99,Texas Tech Univ,,60
+67,101U,niv of Illinois - Chicago,,60
+67,102N,orth Dakota State Univ,,60
+67,104C,egep du Vieux - Montreal,,60
+67,106F,erris State University,,60
+67,114U,niv of North Carolina - Charlotte,,60
+67,120U,niv of Cincinnati,,60
+92,105S,tevens Inst of Tech,,40
+92,107U,niversite Du Quebec a Trois-Rivieres,,40
+92,113U,niversidad Nacional Experimental Polite,,40
+92,123S,outhern Illinois Univ - Carbondale,,40
+96,77,Wayne State Univ,,30
+,8,Univ of Michigan - Dearborn,,
+,14,Hope College,,
+,21,Southern Illinois Univ - Edwardville,,
+,25,Old Dominion Univ,,
+,26,Mississippi State Univ,,
+,38,Cooper Union,,
+,43,Univ of Guelph,,
+,54,National Institute of Technology Karnataka,,
+,60,Univ of South Florida,,
+,78,Iowa State Univ,,
+,79,Cedarville Univ,,
+,85,Lafayette College,,
+,87,Univ of Minnesota-Duluth,,
+,88,Ecole De Technologie Superieure,,
+,91,Middle Tennessee State Univ,,
+,94,Univ of Alabama - Tuscaloosa,,
+,98,Central Connecticut State Univ,,
+,100T,emple Univ,,
+,108U,niv of Maine,,
+,109E,scuela Sup De Ing Automotriz Tlalnepa,,
+,111U,niversidad Metropolitana,,
+,118R,yerson Univ,,
+,119U,niv of Waterloo,,
+,121U,niv of Windsor,,
+,122K,okushikan Univ,,

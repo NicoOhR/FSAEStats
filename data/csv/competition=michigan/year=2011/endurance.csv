@@ -1,0 +1,85 @@
+Place,CarNum,Team,Time,Laps,Cones,OffCourse,OtherPenalty,AdjTime,EnduranceScore
+1,1,Oregon State Univ,1488.288,28,7,,,1502.288,300
+2,7,Technical Univ of Munich,1505.286,28,6,,,1517.286,292.1
+3,3,Graz Univ of Technology,1511.930,28,5,,,1521.930,289.6
+4,2,Univ of Michigan - Ann Arbor,1578.095,28,,,,1578.095,261.4
+5,11,Univ of Stuttgart,1517.969,28,21,1,,1579.969,260.5
+6,45,Univ of Wisconsin - Madison,1574.905,28,9,,,1592.905,254.3
+7,41,University of Applied Sciences Zwickau,1593.068,28,3,,,1599.068,251.3
+8,49,Purdue Univ - W Lafayette,1551.867,28,14,2,,1619.867,241.6
+9,36,Univ of Kansas - Lawrence,1608.122,28,9,,,1626.122,238.8
+10,73,Univ of Akron,1611.747,28,8,,,1627.747,238.0
+11,70,Univ of Applied Sciences - Graz,1617.335,28,3,2,,1663.335,222.1
+12,30,Univ of Toledo,1661.465,28,13,1,,1707.465,203.4
+13,51,Michigan State Univ,1686.185,28,2,1,,1710.185,202.2
+14,81,Auburn Univ,1696.875,28,7,,,1710.875,202.0
+15,116C,olorado State University,1743.429,28,1,,,1745.429,188.0
+16,86,Georgia Southern Univ,1737.566,28,5,,,1747.566,187.1
+17,27,Univ of Applied Sciences Amberg-Weiden,1683.361,28,6,4,,1775.361,176.3
+18,9,Cornell Univ,1747.195,28,10,1,,1787.195,171.8
+19,17,Universidad Simon Bolivar,1699.985,28,21,3,,1801.985,166.3
+20,114U,niv of North Carolina - Charlotte,1740.471,28,8,4,,1836.471,153.7
+21,117N,orth Carolina State Univ - Raleigh,1735.637,28,15,5,,1865.637,143.4
+22,46,Univ of Pennsylvania,1860.572,28,5,1,,1890.572,134.8
+23,35,Brown Univ,1871.290,28,1,2,,1913.290,127.3
+24,110N,orthern Illinois Univ,1908.194,28,2,1,,1932.194,121.1
+25,12,San Jose State University,1940.976,28,3,,,1946.976,116.3
+26,82,Univ of Central Florida,1921.424,28,,2,,1961.424,111.8
+27,71,Univ of Pittsburgh - Pittsburgh,1889.081,28,3,4,,1975.081,107.5
+28,37,IUPUI,1918.017,28,3,3,,1984.017,104.7
+29,29,National Univ of Singapore,2007.836,28,3,3,,2073.836,78.4
+30,123S,outhern Illinois Univ - Carbondale,2082.418,28,2,,,2086.418,74.9
+31,95,Univ of Manitoba,2086.937,28,10,,,2106.937,69.2
+32,99,Texas Tech Univ,2161.817,28,22,4,,2285.817,28
+33,102N,orth Dakota State Univ,2119.762,28,9,9,,2317.762,28
+34,10,Kookmin Univ,1986.808,28,17,9,120,2320.808,28
+35,72,Universite Du Quebec-Chicoutimi,2319.519,28,1,4,,2401.519,28
+36,55,Worcester Polytechnic Inst,2152.613,28,17,7,120,2446.613,28
+,64,Duke Univ,1684.431,27,7,2,,,27
+,5,Rochester Institute of Technology,1412.687,26,9,1,,,26
+,65,McGill Univ,1670.567,26,1,2,,,26
+,63,Rutgers Univ,1875.893,26,4,5,,,26
+,80,Universite Laval,1532.554,25,,,,,25
+,67,Florida Atlantic Univ,1620.606,24,14,1,,,24
+,13,Centro Universitario Da FEI,1472.645,23,1,,,,23
+,103P,enn State Univ - University Park,1490.217,23,12,,,,23
+,23,Georgia Institute of Technology,1615.025,22,11,7,,,22
+,8,Univ of Michigan - Dearborn,1510.312,20,14,,,,20
+,74,Michigan Tech Univ,1395.745,19,5,2,,,19
+,19,Northwestern Univ,1443.757,19,3,1,,,19
+,928U,niv of Florida,1087.484,18,3,1,,,18
+,22,Univ of Evansville,1162.725,18,1,,,,18
+,39,Carnegie Mellon Univ,1212.801,16,3,4,,,16
+,101U,niv of Illinois - Chicago,913.505,15,4,2,,,15
+,53,Rose Hulman Inst of Tech,973.136,15,,1,,,15
+,66,Villanova Univ,1026.253,15,6,2,,,15
+,90,Lehigh Univ,1078.797,15,5,1,,,15
+,96,Univ of Connecticut,1245.039,15,25,1,,,15
+,24,Karlsruhe Institute of Technology,780.892,14,7,,,,14
+,20,Oxford Brookes Univ,849.258,14,11,1,,,14
+,120U,niv of Cincinnati,897.745,14,3,,,,14
+,34,Saginaw Valley State Univ,918.136,14,1,2,,,14
+,68,Univ of Toronto,948.671,14,1,2,,,14
+,44,Queen's Univ - Ontario Canada,1075.603,14,7,5,,,14
+,97,Turabo Univ,1112.701,14,2,,,,14
+,106F,erris State University,1181.478,14,12,,,,14
+,112U,niv of Texas - San Antonio,839.534,13,2,1,,,13
+,31,Oakland University,866.890,13,13,,,,13
+,92,Univ of Minnesota - Twin Cities,884.342,13,1,,,,13
+,32,Universite de Sherbrooke,923.616,13,,,,,13
+,59,Rensselaer Polytechnic Inst,744.635,12,,1,,,12
+,40,California State Poly Univ - Pomona,930.731,12,13,3,,,12
+,83,Minnesota State University - Mankato,875.524,11,,1,,,11
+,105S,tevens Inst of Tech,916.299,11,3,2,,,11
+,84,Clemson Univ,588.715,10,,,,,10
+,18,Dalhousie Univ,786.161,10,13,1,,,10
+,15,US Naval Academy,579.850,8,17,,,,8
+,115O,klahoma State Univ,603.049,8,2,3,,,8
+,16,US Air Force Academy,606.394,8,,,,,8
+,89,Kumoh National Institute of Technology,458.087,6,1,1,,,6
+,56,Clarkson University,487.946,6,1,1,,,6
+,57,York College of Pa,402.751,5,1,3,,,5
+,75,Univ of Illinois - Urbana Champaign,241.240,4,,3,,,4
+,69,Univ of New Hampshire,287.953,4,1,1,,,4
+,50,Western Michigan Univ,187.113,3,,1,,,3
+,58,Louisiana State Univ,255.602,3,1,1,,,3

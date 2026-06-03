@@ -1,0 +1,121 @@
+Place,CarNum,Team,RawScore,Penalty,Status,Score
+1,13,Technical Univ of Munich,150,,Final,150
+2,3,U A S Graz,142,,Final,142
+3,1,Universitat Stuttgart,140,,Final,140
+4,88,Ecole De Technologie Superieure,138,,Final,138
+5,99,Cornell Univ,127,,Final,127
+6,11,Universidade de Sao Paulo,123,,Final,123
+7,2,Graz Technical Univ,122,,Final,122
+8,4,Oregon State Univ,121,,Final,121
+9,47,National Univ of Singapore,118,,Final,118
+10,16,San Jose State University,117,,Final,117
+11,6,Univ of Wisconsin - Madison,115,,,115
+11,15,Univ of Alabama - Tuscaloosa,115,,,115
+11,49,Univ of Illinois - Urbana Champaign,115,,,115
+11,57,Univ of Victoria,115,,,115
+11,81,Virginia Tech,115,,,115
+11,83,Kookmin Univ,115,,,115
+11,111,Univ of Michigan - Ann Arbor,115,,,115
+18,5,Michigan State Univ,100,,,100
+18,7,Missouri University of Science and Tech,100,,,100
+18,9,Univ of Florida,100,,,100
+18,20,Minnesota State University - Mankato,100,,,100
+18,21,Brown Univ,100,,,100
+18,32,Louisiana State Univ,100,,,100
+18,37,Univ of British Columbia,100,,,100
+18,42,Western University,100,,,100
+18,50,Rutgers Univ,100,,,100
+18,54,Univ of Kansas - Lawrence,100,,,100
+18,58,Universite de Sherbrooke,100,,,100
+18,59,Purdue Univ - W Lafayette,100,,,100
+18,60,The Ohio State University,100,,,100
+18,65,Univ of Akron,100,,,100
+18,67,Rochester Institute of Technology,100,,,100
+18,69,Univ of Pittsburgh - Pittsburgh,100,,,100
+18,82,Univ of Cincinnati,100,,,100
+18,84,Univ of Toronto,100,,,100
+18,103,Univ of Central Florida,100,,,100
+18,105,Univ of Minnesota - Twin Cities,100,,,100
+18,126,Univ of Waterloo,100,,,100
+39,14,Florida Atlantic Univ,85,,,85
+39,33,Univ of Maryland - College Park,85,,,85
+39,62,Cooper Union,85,,,85
+39,71,Temple Univ,85,,,85
+39,78,Polytechnique Montréal,85,,,85
+39,93,US Air Force Academy,85,,,85
+39,98,Univ of Puerto Rico-Mayaquez,85,,,85
+39,110,Univ of Manitoba,85,,,85
+39,123,Queen's Univ - Ontario Canada,85,,,85
+39,124,North Carolina State Univ - Raleigh,85,,,85
+39,125,Univ of Nebraska - Lincoln,85,,,85
+50,53,Univ of Toledo,85,10,,75
+51,22,Villanova Univ,70,,,70
+51,23,Univ of Missouri,70,,,70
+51,24,Purdue Univ - Northwest,70,,,70
+51,27,South Dakota School of Mines & Tech,70,,,70
+51,29,Washington Univ - St Louis,70,,,70
+51,34,Grand Valley State Univ,70,,,70
+51,35,York College of Pennsylvania,70,,,70
+51,38,Rensselaer Polytechnic Inst,70,,,70
+51,39,Western Michigan Univ,70,,,70
+51,41,Lawrence Technological Univ,70,,,70
+51,46,US Naval Academy,70,,,70
+51,51,Carleton Univ,70,,,70
+51,61,Northwestern Univ,70,,,70
+51,73,Embry-Riddle Aero Univ - Daytona Beach,70,,,70
+51,86,Indiana Univ Purdue Univ Indianapolis,70,,,70
+51,89,Lakehead Univ,70,,,70
+51,92,Kansas State Univ,70,,,70
+51,102,Duke Univ,70,,,70
+51,115,Universidad Simon Bolivar,70,,,70
+51,122,Penn State Univ - University Park,70,,,70
+71,97,Kettering Univ,70,10,,60
+72,25,Michigan Tech Univ,55,,,55
+72,30,Lehigh Univ,55,,,55
+72,40,Univ of North Florida,55,,,55
+72,48,Univ of Connecticut,55,,,55
+72,55,Tennessee Tech Univ,55,,,55
+72,56,Univ of South Florida,55,,,55
+72,76,Univ of Hartford,55,,,55
+72,91,Saint Louis Univ,55,,,55
+72,94,Stevens Inst of Tech,55,,,55
+72,100,Univ of British Columbia - Okangan,55,,,55
+72,104,Univ of Evansville,55,,,55
+72,108,Washington State Univ,55,,,55
+72,114,Florida Inst of Tech,55,,,55
+72,120,Oakland University,55,,,55
+86,19,Mississippi State Univ,45,,,45
+86,36,Colorado Mesa University,45,,,45
+86,44,Univ of Guelph,45,,,45
+86,45,St Cloud State Univ,45,,,45
+86,52,Univ of Minnesota-Duluth,45,,,45
+86,70,Universidad Metropolitana,45,,,45
+86,79,Univ of New Hampshire,45,,,45
+86,80,Ryerson Univ,45,,,45
+86,85,Univ of Kentucky,45,,,45
+86,87,West Virginia Univ,45,,,45
+86,101,North Dakota State Univ,45,,,45
+86,106,Universidad Autonoma Estado Mexico,55,10,,45
+86,109,Clemson Univ,45,,,45
+86,112,Ferris State University,45,,,45
+86,113,Central Michigan Univ,45,,,45
+86,117,Texas Tech Univ,45,,,45
+102,18,Univ of Illinois - Chicago,40,,,40
+103,31,Univ of Louisiana - Lafayette,45,10,,35
+103,72,Saginaw Valley State Univ,55,20,,35
+105,64,Penn State Univ - Harrisburg,40,10,,30
+105,90,Univ of Massachusetts - Lowell,40,10,,30
+107,96,Universite Du Quebec a Trois-Rivieres,45,20,,25
+108,77,Rose Hulman Inst of Tech,70,55,,15
+,8,Univ of Michigan - Dearborn,,,,
+,17,Auburn Univ,,,,
+,26,Columbia Univ,,,,
+,43,Georgia Institute of Technology,,,,
+,63,McGill Univ,,,,
+,66,Dalhousie Univ,,,,
+,75,Univ of New Brunswick,,,,
+,107,Universidad Central de Venezuela,,,,
+,116,South Dakota State Univ,,,,
+,118,Bradley Univ,,,,
+,121,Texas State University-San Marcos,,,,
+,128,Cegep du Vieux - Montreal,,,,

@@ -1,0 +1,37 @@
+Place,CarNum,Team,FuelUsed_L,FuelType,AdjFuelUsed_L,Score
+1,27,Univ of Applied Sciences Amberg-Weiden,0.619,100,0.619,100
+2,1,Oregon State Univ,0.688,93,0.688,92.3
+3,12,San Jose State University,0.835,100,0.835,75.8
+4,7,Technical Univ of Munich,0.843,100,0.843,74.9
+5,45,Univ of Wisconsin - Madison,1.198,E85,0.855,73.5
+6,11,Univ of Stuttgart,0.903,93,0.903,68.1
+7,37,IUPUI,0.948,100,0.948,63.1
+8,114,Univ of North Carolina - Charlotte,0.970,93,0.970,60.6
+9,86,Georgia Southern Univ,1.021,93,1.021,54.9
+10,29,National Univ of Singapore,0.992,100,0.992,54.0
+11,70,Univ of Applied Sciences - Graz,1.455,E85,1.039,52.9
+12,110,Northern Illinois Univ,1.091,93,1.091,47.0
+13,2,Univ of Michigan - Ann Arbor,1.104,93,1.104,45.6
+14,71,Univ of Pittsburgh - Pittsburgh,1.166,93,1.166,43.1
+15,9,Cornell Univ,1.583,E85,1.130,42.6
+16,123,Southern Illinois Univ - Carbondale,1.141,93,1.141,41.4
+17,3,Graz Univ of Technology,1.142,100,1.142,41.3
+18,41,University of Applied Sciences Zwickau,1.145,100,1.145,41.0
+19,116,Colorado State University,1.635,E85,1.167,38.5
+20,81,Auburn Univ,1.171,93,1.171,38.0
+21,46,Univ of Pennsylvania,1.189,93,1.189,36.0
+22,36,Univ of Kansas - Lawrence,1.743,E85,1.245,29.7
+23,117,North Carolina State Univ - Raleigh,1.874,E85,1.338,24.5
+24,73,Univ of Akron,1.341,93,1.341,19.0
+25,30,Univ of Toledo,1.883,E85,1.345,18.5
+26,35,Brown Univ,1.423,100,1.423,9.8
+27,102,North Dakota State Univ,0.847,93,0.847,0
+28,55,Worcester Polytechnic Inst,0.973,93,0.973,0
+29,72,Universite Du Quebec-Chicoutimi,1.184,100,1.184,0
+30,10,Kookmin Univ,1.291,93,1.291,0
+31,99,Texas Tech Univ,1.516,93,1.516,0
+32,17,Universidad Simon Bolivar,1.512,93,1.512,-0.0
+33,49,Purdue Univ - W Lafayette,1.548,93,1.548,-2.1
+34,82,Univ of Central Florida,1.625,93,1.625,-4.1
+35,95,Univ of Manitoba,1.627,93,1.627,-11.4
+36,51,Michigan State Univ,1.663,93,1.663,-17.0

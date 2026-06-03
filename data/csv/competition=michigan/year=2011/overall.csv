@@ -1,0 +1,122 @@
+Place,CarNum,Team,Penalty,CostScore,PresentationScore,DesignScore,AccelerationScore,SkidPadScore,AutocrossScore,EnduranceScore,EfficiencyScore,TotalScore
+1,1,Oregon State Univ,,80.3,74.5,150,64.1,48.6,144.4,300.0,92.3,954.2
+2,7,Technical Univ of Munich,,56.5,64.7,135,64.7,46.3,130.9,292.1,74.9,864.9
+3,11,Univ of Stuttgart,,68.5,75.0,140,72.8,44.8,124.6,260.5,68.1,854.2
+4,3,Graz Univ of Technology,,55.2,71.8,145,66.0,49.0,97.8,289.6,41.3,815.7
+5,45,Univ of Wisconsin - Madison,,81.0,70.2,115,56.0,44.1,118.0,254.3,73.5,812.1
+6,2,Univ of Michigan - Ann Arbor,,85.6,63.7,115,71.9,44.2,101.2,261.4,45.6,788.5
+7,41,University of Applied Sciences Zwickau,,65.5,66.6,110,68.0,48.7,100.2,251.3,41.0,751.3
+8,73,Univ of Akron,,83.0,69.6,100,60.6,32.8,124.8,238.0,19.0,727.8
+9,36,Univ of Kansas - Lawrence,,52.9,72.2,80,60.6,33.7,150.0,238.8,29.7,717.9
+10,70,Univ of Applied Sciences - Graz,,55.2,52.9,120,37.3,50.0,108.0,222.1,52.9,698.5
+11,27,Univ of Applied Sciences Amberg-Weiden,-20,61.8,66.4,110,55.3,36.6,79.0,176.3,100.0,665.4
+12,49,Purdue Univ - W Lafayette,,61.8,60.1,80,63.5,48.0,107.2,241.6,-2.1,660.1
+13,116C,olorado State University,,71.0,65.1,100,48.9,35.6,99.4,188.0,38.5,646.3
+14,9,Cornell Univ,,50.3,67.6,110,75.0,45.7,76.2,171.8,42.6,639.2
+15,51,Michigan State Univ,,75.2,64.6,100,55.5,33.5,116.1,202.2,-17.0,630.0
+16,81,Auburn Univ,,71.0,65.3,80,53.3,38.9,63.6,202.0,38.0,612.0
+17,30,Univ of Toledo,,74.0,59.6,80,57.2,28.2,82.2,203.4,18.5,603.1
+18,46,Univ of Pennsylvania,,90.7,70.5,100,50.1,43.7,58.4,134.8,36.0,584.3
+19,86,Georgia Southern Univ,,69.3,35.9,60,42.4,29.1,58.4,187.1,54.9,537.2
+20,17,Universidad Simon Bolivar,-10,87.3,31.7,105,53.2,30.0,70.0,166.3,-0.0,533.3
+21,5,Rochester Institute of Technology,,76.5,67.7,125,69.0,42.4,124.6,26.0,,531.3
+22,12,San Jose State University,-20,81.2,27.1,70,46.9,24.5,87.2,116.3,75.8,509.0
+23,29,National Univ of Singapore,,74.1,74.8,80,42.9,40.3,59.1,78.4,54.0,503.6
+24,114U,niv of North Carolina - Charlotte,,60.3,68.2,60,,,73.6,153.7,60.6,476.4
+25,35,Brown Univ,,66.7,54.9,100,57.5,27.8,28.2,127.3,9.8,472.0
+26,59,Rensselaer Polytechnic Inst,,88.1,57.7,80,65.7,34.3,105.1,12.0,,442.8
+27,928U,niv of Florida,,71.1,71.5,100,60.4,38.3,80.2,18.0,,439.5
+28,33,South Dakota Sch of Mines & Tech,,58.3,61.2,100,36.7,38.2,143.8,,,438.1
+29,10,Kookmin Univ,,96.9,68.5,80,28.6,38.2,90.6,28.0,,430.8
+30,13,Centro Universitario Da FEI,,95.5,37.7,100,43.0,40.5,83.4,23.0,,423.1
+31,20,Oxford Brookes Univ,,74.5,67.3,100,39.2,39.0,88.6,14.0,,422.5
+32,64,Duke Univ,,84.4,54.9,100,48.3,29.3,73.3,27.0,,417.2
+33,71,Univ of Pittsburgh - Pittsburgh,,74.1,32.7,60,33.6,28.5,36.3,107.5,43.1,415.9
+34,65,McGill Univ,,84.1,68.3,100,11.8,47.0,77.0,26.0,,414.2
+35,80,Universite Laval,,72.3,66.1,100,51.1,47.4,50.9,25.0,,412.8
+36,103P,enn State Univ - University Park,,89.3,59.0,100,41.2,41.2,48.1,23.0,,401.9
+37,84,Clemson Univ,,75.1,70.2,60,49.9,29.5,102.9,10.0,,397.5
+38,110N,orthern Illinois Univ,,87.8,41.9,80,,11.8,7.5,121.1,47.0,397.2
+39,82,Univ of Central Florida,,85.1,37.7,60,60.3,2.5,38.6,111.8,-4.1,391.9
+40,83,Minnesota State University - Mankato,,73.0,60.1,100,45.0,28.5,47.7,11.0,,365.4
+41,24,Karlsruhe Institute of Technology,,64.8,56.5,110,,,117.2,14.0,,362.5
+42,75,Univ of Illinois - Urbana Champaign,-10,68.9,36.7,90,52.2,47.5,71.5,4.0,,360.7
+43,95,Univ of Manitoba,,80.9,43.4,100,51.1,17.5,7.5,69.2,-11.4,358.2
+44,120U,niv of Cincinnati,,69.5,66.6,60,41.1,26.2,73.1,14.0,,350.5
+45,67,Florida Atlantic Univ,,66.6,45.1,100,52.7,43.7,7.5,24.0,,339.5
+46,22,Univ of Evansville,,62.2,47.6,100,36.6,22.5,47.7,18.0,,334.5
+47,68,Univ of Toronto,,92.9,48.1,80,5.0,43.3,50.1,14.0,,333.4
+48,32,Universite de Sherbrooke,,81.7,56.8,100,55.4,13.1,7.5,13.0,,327.5
+49,101U,niv of Illinois - Chicago,,88.3,26.4,60,50.7,11.2,72.5,15.0,,324.0
+50,117N,orth Carolina State Univ - Raleigh,-10,-100.0,54.8,80,69.2,29.0,28.0,143.4,24.5,318.9
+51,37,IUPUI,,53.1,30.3,60,,,7.5,104.7,63.1,318.7
+52,74,Michigan Tech Univ,,63.0,56.7,100,42.6,28.2,7.5,19.0,,316.9
+53,63,Rutgers Univ,-20,81.7,51.2,80,19.4,,71.0,26.0,,309.2
+54,34,Saginaw Valley State Univ,,75.7,68.0,80,53.8,8.7,7.5,14.0,,307.7
+55,53,Rose Hulman Inst of Tech,,51.3,30.3,80,28.5,36.9,59.7,15.0,,301.7
+56,92,Univ of Minnesota - Twin Cities,,65.5,59.1,80,52.1,21.9,7.5,13.0,,299.0
+57,89,Kumoh National Institute of Technology,,93.7,21.7,60,35.8,44.9,32.6,6.0,,294.7
+58,23,Georgia Institute of Technology,,77.7,44.7,100,27.0,11.7,11.0,22.0,,294.1
+59,40,California State Poly Univ - Pomona,-10,81.1,43.3,70,39.2,37.3,7.5,12.0,,280.3
+60,123S,outhern Illinois Univ - Carbondale,-10,45.8,17.2,40,3.5,30.5,25.9,74.9,41.4,269.2
+61,48,Univ of Ontario Institute of Tech,-10,89.7,40.0,80,24.3,32.9,7.5,,,264.5
+62,115O,klahoma State Univ,,89.7,45.9,80,3.5,29.6,7.5,8.0,,264.2
+63,96,Univ of Connecticut,,77.5,50.1,80,31.2,2.5,7.5,15.0,,263.8
+64,66,Villanova Univ,,77.1,41.9,70,47.7,,7.5,15.0,,259.2
+65,19,Northwestern Univ,,59.7,60.2,80,12.3,2.5,23.0,19.0,,256.6
+66,90,Lehigh Univ,-10,66.0,47.5,60,,27.6,45.4,15.0,,251.5
+67,72,Universite Du Quebec-Chicoutimi,,76.6,36.1,80,5.2,11.8,7.5,28.0,,245.1
+68,62,Virginia Tech,,72.6,51.2,105,,14.3,,,,243.1
+69,55,Worcester Polytechnic Inst,,80.7,38.1,80,3.5,2.5,7.5,28.0,,240.3
+70,97,Turabo Univ,,65.9,35.0,60,33.9,16.7,7.5,14.0,,233.0
+71,16,US Air Force Academy,,72.9,28.5,60,26.3,15.8,21.4,8.0,,232.8
+72,104C,egep du Vieux - Montreal,,72.4,34.4,60,34.7,22.5,7.5,,,231.5
+73,50,Western Michigan Univ,,60.1,39.4,60,,,60.7,3.0,,223.2
+74,69,Univ of New Hampshire,,79.0,43.6,60,16.7,9.3,7.5,4.0,,220.1
+75,31,Oakland University,,72.9,30.1,100,,,,13.0,,215.9
+76,15,US Naval Academy,-10,69.7,66.1,80,,,,8.0,,213.8
+77,18,Dalhousie Univ,,67.1,39.2,80,3.5,2.5,7.5,10.0,,209.8
+78,124U,niv of Western Ontario,,77.7,46.5,80,,,,,,204.2
+79,102N,orth Dakota State Univ,,72.3,33.4,60,,,7.5,28.0,,201.2
+80,44,Queen's Univ - Ontario Canada,,54.4,35.9,80,,2.5,7.5,14.0,,194.3
+81,57,York College of Pa,,51.0,34.9,60,3.5,27.7,7.5,5.0,,189.6
+82,93,Lawrence Technological Univ,,67.3,44.0,70,,,,,,181.3
+83,105S,tevens Inst of Tech,-10,58.6,35.6,40,22.8,8.4,7.5,11.0,,173.9
+84,76,Bradley Univ,,65.6,39.3,60,,,7.5,,,172.3
+85,56,Clarkson University,,47.1,34.0,80,,,,6.0,,167.1
+86,39,Carnegie Mellon Univ,,42.4,40.5,60,,,7.5,16.0,,166.4
+87,47,Univ of Louisville,,64.4,39.4,60,,,,,,163.8
+88,113U,niversidad Nacional Experimental Polite,,81.0,41.4,40,,,,,,162.4
+89,77,Wayne State Univ,,71.9,60.5,30,,,,,,162.4
+90,52,Lakehead Univ,,61.5,40.2,60,,,,,,161.7
+91,42,Washington Univ - St Louis,,59.3,31.1,60,,,,,,150.4
+92,112U,niv of Texas - San Antonio,-10,-35.5,19.3,80,16.9,26.8,37.1,13.0,,147.6
+93,106F,erris State University,-10,58.8,15.0,60,,,7.5,14.0,,145.3
+94,107U,niversite Du Quebec a Trois-Rivieres,,49.5,36.7,40,,,,,,126.1
+95,58,Louisiana State Univ,,55.4,,60,,,7.5,3.0,,125.9
+96,54,National Institute of Technology Karnataka,,66.7,34.4,,,,,,,101.1
+97,8,Univ of Michigan - Dearborn,-10,,,,,,7.5,20.0,,17.5
+98,99,Texas Tech Univ,,-100.0,,60,,,,28.0,,15.0
+,25,Old Dominion Univ,,,,,,,,,,forfeit
+,38,Cooper Union,,,,,,,,,,forfeit
+,78,Iowa State Univ,,61.2,,,,,,,,forfeit
+,85,Lafayette College,,,,,,,,,,forfeit
+,91,Middle Tennessee State Univ,,,,,,,,,,forfeit
+,109E,scuela Sup De Ing Automotriz Tlalnepa,,56.0,,,,,,,,forfeit
+,118R,yerson Univ,,,,,,,,,,forfeit
+,14,Hope College,,,,,,,,,,withdrawn
+,21,Southern Illinois Univ - Edwardville,,,,,,,,,,withdrawn
+,26,Mississippi State Univ,,,,,,,,,,withdrawn
+,43,Univ of Guelph,,,,,,,,,,withdrawn
+,60,Univ of South Florida,,,,,,,,,,withdrawn
+,79,Cedarville Univ,,,,,,,,,,withdrawn
+,87,Univ of Minnesota-Duluth,,,,,,,,,,withdrawn
+,88,Ecole De Technologie Superieure,,,,,,,,,,withdrawn
+,94,Univ of Alabama - Tuscaloosa,,,,,,,,,,withdrawn
+,98,Central Connecticut State Univ,,,,,,,,,,withdrawn
+,100T,emple Univ,,,,,,,,,,withdrawn
+,108U,niv of Maine,,,,,,,,,,withdrawn
+,111U,niversidad Metropolitana,,,,,,,,,,withdrawn
+,119U,niv of Waterloo,,,,,,,,,,withdrawn
+,121U,niv of Windsor,,,,,,,,,,withdrawn
+,122K,okushikan Univ,,,,,,,,,,withdrawn

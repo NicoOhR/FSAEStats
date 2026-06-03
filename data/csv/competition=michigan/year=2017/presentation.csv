@@ -1,0 +1,121 @@
+Place,CarNum,Team,Score
+1,1,Universitat Stuttgart,75
+2,49,Univ of Illinois - Urbana Champaign,72.0
+3,47,National Univ of Singapore,71.0
+4,13,Technical Univ of Munich,68.7
+5,96,Universite Du Quebec a Trois-Rivieres,68.2
+6,65,Univ of Akron,67.6
+7,99,Cornell Univ,67.4
+8,5,Michigan State Univ,67.2
+9,42,Western University,66.6
+10,7,Missouri University of Science and Tech,65.9
+11,62,Cooper Union,65.7
+12,111,Univ of Michigan - Ann Arbor,64.9
+13,15,Univ of Alabama - Tuscaloosa,63.8
+14,9,Univ of Florida,63.6
+15,80,Ryerson Univ,62.7
+16,46,US Naval Academy,62.3
+17,4,Oregon State Univ,62.2
+18,87,West Virginia Univ,61.9
+18,123,Queen's Univ - Ontario Canada,61.9
+20,81,Virginia Tech,61.9
+21,25,Michigan Tech Univ,61.8
+22,22,Villanova Univ,61.3
+23,14,Florida Atlantic Univ,59.7
+24,32,Louisiana State Univ,58.2
+25,50,Rutgers Univ,57.9
+26,38,Rensselaer Polytechnic Inst,57.5
+27,83,Kookmin Univ,57.1
+28,69,Univ of Pittsburgh - Pittsburgh,56.9
+29,109,Clemson Univ,56.8
+30,11,Universidade de Sao Paulo,56.3
+31,33,Univ of Maryland - College Park,55.9
+32,110,Univ of Manitoba,55.3
+33,19,Mississippi State Univ,55.1
+34,78,Polytechnique Montréal,55.0
+35,60,The Ohio State University,54.1
+36,57,Univ of Victoria,53.9
+37,82,Univ of Cincinnati,53.5
+38,20,Minnesota State University - Mankato,52.9
+39,55,Tennessee Tech Univ,52.8
+40,122,Penn State Univ - University Park,52.4
+41,88,Ecole De Technologie Superieure,52.3
+42,59,Purdue Univ - W Lafayette,52.2
+43,41,Lawrence Technological Univ,51.1
+44,2,Graz Technical Univ,50.5
+45,77,Rose Hulman Inst of Tech,50.2
+46,102,Duke Univ,49.9
+47,117,Texas Tech Univ,49.1
+48,3,U A S Graz,49.1
+49,105,Univ of Minnesota - Twin Cities,48.6
+50,100,Univ of British Columbia - Okangan,48.6
+51,51,Carleton Univ,48.4
+52,112,Ferris State University,48.1
+53,48,Univ of Connecticut,47.6
+54,6,Univ of Wisconsin - Madison,47.5
+55,72,Saginaw Valley State Univ,47.3
+56,97,Kettering Univ,47.2
+57,61,Northwestern Univ,46.4
+58,94,Stevens Inst of Tech,45.6
+59,98,Univ of Puerto Rico-Mayaquez,45.2
+60,115,Universidad Simon Bolivar,44.5
+61,70,Universidad Metropolitana,44.4
+62,58,Universite de Sherbrooke,44.4
+63,106,Universidad Autonoma Estado Mexico,43.9
+64,73,Embry-Riddle Aero Univ - Daytona Beach,43.9
+65,37,Univ of British Columbia,43.8
+66,21,Brown Univ,43.4
+67,67,Rochester Institute of Technology,43.4
+68,93,US Air Force Academy,43.3
+69,44,Univ of Guelph,43.2
+69,86,Indiana Univ Purdue Univ Indianapolis,43.2
+71,16,San Jose State University,43.1
+72,89,Lakehead Univ,43.0
+73,54,Univ of Kansas - Lawrence,42.9
+74,103,Univ of Central Florida,42.8
+75,36,Colorado Mesa University,42.4
+76,34,Grand Valley State Univ,42.3
+77,124,North Carolina State Univ - Raleigh,42.1
+78,85,Univ of Kentucky,40.0
+79,84,Univ of Toronto,39.4
+80,71,Temple Univ,38.6
+81,120,Oakland University,38.3
+82,56,Univ of South Florida,38.2
+83,30,Lehigh Univ,38.2
+84,23,Univ of Missouri,38.0
+85,53,Univ of Toledo,37.4
+86,126,Univ of Waterloo,37.2
+87,18,Univ of Illinois - Chicago,36.6
+88,52,Univ of Minnesota-Duluth,36.4
+89,108,Washington State Univ,35.7
+90,125,Univ of Nebraska - Lincoln,35.5
+91,40,Univ of North Florida,34.4
+92,39,Western Michigan Univ,33.2
+93,29,Washington Univ - St Louis,33.1
+94,79,Univ of New Hampshire,31.1
+95,31,Univ of Louisiana - Lafayette,30.6
+96,35,York College of Pennsylvania,30.2
+97,113,Central Michigan Univ,30.0
+98,45,St Cloud State Univ,29.7
+99,114,Florida Inst of Tech,28.3
+100,64,Penn State Univ - Harrisburg,27.7
+101,92,Kansas State Univ,27.0
+102,24,Purdue Univ - Northwest,26.8
+103,27,South Dakota School of Mines & Tech,26.3
+104,76,Univ of Hartford,25.4
+105,104,Univ of Evansville,24.7
+106,101,North Dakota State Univ,22.9
+107,121,Texas State University-San Marcos,22.3
+108,91,Saint Louis Univ,21.9
+109,90,Univ of Massachusetts - Lowell,19.7
+110,75,Univ of New Brunswick,13.8
+,8,Univ of Michigan - Dearborn,
+,17,Auburn Univ,
+,26,Columbia Univ,
+,43,Georgia Institute of Technology,
+,63,McGill Univ,
+,66,Dalhousie Univ,
+,107,Universidad Central de Venezuela,
+,116,South Dakota State Univ,
+,118,Bradley Univ,
+,128,Cegep du Vieux - Montreal,

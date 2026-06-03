@@ -1,0 +1,121 @@
+Place,CarNum,Team,RawScore,Penalty,Status,Score
+1,4,Ecole De Technologie Superieure,150,,Final,150
+2,14,Karlsruhe Institute of Technology,140,,Final,140
+3,113,Univ of Wisconsin - Madison,130,,Final,130
+4,23,Oregon State Univ,129,,Final,129
+5,44,Ohio State Univ,128,,Final,128
+6,5,Université Laval,127,,Final,127
+7,3,Univ of Akron,124,,Final,124
+8,6,Cornell Univ,118,,Final,118
+9,36,Univ of Michigan - Ann Arbor,114,,Final,114
+10,1,Universitat Stuttgart,110,,,110
+10,15,Univ of Kansas - Lawrence,110,,,110
+10,21,Technical Univ of Munich,110,,,110
+10,112,FH - Joanneum Graz,110,,,110
+10,126,Univ of Waterloo,110,,,110
+15,8,Centro Universitario Da FEI,100,,,100
+15,9,Michigan State Univ,100,,,100
+15,10,Univ of Florida,100,,,100
+15,12,Auburn Univ,100,,,100
+15,13,Missouri University of Science and Tech,100,,,100
+15,17,Univ of Illinois - Urbana Champaign,100,,,100
+15,22,California State Poly Univ - Pomona,100,,,100
+15,38,National Univ of Singapore,100,,,100
+15,41,Univ of Pittsburgh - Pittsburgh,100,,,100
+15,57,Univ of Toledo,100,,,100
+15,62,Univ of Missouri,100,,,100
+15,66,Fachhochschule Hamburg,100,,,100
+15,74,Cegep du Vieux - Montreal,100,,,100
+15,77,Rochester Institute of Technology,100,,,100
+15,82,Univ of Connecticut,100,,,100
+15,84,Purdue Univ - W Lafayette,100,,,100
+15,87,Kansas State Univ,100,,,100
+15,88,California Polytechnic State Univ-SLO,100,,,100
+15,102,North Carolina State Univ - Raleigh,100,,,100
+15,111,Univ of Manitoba,100,,,100
+15,114,Virginia Tech,100,,,100
+15,121,Concordia University,100,,,100
+37,20,Univ of South Florida,100,10,,90
+38,11,Instituto Maua de Tecnologia,80,,,80
+38,16,Kettering Univ,80,,,80
+38,24,Universidad Central de Venezuela,80,,,80
+38,25,Universidad Simon Bolivar,80,,,80
+38,26,US Naval Academy,80,,,80
+38,27,US Air Force Academy,80,,,80
+38,31,Georgia Institute of Technology,80,,,80
+38,32,Univ of Minnesota - Twin Cities,80,,,80
+38,34,Carleton Univ,80,,,80
+38,37,Univ of New Hampshire,80,,,80
+38,39,Univ of Toronto,80,,,80
+38,43,San Jose State University,80,,,80
+38,48,Oakland University,80,,,80
+38,49,Minnesota State University - Mankato,80,,,80
+38,50,Saginaw Valley State Univ,80,,,80
+38,53,Queen's Univ - Ontario Canada,80,,,80
+38,54,Florida Inst of Tech,80,,,80
+38,56,Univ of Oklahoma,80,,,80
+38,59,Dalhousie Univ,80,,,80
+38,60,Univ of Western Ontario,80,,,80
+38,65,Universite Du Quebec a Trois-Rivieres,80,,,80
+38,80,Kookmin Univ,80,,,80
+38,81,Georgia Southern Univ,80,,,80
+38,85,Rensselaer Polytechnic Inst,80,,,80
+38,89,Penn State Univ - University Park,80,,,80
+38,93,York College of Pa,80,,,80
+38,96,Lehigh Univ,80,,,80
+38,99,Florida Atlantic Univ,80,,,80
+38,101,Clemson Univ,80,,,80
+38,103,Univ of Evansville,80,,,80
+38,105,Mississippi State Univ,80,,,80
+38,108,Louisiana State Univ,80,,,80
+38,115,Ryerson Univ,80,,,80
+38,122,Rutgers Univ,80,,,80
+72,58,Lawrence Technological Univ,80,10,,70
+72,90,Texas Tech Univ,80,10,,70
+74,30,Brown Univ,60,,,60
+74,42,Villanova Univ,60,,,60
+74,45,Oklahoma State Univ,60,,,60
+74,46,Michigan Tech Univ,60,,,60
+74,47,Univ of Michigan - Dearborn,60,,,60
+74,52,Univ of North Florida,60,,,60
+74,55,Cooper Union,60,,,60
+74,63,Clarkson University,60,,,60
+74,64,Duke Univ,60,,,60
+74,67,Washington Univ - St Louis,60,,,60
+74,71,Florida International Univ,60,,,60
+74,73,Universite Du Quebec-Chicoutimi,60,,,60
+74,76,Ferris State University,60,,,60
+74,78,Western Michigan Univ,60,,,60
+74,79,Old Dominion Univ,60,,,60
+74,83,Recinto Univ De Mayaguez,60,,,60
+74,97,Lakehead Univ,60,,,60
+74,98,Rose Hulman Inst of Tech,60,,,60
+74,100,Vanderbilt Univ,60,,,60
+74,106,North Dakota State Univ,60,,,60
+74,117,Tennessee Tech Univ,60,,,60
+74,120,Bradley Univ,60,,,60
+74,125,Northwestern Univ,60,,,60
+97,124,Univ of Guelph,60,10,,50
+98,33,Yeungnam Univ,40,,,40
+98,61,Univ of Illinois - Chicago,40,,,40
+98,68,Univ of Alabama - Tuscaloosa,40,,,40
+98,70,Univ of Hartford,40,,,40
+98,86,Southern Illinois Univ - Carbondale,40,,,40
+98,94,West Virginia Univ,40,,,40
+98,116,Lafayette College,40,,,40
+105,40,Kumoh National Institute of Technology,40,50,,10
+105,92,California State Univ - Long Beach,60,50,,10
+,18,UAS Esslingen,,,,
+,19,Univ of Cincinnati,,,,
+,29,Universidad Fermin Toro,,,,
+,51,Univ of Central Florida,,,,
+,69,Universidad Iberoamericana,,,,
+,72,Univ of Utah,,,,
+,91,Bits Pilani-Dubai,,,,
+,95,Univ of Kentucky,,,,
+,104,South Dakota Sch of Mines & Tech,,,,
+,107,American Univ of Sharjah,,,,
+,109,Northern Illinois Univ,,,,
+,110,Temple Univ,,,,
+,119,Washington State Univ,,,,
+,123,MADI State Tech Univ,,,,

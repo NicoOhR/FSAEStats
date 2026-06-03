@@ -1,0 +1,121 @@
+Place,CarNum,Team,RawScore,Penalty,Status,Score
+1,14,Universitat Stuttgart,150,,Final,150
+2,12,FH - Joanneum Graz,135,,Final,135
+3,15,Univ of Wisconsin - Madison,130,,Final,130
+4,130,Ecole De Technologie Superieure,122,,Final,122
+5,93,Fachhochschule Hamburg,119,,Final,119
+6,23,Michigan State Univ,116,,Final,116
+7,3,Graz Technical Univ,113,,Final,113
+8,7,National Univ of Singapore,110,,Final,110
+9,2,Univ of Florida,108,,Final,108
+10,52,Univ of Minnesota - Twin Cities,106,,Final,106
+11,138,Univ of Akron,105,,Final,105
+12,1,Oregon State Univ,100,,,100
+12,4,Kookmin Univ,100,,,100
+12,5,Univ of Michigan - Ann Arbor,100,,,100
+12,6,Virginia Tech,100,,,100
+12,8,Univ of Michigan - Dearborn,100,,,100
+12,10,Western University,100,,,100
+12,16,Missouri University of Science and Tech,100,,,100
+12,17,Universit Degli Studi Di Brescia,100,,,100
+12,20,Univ of Kansas - Lawrence,100,,,100
+12,39,McGill Univ,100,,,100
+12,40,Rose Hulman Inst of Tech,100,,,100
+12,42,Univ of Pittsburgh - Pittsburgh,100,,,100
+12,47,The Ohio State University,100,,,100
+12,57,US Naval Academy,100,,,100
+12,61,Rochester Institute of Technology,100,,,100
+12,66,Kettering Univ,100,,,100
+12,74,Univ of Cincinnati,100,,,100
+12,79,Villanova Univ,100,,,100
+12,80,Univ of Texas - Arlington,100,,,100
+12,81,Auburn Univ,100,,,100
+12,92,Wayne State Univ,100,,,100
+12,97,Minnesota State University - Mankato,100,,,100
+12,104,Univ of Illinois - Urbana Champaign,100,,,100
+12,115,Cornell Univ,100,,,100
+12,128,San Jose State University,100,,,100
+12,129,Carleton Univ,100,,,100
+38,91,Georgia Institute of Technology,100,10,,90
+39,11,Polytechnique Montréal,80,,,80
+39,13,Faculdade de Engenharia de Sorocaba,80,,,80
+39,18,Florida Atlantic Univ,80,,,80
+39,19,Texas Tech Univ,80,,,80
+39,21,Univ of Victoria,80,,,80
+39,26,Univ of Central Florida,80,,,80
+39,32,Univ of Maryland - College Park,80,,,80
+39,34,Louisiana State Univ,80,,,80
+39,43,California Polytechnic State Univ-SLO,80,,,80
+39,45,Queen's Univ - Ontario Canada,80,,,80
+39,48,Georgia Southern Univ,80,,,80
+39,49,Tennessee Tech Univ,80,,,80
+39,58,Worcester Polytechnic Inst,80,,,80
+39,59,Univ of North Carolina - Charlotte,80,,,80
+39,62,Universite de Sherbrooke,80,,,80
+39,67,Purdue Univ - W Lafayette,80,,,80
+39,69,Kennesaw State University,80,,,80
+39,75,Old Dominion Univ,80,,,80
+39,76,Univ of Alabama - Tuscaloosa,80,,,80
+39,83,Univ of South Florida,80,,,80
+39,85,Concordia University,80,,,80
+39,89,Univ of Utah,80,,,80
+39,95,Columbia Univ,80,,,80
+39,99,Duke Univ,80,,,80
+39,100,Saginaw Valley State Univ,80,,,80
+39,101,Universidad Simon Bolivar,80,,,80
+39,102,Rutgers Univ,80,,,80
+39,105,Univ of Connecticut,80,,,80
+39,116,Univ of Toledo,80,,,80
+39,118,Univ of Waterloo,80,,,80
+39,122,Univ of British Columbia,80,,,80
+39,123,Kansas State Univ,80,,,80
+39,132,Northwestern Univ,80,,,80
+72,72,Univ of North Florida,80,10,,70
+72,78,North Carolina State Univ - Raleigh,80,10,,70
+74,25,Central Michigan Univ,60,,,60
+74,27,Lafayette College,60,,,60
+74,29,West Virginia Univ,60,,,60
+74,30,Universite Du Quebec a Trois-Rivieres,60,,,60
+74,33,Ferris State University,60,,,60
+74,37,Penn State Univ - University Park,60,,,60
+74,44,Clemson Univ,60,,,60
+74,46,Rensselaer Polytechnic Inst,60,,,60
+74,50,Lakehead Univ,60,,,60
+74,51,Purdue Univ - Calumet,80,20,,60
+74,53,Brown Univ,60,,,60
+74,55,Lawrence Technological Univ,60,,,60
+74,56,Univ of Saskatchewan,60,,,60
+74,60,Washington Univ - St Louis,60,,,60
+74,63,Ryerson Univ,60,,,60
+74,65,US Air Force Academy,60,,,60
+74,68,Hope College,60,,,60
+74,73,Florida International Univ,60,,,60
+74,82,Cooper Union,60,,,60
+74,87,Univ of Missouri,60,,,60
+74,88,Université Laval,60,,,60
+74,94,Florida Inst of Tech,60,,,60
+74,96,Michigan Tech Univ,60,,,60
+74,98,Embry-Riddle Aero Univ - Daytona Beach,60,,,60
+74,107,Univ of Minnesota-Duluth,60,,,60
+74,108,Univ of Hartford,60,,,60
+74,109,Bradley Univ,60,,,60
+74,113,Univ of Guelph,60,,,60
+74,114,Universite Du Quebec-Chicoutimi,60,,,60
+74,120,Univ of Toronto,60,,,60
+74,121,Univ of Kentucky,60,,,60
+74,124,South Dakota State Univ,60,,,60
+74,127,Washington State Univ,60,,,60
+107,22,Univ of New Hampshire,60,10,,50
+108,36,Turabo Univ,40,,,40
+108,77,Clarkson University,40,,,40
+108,90,Colorado Mesa University,40,,,40
+108,103,Southern Illinois Univ - Edwardville,40,,,40
+112,112,Universidad Autonoma Estado Mexico,40,10,,30
+113,54,Oklahoma State Univ,40,30,,10
+113,106,Lehigh Univ,60,50,,10
+,35,Universidad Metropolitana,,,,
+,38,Univ of Puerto Rico-Mayaquez,,,,
+,41,York College of Pa,,,,
+,64,Mississippi State Univ,,,,
+,70,Univ of Evansville,,,,
+,117,Univ of Windsor,,,,

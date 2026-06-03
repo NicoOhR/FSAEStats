@@ -20,7 +20,7 @@ pub async fn user_request(
                 let resp = Response::new(full(body.to_string()));
                 return Ok(resp);
             }
-            todo!()
+            let df = request.resolve();
         }
         _ => {
             let mut not_found = Response::new(empty());

@@ -1,0 +1,121 @@
+Place,CarNum,Team,Score
+1,7,National Univ of Singapore,75
+2,104,Univ of Illinois - Urbana Champaign,69.7
+3,14,Universitat Stuttgart,66.8
+4,49,Tennessee Tech Univ,66.4
+5,10,Western University,65.8
+6,2,Univ of Florida,65.1
+7,96,Michigan Tech Univ,65.0
+8,100,Saginaw Valley State Univ,64.5
+9,120,Univ of Toronto,64.5
+10,1,Oregon State Univ,63.9
+11,15,Univ of Wisconsin - Madison,62.4
+12,55,Lawrence Technological Univ,62.2
+13,92,Wayne State Univ,61.8
+14,16,Missouri University of Science and Tech,61.5
+15,79,Villanova Univ,60.8
+16,99,Duke Univ,60.7
+17,34,Louisiana State Univ,60.6
+18,63,Ryerson Univ,60.4
+19,6,Virginia Tech,60.2
+20,5,Univ of Michigan - Ann Arbor,59.5
+21,132,Northwestern Univ,59.1
+22,42,Univ of Pittsburgh - Pittsburgh,59.1
+23,47,The Ohio State University,58.7
+24,23,Michigan State Univ,58.2
+25,57,US Naval Academy,58.2
+26,138,Univ of Akron,57.4
+27,81,Auburn Univ,56.5
+28,11,Polytechnique Montréal,56.3
+29,80,Univ of Texas - Arlington,56.0
+30,82,Cooper Union,55.8
+31,3,Graz Technical Univ,55.7
+32,128,San Jose State University,55.4
+33,76,Univ of Alabama - Tuscaloosa,55.3
+34,65,US Air Force Academy,54.7
+35,52,Univ of Minnesota - Twin Cities,54.3
+36,102,Rutgers Univ,54.2
+37,45,Queen's Univ - Ontario Canada,53.6
+38,115,Cornell Univ,53.1
+39,12,FH - Joanneum Graz,53.0
+40,129,Carleton Univ,52.4
+41,30,Universite Du Quebec a Trois-Rivieres,52.4
+42,87,Univ of Missouri,52.2
+43,32,Univ of Maryland - College Park,51.9
+44,4,Kookmin Univ,51.7
+45,21,Univ of Victoria,51.4
+46,74,Univ of Cincinnati,51.1
+47,20,Univ of Kansas - Lawrence,50.7
+48,56,Univ of Saskatchewan,50.6
+49,98,Embry-Riddle Aero Univ - Daytona Beach,50.1
+50,130,Ecole De Technologie Superieure,50.0
+51,93,Fachhochschule Hamburg,49.7
+52,68,Hope College,49.5
+53,101,Universidad Simon Bolivar,49.3
+54,8,Univ of Michigan - Dearborn,49.2
+55,91,Georgia Institute of Technology,49.2
+56,69,Kennesaw State University,49.0
+57,60,Washington Univ - St Louis,49.0
+58,105,Univ of Connecticut,48.8
+59,122,Univ of British Columbia,48.8
+60,37,Penn State Univ - University Park,48.5
+61,94,Florida Inst of Tech,48.1
+62,26,Univ of Central Florida,47.6
+63,85,Concordia University,47.3
+64,67,Purdue Univ - W Lafayette,47.3
+65,40,Rose Hulman Inst of Tech,47.0
+66,121,Univ of Kentucky,46.8
+67,66,Kettering Univ,46.7
+68,39,McGill Univ,46.7
+69,75,Old Dominion Univ,46.6
+70,48,Georgia Southern Univ,45.9
+71,95,Columbia Univ,44.8
+72,51,Purdue Univ - Calumet,44.6
+73,17,Universit Degli Studi Di Brescia,44.5
+74,29,West Virginia Univ,44.3
+75,22,Univ of New Hampshire,44.1
+75,61,Rochester Institute of Technology,44.1
+77,59,Univ of North Carolina - Charlotte,44.1
+78,107,Univ of Minnesota-Duluth,44.0
+79,97,Minnesota State University - Mankato,43.9
+80,44,Clemson Univ,43.4
+81,123,Kansas State Univ,43.3
+82,35,Universidad Metropolitana,43.0
+83,18,Florida Atlantic Univ,42.7
+84,113,Univ of Guelph,42.0
+85,43,California Polytechnic State Univ-SLO,41.8
+86,27,Lafayette College,41.4
+87,73,Florida International Univ,41.0
+88,25,Central Michigan Univ,40.9
+89,109,Bradley Univ,40.7
+90,78,North Carolina State Univ - Raleigh,40.5
+91,106,Lehigh Univ,39.7
+92,83,Univ of South Florida,38.7
+93,53,Brown Univ,38.4
+94,58,Worcester Polytechnic Inst,38.4
+95,54,Oklahoma State Univ,38.4
+96,13,Faculdade de Engenharia de Sorocaba,38.1
+96,19,Texas Tech Univ,38.1
+98,46,Rensselaer Polytechnic Inst,38.1
+98,88,Université Laval,38.1
+100,62,Universite de Sherbrooke,38.0
+101,90,Colorado Mesa University,37.9
+102,114,Universite Du Quebec-Chicoutimi,36.9
+103,38,Univ of Puerto Rico-Mayaquez,35.1
+104,72,Univ of North Florida,35.0
+105,127,Washington State Univ,32.9
+106,33,Ferris State University,32.8
+107,118,Univ of Waterloo,32.7
+108,77,Clarkson University,30.6
+109,116,Univ of Toledo,30.5
+110,103,Southern Illinois Univ - Edwardville,29.0
+111,108,Univ of Hartford,26.7
+112,112,Universidad Autonoma Estado Mexico,22.9
+113,124,South Dakota State Univ,22.9
+114,89,Univ of Utah,10.6
+115,50,Lakehead Univ,7.3
+,36,Turabo Univ,
+,41,York College of Pa,
+,64,Mississippi State Univ,
+,70,Univ of Evansville,
+,117,Univ of Windsor,

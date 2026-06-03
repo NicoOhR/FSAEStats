@@ -1,0 +1,47 @@
+Place,CarNum,Team,FuelUsed_L,FuelType,AdjFuelUsed_L,Score
+1,5,Univ of Wisconsin - Madison,0.762,E85,0.544,100
+2,17,US Air Force Academy,0.590,93,0.590,95.2
+3,15,US Naval Academy,0.604,93,0.604,93.8
+4,49,Friedrich Alexander Univ of Erlangen,0.868,E85,0.620,92.1
+5,79,Univ of Cincinnati,0.627,93,0.627,91.4
+6,1,Oregon State Univ,0.628,93,0.628,91.3
+7,66,Massachusetts Inst of Tech,0.942,E85,0.672,86.7
+8,34,National Univ of Singapore,0.684,93,0.684,85.5
+9,11,Ecole De Technologie Superieure,0.697,93,0.697,84.2
+10,3,Universitat Stuttgart,0.983,E85,0.702,83.6
+11,93,Universite Du Quebec a Trois-Rivieres,0.704,93,0.704,83.4
+12,52,Univ of New Hampshire,0.742,93,0.742,79.5
+13,14,Karlsruhe Institute of Technology,0.767,100,0.767,76.9
+14,8,Univ of Akron,0.810,93,0.810,72.5
+15,2,Technical Univ of Munich,0.812,100,0.812,72.3
+16,67,Georgia Institute of Technology,0.814,93,0.814,72.0
+17,4,Graz Univ of Technology,0.822,100,0.822,71.2
+18,54,Univ of Michigan - Dearborn,0.824,100,0.824,71.0
+19,78,McGill Univ,0.842,93,0.842,69.2
+20,21,Rose Hulman Inst of Tech,0.890,93,0.890,64.2
+21,62,Univ of Toledo,1.327,E85,0.947,62.9
+22,118,Metropolia University of Applied Science,0.908,100,0.908,62.3
+23,58,Rutgers Univ,0.964,93,0.964,61.3
+24,43,Brown Univ,0.939,100,0.939,59.1
+25,82,Kumoh National Institute of Technology,0.947,93,0.947,58.3
+26,59,North Carolina State Univ - Raleigh,1.336,E85,0.954,57.6
+27,88,Mississippi State Univ,1.342,E85,0.958,57.1
+28,119,UAS Esslingen,1.027,100,1.027,55.1
+29,87,Univ of Windsor,0.986,93,0.986,54.2
+30,73,Universite Laval,1.392,E85,0.994,53.4
+31,6,Univ of Michigan - Ann Arbor,0.999,93,0.999,52.9
+32,89,Duke Univ,1.052,100,1.052,52.6
+33,71,Clemson Univ,1.031,100,1.031,49.6
+34,50,San Jose State University,1.036,100,1.036,49.1
+35,116,Univ of Pittsburgh - Pittsburgh,1.038,93,1.038,48.9
+36,68,Southern Polytechnic State Univ,1.089,93,1.089,43.6
+37,31,Lakehead Univ,1.101,93,1.101,42.3
+38,57,Carnegie Mellon Univ,1.108,93,1.108,41.6
+39,32,Univ of St Thomas,1.138,93,1.138,38.5
+40,97,Villanova Univ,1.148,100,1.148,37.5
+41,107,Univ of Missouri,1.162,100,1.162,36.0
+42,35,Oakland University,1.235,93,1.235,34.6
+43,29,Univ of Florida,1.293,93,1.293,22.5
+44,16,Universidad Simon Bolivar,1.316,93,1.316,20.1
+45,129,Vanderbilt Univ,0.629,93,0.629,0
+46,46,Columbia Univ,1.118,93,1.118,0

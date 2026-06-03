@@ -1,0 +1,65 @@
+Place,CarNum,Team,AvgLapAdjTime,CompletedLaps,FuelUsed_L,CO2_kg,CO2PerLap,FuelType,FuelEfficiency,Score
+1,116,Lafayette College,86.296,20,1.984,4.583,0.2182,93,0.693,100
+2,34,Carleton Univ,84.472,20,2.022,4.670,0.2335,93,0.661,97.7
+3,8,Centro Universitario Da FEI,69.077,20,3.830,6.319,0.3160,E85,0.598,92.2
+4,3,Univ of Akron,63.591,20,4.631,7.641,0.3639,E85,0.564,88.8
+5,1,Universitat Stuttgart,61.789,20,4.843,7.990,0.3805,E85,0.555,87.8
+6,23,Oregon State Univ,59.770,20,3.427,7.916,0.3958,93,0.551,87.4
+7,21,Technical Univ of Munich,60.221,20,5.116,8.441,0.4221,E85,0.513,82.8
+8,12,Auburn Univ,65.023,20,3.443,7.953,0.3977,93,0.504,81.7
+9,112,FH - Joanneum Graz,62.006,20,3.923,9.062,0.4531,100,0.464,75.9
+10,88,California Polytechnic State Univ-SLO,84.154,20,2.769,6.396,0.3366,100,0.460,75.3
+11,10,Univ of Florida,65.734,20,3.951,9.126,0.4563,93,0.435,70.9
+12,44,Ohio State Univ,70.421,18,4.734,7.811,0.4339,E85,0.427,69.4
+13,17,Univ of Illinois - Urbana Champaign,72.119,20,3.717,8.586,0.4293,93,0.421,68.4
+14,11,Instituto Maua de Tecnologia,79.980,20,3.425,7.911,0.3956,100,0.412,66.6
+15,32,Univ of Minnesota - Twin Cities,74.119,20,3.908,9.027,0.4299,93,0.409,66.1
+16,111,Univ of Manitoba,78.029,17,3.058,7.063,0.4155,93,0.402,64.6
+17,38,National Univ of Singapore,81.902,20,3.484,8.048,0.4024,93,0.396,63.2
+18,98,Rose Hulman Inst of Tech,79.442,20,3.608,8.334,0.4167,93,0.394,62.8
+19,36,Univ of Michigan - Ann Arbor,64.078,20,6.587,10.868,0.5175,E85,0.393,62.7
+20,65,Universite Du Quebec a Trois-Rivieres,81.015,20,3.599,8.313,0.4157,93,0.387,61.3
+21,5,Université Laval,63.653,20,6.455,10.650,0.5325,E85,0.385,60.8
+22,82,Univ of Connecticut,74.719,20,3.939,9.099,0.4550,93,0.384,60.5
+23,15,Univ of Kansas - Lawrence,68.783,20,6.026,9.942,0.4971,E85,0.381,60.0
+24,22,California State Poly Univ - Pomona,70.217,20,4.268,9.859,0.4930,93,0.377,58.9
+25,56,Univ of Oklahoma,81.404,20,3.687,8.516,0.4258,93,0.376,58.8
+26,43,San Jose State University,71.463,20,6.192,10.216,0.4865,E85,0.375,58.5
+27,79,Old Dominion Univ,79.799,20,3.860,8.916,0.4458,93,0.367,56.4
+28,13,Missouri University of Science and Tech,72.240,20,4.291,9.912,0.4956,100,0.364,55.8
+29,60,Univ of Western Ontario,68.389,20,4.547,10.503,0.5252,93,0.363,55.5
+30,80,Kookmin Univ,71.147,20,4.461,10.304,0.5152,100,0.356,53.6
+31,103,Univ of Evansville,83.271,20,3.828,8.842,0.4421,100,0.354,53.1
+32,62,Univ of Missouri,76.972,20,4.212,9.729,0.4865,93,0.348,51.5
+33,84,Purdue Univ - W Lafayette,69.146,20,4.875,11.261,0.5631,93,0.335,47.6
+34,47,Univ of Michigan - Dearborn,75.185,20,4.785,11.053,0.5527,100,0.314,40.8
+35,31,Georgia Institute of Technology,82.976,20,4.358,10.066,0.5033,93,0.312,40.3
+36,57,Univ of Toledo,67.764,11,4.111,6.783,0.6166,E85,0.312,40.2
+37,108,Louisiana State Univ,85.432,20,4.399,10.161,0.5081,93,0.301,36.0
+38,126,Univ of Waterloo,78.022,20,5.178,11.961,0.5696,93,0.294,33.3
+39,53,Queen's Univ - Ontario Canada,81.624,20,4.861,11.228,0.5614,93,0.285,29.7
+40,16,Kettering Univ,83.583,10,3.872,6.388,0.6388,E85,0.244,9.9
+,94,West Virginia Univ,104.119,14,1.879,4.340,0.3100,93,,0
+,92,California State Univ - Long Beach,97.200,12,1.637,3.781,0.3151,93,,0
+,90,Texas Tech Univ,94.312,20,2.901,6.701,0.3351,93,,0
+,78,Western Michigan Univ,90.742,20,2.945,6.802,0.3401,93,,0
+,50,Saginaw Valley State Univ,106.478,20,2.970,6.860,0.3430,100,,0
+,46,Michigan Tech Univ,94.360,20,3.126,7.221,0.3611,93,,0
+,81,Georgia Southern Univ,89.873,20,3.407,7.870,0.3935,93,,0
+,122,Rutgers Univ,90.472,20,3.757,8.678,0.4339,93,,0
+,121,Concordia University,100.061,12,2.386,5.511,0.4593,93,,0
+,59,Dalhousie Univ,114.923,14,3.038,7.017,0.4773,93,,0
+,55,Cooper Union,111.933,20,4.137,9.556,0.4778,93,,0
+,63,Clarkson University,121.487,20,4.246,9.808,0.4904,93,,0
+,102,North Carolina State Univ - Raleigh,95.052,13,3.918,6.464,0.4972,E85,,0
+,100,Vanderbilt Univ,87.341,15,3.318,7.664,0.5109,93,,0
+,45,Oklahoma State Univ,86.851,20,4.643,10.725,0.5363,93,,0
+,74,Cegep du Vieux - Montreal,97.020,15,3.524,8.140,0.5427,93,,0
+,93,York College of Pa,99.050,11,2.718,6.278,0.5707,93,,0
+,9,Michigan State Univ,87.436,20,5.008,11.568,0.5784,93,,0
+,86,Southern Illinois Univ - Carbondale,88.011,13,3.430,7.923,0.5804,93,,0
+,42,Villanova Univ,83.771,14,4.016,9.276,0.6626,100,,0
+,54,Florida Inst of Tech,93.374,17,5.056,11.679,0.6870,100,,0
+,124,Univ of Guelph,86.724,16,4.965,11.469,0.7168,100,,0
+,49,Minnesota State University - Mankato,107.321,10,,,,E85,,0
+,87,Kansas State Univ,84.727,13,,,,E85,,0

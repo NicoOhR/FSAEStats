@@ -1,0 +1,56 @@
+Place,CarNum,Team,AvgLapAdjTime,CompletedLaps,FuelUsed_L,CO2_kg,CO2PerLap,FuelType,FuelEfficiency,Score
+1,1,Oregon State Univ,60.437,22,2.819,6.511,0.2960,93,0.800,100
+2,15,Kettering Univ,73.706,22,3.372,5.563,0.2529,E85,0.768,97.8
+3,65,Minnesota State University - Mankato,83.218,17,2.439,4.024,0.2367,E85,0.726,94.8
+4,72,Univ of Michigan - Dearborn,66.544,22,4.332,7.147,0.3249,E85,0.662,89.2
+5,115,Rochester Institute of Technology,70.212,22,4.262,7.032,0.3196,E85,0.637,86.9
+6,120,Univ of Maryland - College Park,70.545,19,2.652,6.126,0.3224,93,0.629,86.0
+7,85,Villanova Univ,79.145,22,2.776,6.412,0.2915,100,0.620,85.1
+8,8,Univ of Michigan - Ann Arbor,67.756,22,3.259,7.528,0.3422,93,0.617,84.7
+9,110,Virginia Tech,65.232,22,3.451,7.971,0.3623,93,0.605,83.4
+10,101,Wroclaw University of Technology,66.983,22,3.376,7.798,0.3545,100,0.603,83.1
+11,129,Univ of Texas - Arlington,69.575,22,3.293,7.606,0.3457,100,0.595,82.2
+12,73,Saginaw Valley State Univ,69.446,18,2.731,6.308,0.3504,100,0.588,81.4
+13,40,Univ of Central Florida,77.304,22,3.014,6.962,0.3165,93,0.585,81.1
+14,22,US Naval Academy,84.584,22,2.775,6.410,0.2914,93,0.580,80.5
+15,117,Western University,67.286,22,3.507,8.101,0.3682,93,0.577,80.1
+16,38,National Univ of Singapore,70.334,22,3.392,7.835,0.3561,93,0.571,79.4
+17,81,Universidad Simon Bolivar,83.840,22,2.857,6.599,0.3000,93,0.569,79.1
+18,25,Georgia Institute of Technology,77.342,11,1.554,3.589,0.3263,93,0.567,78.8
+19,119,Univ of Victoria,72.762,22,3.364,7.770,0.3532,93,0.557,77.5
+20,49,Univ of Toronto,87.282,22,2.891,6.678,0.3035,93,0.540,75.2
+21,59,Univ of Minnesota - Twin Cities,67.795,22,3.733,8.623,0.3920,93,0.538,75.0
+22,37,Univ of Connecticut,70.058,22,3.648,8.426,0.3830,93,0.533,74.2
+23,7,Auburn Univ,69.054,17,2.881,6.655,0.3915,93,0.529,73.6
+24,51,Univ of Cincinnati,69.792,17,2.873,6.636,0.3904,93,0.525,73.0
+25,9,Univ of Florida,62.471,22,4.159,9.607,0.4367,93,0.524,72.9
+26,27,Louisiana State Univ,72.719,22,3.710,8.570,0.3895,93,0.505,69.9
+27,17,Univ of Toledo,69.957,22,5.470,9.025,0.4102,E85,0.498,68.8
+28,53,Kookmin Univ,65.329,22,4.390,10.140,0.4609,100,0.475,64.8
+29,12,Michigan State Univ,68.722,22,4.183,9.662,0.4392,93,0.474,64.6
+30,70,Kennesaw State University,82.883,22,3.524,8.140,0.3700,93,0.466,63.2
+31,16,Graz Technical Univ,62.958,22,4.653,10.748,0.4885,100,0.465,62.9
+32,76,Universite Du Quebec a Trois-Rivieres,71.770,22,4.085,9.436,0.4289,93,0.465,62.8
+33,30,Univ of Missouri,81.607,22,3.663,8.461,0.3846,93,0.456,61.1
+34,71,Univ of Pittsburgh - Pittsburgh,72.366,12,2.413,5.574,0.4645,93,0.426,54.7
+35,114,Michigan Tech Univ,74.169,22,4.430,10.233,0.4651,93,0.415,52.1
+36,50,Missouri University of Science and Tech,70.147,22,4.870,11.249,0.5113,100,0.399,48.2
+37,48,Washington Univ - St Louis,81.249,22,4.527,10.457,0.4753,93,0.370,40.3
+38,123,Florida Atlantic Univ,77.842,22,5.282,12.201,0.5546,100,0.331,27.2
+39,122,Indiana Univ Purdue Univ Indianapolis,82.984,22,5.593,12.919,0.5872,93,0.294,11.1
+,5,Univ of Akron,90.886,22,2.801,4.621,0.2100,E85,,0
+,55,Universidad Central de Venezuela,96.487,22,2.800,6.468,0.2940,100,,0
+,74,North Dakota State Univ,109.801,15,2.717,4.483,0.2989,E85,,0
+,33,West Virginia Univ,87.823,22,2.957,6.830,0.3105,93,,0
+,94,Oklahoma State Univ,101.981,21,3.223,7.445,0.3545,93,,0
+,68,Lakehead Univ,89.859,22,3.536,8.168,0.3713,93,,0
+,47,Univ of South Florida,98.332,22,3.561,8.225,0.3739,100,,0
+,77,Cegep du Vieux - Montreal,87.934,22,3.767,8.701,0.3955,93,,0
+,14,Univ of Kansas - Lawrence,88.879,18,4.864,8.025,0.4458,E85,,0
+,42,Florida International Univ,105.428,11,2.442,5.641,0.5128,93,,0
+,44,Western Michigan Univ,104.542,13,3.348,7.733,0.5948,93,,0
+,134,Mississippi State Univ,89.265,22,5.722,13.217,0.6008,93,,0
+,96,Penn State Univ - University Park,76.692,22,6.063,14.005,0.6366,100,,0
+,86,Cooper Union,86.445,22,6.504,15.024,0.6829,93,,0
+,63,Duke Univ,82.910,22,6.710,15.500,0.7045,100,,0
+,78,Universite Du Quebec-Chicoutimi,102.402,12,6.264,14.469,1.2058,100,,0

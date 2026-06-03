@@ -2,6 +2,7 @@ use crate::{
     pipeline::{Pipeline, Source},
     validate::{Validate, ValidationError},
 };
+use polars::prelude::*;
 use serde::Deserialize;
 
 //requests takes a JSON request, deseralizes into the PipeLineRequest
@@ -17,7 +18,10 @@ pub struct PipelineRequest {
 
 impl PipelineRequest {
     pub fn validate(&self) -> Vec<ValidationError> {
-        let mut available: Vec<String> = self.src.view.columns()
+        let mut available: Vec<String> = self
+            .src
+            .view
+            .columns()
             .iter()
             .map(|s| s.to_string())
             .collect();
@@ -26,6 +30,12 @@ impl PipelineRequest {
             .iter()
             .flat_map(|op| op.validate(&mut available))
             .collect()
+    }
+    pub fn resolve(&self) -> PolarsResult<DataFrame> {
+        //after validation
+        let mut accum = DataFrame::default();
+
+        Ok(accum)
     }
 }
 
@@ -103,20 +113,29 @@ mod tests {
 
     #[test]
     fn select_known_column_is_valid() {
-        let errs = validate("overall_standings", r#"[{"op": "select", "columns": ["TotalScore"]}]"#);
+        let errs = validate(
+            "overall_standings",
+            r#"[{"op": "select", "columns": ["TotalScore"]}]"#,
+        );
         assert!(errs.is_empty(), "unexpected errors: {errs:?}");
     }
 
     #[test]
     fn select_unknown_column_is_rejected() {
-        let errs = validate("overall_standings", r#"[{"op": "select", "columns": ["Nope"]}]"#);
+        let errs = validate(
+            "overall_standings",
+            r#"[{"op": "select", "columns": ["Nope"]}]"#,
+        );
         assert!(has_unknown_column(&errs, "Nope"));
     }
 
     #[test]
     fn column_validation_is_view_aware() {
         // TotalScore exists in the overall views but not in the projected dynamic_events view.
-        let errs = validate("dynamic_events", r#"[{"op": "select", "columns": ["TotalScore"]}]"#);
+        let errs = validate(
+            "dynamic_events",
+            r#"[{"op": "select", "columns": ["TotalScore"]}]"#,
+        );
         assert!(has_unknown_column(&errs, "TotalScore"));
     }
 
@@ -128,7 +147,10 @@ mod tests {
 
     #[test]
     fn partition_columns_are_selectable() {
-        let errs = validate("overall_standings", r#"[{"op": "select", "columns": ["year", "competition"]}]"#);
+        let errs = validate(
+            "overall_standings",
+            r#"[{"op": "select", "columns": ["year", "competition"]}]"#,
+        );
         assert!(errs.is_empty(), "unexpected errors: {errs:?}");
     }
 

@@ -1,0 +1,101 @@
+Place,CarNum,Team,Time,Laps,Cones,OffCourse,OtherPenalty,AdjTime,EnduranceScore
+1,3,Graz Technical Univ,1414.256,20,1,,,1416.256,300
+2,14,Universitat Stuttgart,1439.786,20,2,,,1443.786,284.6
+3,12,FH - Joanneum Graz,1475.635,20,,,,1475.635,267.6
+4,129,Carleton Univ,1463.445,20,,1,,1483.445,263.5
+5,23,Michigan State Univ,1473.364,20,2,1,,1497.364,256.4
+6,43,California Polytechnic State Univ-SLO,1479.432,20,3,1,,1505.432,252.3
+7,1,Oregon State Univ,1509.361,20,,,,1509.361,250.3
+8,16,Missouri University of Science and Tech,1506.840,20,4,,,1514.840,247.6
+9,8,Univ of Michigan - Dearborn,1541.749,20,4,,,1549.749,230.6
+10,34,Louisiana State Univ,1557.308,20,,,,1557.308,227.0
+11,15,Univ of Wisconsin - Madison,1538.560,20,1,1,,1560.560,225.5
+12,13,Faculdade de Engenharia de Sorocaba,1565.993,20,4,,,1573.993,219.3
+13,62,Universite de Sherbrooke,1569.644,20,3,,,1575.644,218.5
+14,37,Penn State Univ - University Park,1580.060,20,5,1,,1610.060,203.0
+15,46,Rensselaer Polytechnic Inst,1614.526,20,2,,,1618.526,199.3
+16,42,Univ of Pittsburgh - Pittsburgh,1613.579,20,3,,,1619.579,198.9
+17,5,Univ of Michigan - Ann Arbor,1623.327,20,1,,,1625.327,196.4
+18,4,Kookmin Univ,1623.217,20,2,,,1627.217,195.6
+19,26,Univ of Central Florida,1617.259,20,1,1,,1639.259,190.4
+20,104,Univ of Illinois - Urbana Champaign,1630.701,20,5,,,1640.701,189.8
+21,74,Univ of Cincinnati,1640.741,20,,,,1640.741,189.8
+22,7,National Univ of Singapore,1644.456,20,,,,1644.456,188.2
+23,2,Univ of Florida,1582.951,20,1,3,,1644.951,188.0
+24,21,Univ of Victoria,1650.141,20,1,,,1652.141,185.0
+25,97,Minnesota State University - Mankato,1652.521,20,,,,1652.521,184.8
+26,116,Univ of Toledo,1669.430,20,,,,1669.430,177.8
+27,128,San Jose State University,1662.951,20,,1,,1682.951,172.3
+28,11,Polytechnique Montréal,1666.733,20,1,1,,1688.733,170.0
+29,115,Cornell Univ,1690.201,20,,,,1690.201,169.4
+30,81,Auburn Univ,1625.726,20,4,3,,1693.726,168.0
+31,80,Univ of Texas - Arlington,1626.854,20,6,3,,1698.854,166.0
+32,100,Saginaw Valley State Univ,1706.308,20,,,,1706.308,163.1
+33,52,Univ of Minnesota - Twin Cities,1690.979,20,1,1,,1712.979,160.5
+34,19,Texas Tech Univ,1667.073,20,3,2,,1713.073,160.4
+35,105,Univ of Connecticut,1675.770,20,,2,,1715.770,159.4
+36,32,Univ of Maryland - College Park,1672.196,20,2,2,,1716.196,159.2
+37,85,Concordia University,1717.259,20,1,,,1719.259,158.0
+38,99,Duke Univ,1659.230,20,2,3,,1723.230,156.5
+39,59,Univ of North Carolina - Charlotte,1725.902,20,,,,1725.902,155.5
+40,44,Clemson Univ,1728.204,20,4,,,1736.204,151.6
+41,61,Rochester Institute of Technology,1713.063,20,2,1,,1737.063,151.2
+42,107,Univ of Minnesota-Duluth,1722.812,20,4,1,,1750.812,146.1
+43,78,North Carolina State Univ - Raleigh,1770.045,20,,,,1770.045,139.0
+44,76,Univ of Alabama - Tuscaloosa,1776.841,20,1,,,1778.841,135.8
+45,95,Columbia Univ,1779.585,20,,,,1779.585,135.5
+46,18,Florida Atlantic Univ,1799.856,20,,,,1799.856,128.3
+47,87,Univ of Missouri,1818.886,20,,,,1818.886,121.7
+48,93,Fachhochschule Hamburg,1813.752,20,5,,,1823.752,120.0
+49,39,McGill Univ,1687.512,20,2,8,,1851.512,110.6
+50,25,Central Michigan Univ,1856.485,20,,1,,1876.485,102.4
+51,83,Univ of South Florida,1862.458,20,4,1,,1890.458,97.9
+52,22,Univ of New Hampshire,1869.433,20,1,1,,1891.433,97.6
+53,58,Worcester Polytechnic Inst,1857.207,20,6,2,,1909.207,92.0
+54,122,Univ of British Columbia,1851.794,20,3,3,,1917.794,89.3
+55,57,US Naval Academy,1883.841,20,2,2,,1927.841,86.2
+56,50,Lakehead Univ,1843.699,20,5,4,,1933.699,84.4
+57,29,West Virginia Univ,1918.881,20,,1,,1938.881,82.9
+58,132,Northwestern Univ,1902.231,20,,4,,1982.231,70.0
+59,69,Kennesaw State University,1950.484,20,9,,45,2013.484,61.1
+60,121,Univ of Kentucky,1979.850,20,1,2,,2021.850,58.7
+61,75,Old Dominion Univ,1892.174,20,13,1,90,2028.174,57.0
+62,96,Michigan Tech Univ,1978.670,20,3,4,,2064.670,20
+63,73,Florida International Univ,2251.912,20,2,2,,2295.912,20
+64,33,Ferris State University,2072.648,20,,9,120,2372.648,20
+65,68,Hope College,1792.191,20,8,,840,2648.191,20
+,92,Wayne State Univ,1595.403,19,1,1,,,19
+,30,Universite Du Quebec a Trois-Rivieres,1599.172,19,1,,,,19
+,66,Kettering Univ,1750.790,19,,2,,,19
+,108,Univ of Hartford,1875.303,18,6,7,,,18
+,94,Florida Inst of Tech,1979.508,18,8,9,,,18
+,123,Kansas State Univ,1509.213,17,4,1,,,17
+,47,The Ohio State University,1217.306,16,,,,,16
+,48,Georgia Southern Univ,1233.837,15,4,,,,15
+,60,Washington Univ - St Louis,1464.955,15,1,,,,15
+,20,Univ of Kansas - Lawrence,1076.644,13,1,,,,13
+,56,Univ of Saskatchewan,1312.850,13,,,,,13
+,91,Georgia Institute of Technology,979.213,12,5,,,,12
+,54,Oklahoma State Univ,1110.036,12,8,2,,,12
+,88,Université Laval,735.824,10,,4,120,,10
+,120,Univ of Toronto,754.506,10,1,,,,10
+,114,Universite Du Quebec-Chicoutimi,835.414,10,,,,,10
+,124,South Dakota State Univ,861.999,10,,1,,,10
+,138,Univ of Akron,1020.577,10,6,2,120,,10
+,112,Universidad Autonoma Estado Mexico,1165.008,10,1,1,120,,10
+,79,Villanova Univ,1240.601,10,,,120,,10
+,67,Purdue Univ - W Lafayette,587.606,7,5,,,,7
+,65,US Air Force Academy,701.895,7,,,,,7
+,118,Univ of Waterloo,339.567,4,2,1,,,4
+,49,Tennessee Tech Univ,401.409,4,,1,,,4
+,40,Rose Hulman Inst of Tech,237.549,3,1,,,,3
+,101,Universidad Simon Bolivar,268.431,3,,3,,,3
+,51,Purdue Univ - Calumet,453.021,3,,,120,,3
+,6,Virginia Tech,172.329,2,,,,,2
+,82,Cooper Union,188.104,2,,1,,,2
+,36,Turabo Univ,126.849,1,,,,,1
+,113,Univ of Guelph,128.302,1,,,,,1
+,17,Universit Degli Studi Di Brescia,153.695,1,1,,,,1
+,27,Lafayette College,0.000,0,,,,,
+,45,Queen's Univ - Ontario Canada,0.000,0,,,,,
+,98,Embry-Riddle Aero Univ - Daytona Beach,0.000,0,,1,,,

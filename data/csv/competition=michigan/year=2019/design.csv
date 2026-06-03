@@ -1,0 +1,121 @@
+Place,CarNum,Team,RawScore,Penalty,Status,Score
+1,1,Universitat Stuttgart,150,,Final,150
+2,5,Ecole De Technologie Superieure,141,,Final,141
+3,74,Rochester Institute of Technology,137,,Final,137
+4,56,National Univ of Singapore,133,,Final,133
+5,90,Coburg University of Applied Sciences,126,,Final,126
+6,6,Univ of Akron,117,,Final,117
+7,18,Univ of Alabama - Tuscaloosa,115,,Final,115
+8,2,Graz Technical Univ,110,,,110
+8,9,Univ of Michigan - Ann Arbor,110,,,110
+8,11,Michigan State Univ,110,,,110
+8,16,Kookmin Univ,110,,,110
+8,33,Oregon State Univ,110,,,110
+8,34,Univ of Central Florida,110,,,110
+8,36,Missouri University of Science and Tech,110,,,110
+8,62,Univ of Minnesota - Twin Cities,110,,,110
+8,85,Wroclaw University of Technology,110,,,110
+8,115,Univ of British Columbia,110,,,110
+8,118,Cooper Union,110,,,110
+19,7,Carleton Univ,90,,,90
+19,10,AGH Univ of Science and Technology,90,,,90
+19,14,Polytechnique Montréal,90,,,90
+19,23,Rensselaer Polytechnic Inst,90,,,90
+19,29,Univ of Cincinnati,90,,,90
+19,37,Univ of Illinois - Urbana Champaign,90,,,90
+19,46,San Jose State University,90,,,90
+19,50,Univ of Michigan - Dearborn,90,,,90
+19,51,Universidad Simon Bolivar,90,,,90
+19,54,Michigan Tech Univ,90,,,90
+19,55,Rutgers Univ,90,,,90
+19,63,Washington Univ - St Louis,90,,,90
+19,64,Univ of Maryland - College Park,90,,,90
+19,66,Univ of Waterloo,90,,,90
+19,69,Univ of Connecticut,90,,,90
+19,76,Hope College,90,,,90
+19,80,Virginia Tech,90,,,90
+19,81,Northwestern Univ,90,,,90
+19,84,Univ of Toronto,90,,,90
+19,88,The Ohio State University,90,,,90
+19,91,Georgia Institute of Technology,90,,,90
+19,92,Univ of Victoria,90,,,90
+19,124,Univ of Nebraska - Lincoln,90,,,90
+19,126,Univ of Kansas - Lawrence,90,,,90
+19,139,CEFET-MG,90,,,90
+44,122,Florida Atlantic Univ,90,10,,80
+45,8,Univ of Wisconsin - Madison,70,,,70
+45,12,Purdue Univ - W Lafayette,70,,,70
+45,19,North Carolina State Univ - Raleigh,70,,,70
+45,20,Florida Inst of Tech,70,,,70
+45,21,Univ of Florida,70,,,70
+45,35,Kansas State Univ,70,,,70
+45,38,Brown Univ,70,,,70
+45,39,Univ of Missouri,70,,,70
+45,40,Clemson Univ,70,,,70
+45,42,Univ of Kentucky,70,,,70
+45,43,Minnesota State University - Mankato,70,,,70
+45,47,Ryerson Univ,70,,,70
+45,52,Western Michigan Univ,70,,,70
+45,58,Kennesaw State University,70,,,70
+45,65,Lehigh Univ,70,,,70
+45,67,Univ of Guelph,70,,,70
+45,71,Univ of Puerto Rico-Mayaquez,70,,,70
+45,75,Old Dominion Univ,70,,,70
+45,77,Oakland University,70,,,70
+45,78,Temple Univ,70,,,70
+45,82,Univ of North Florida,70,,,70
+45,86,Wayne State Univ,70,,,70
+45,89,Tennessee Tech Univ,70,,,70
+45,94,Saginaw Valley State Univ,70,,,70
+45,99,York College of Pennsylvania,70,,,70
+45,100,Clarkson University,70,,,70
+45,103,Texas Tech Univ,70,,,70
+45,106,Kettering Univ,70,,,70
+45,109,US Air Force Academy,70,,,70
+45,111,Lakehead Univ,70,,,70
+45,119,Duke Univ,70,,,70
+45,123,Villanova Univ,70,,,70
+45,132,Univ of Pittsburgh - Pittsburgh,70,,,70
+78,32,Pellissippi State Community College,70,10,,60
+79,24,Univ of Toledo,55,,,55
+79,26,Purdue Univ - Northwest,55,,,55
+79,30,Univ of New Hampshire,55,,,55
+79,41,Grand Valley State Univ,55,,,55
+79,44,IPN - UPIITA,55,,,55
+79,49,Univ of Louisiana - Lafayette,55,,,55
+79,68,Penn State Univ - University Park,55,,,55
+79,70,Penn State Univ - Harrisburg,55,,,55
+79,72,Florida International Univ,55,,,55
+79,73,Louisiana State Univ,55,,,55
+79,79,Georgia Southern Univ,55,,,55
+79,83,Univ of British Columbia - Okanagan,55,,,55
+79,101,Mississippi State Univ,55,,,55
+79,104,South Dakota School of Mines & Tech,55,,,55
+79,105,Worcester Polytechnic Inst,55,,,55
+79,107,Univ of South Florida,55,,,55
+79,108,Colorado Mesa University,55,,,55
+79,113,Dalhousie Univ,55,,,55
+79,114,Binghamton Univ,55,,,55
+79,117,Columbia Univ,55,,,55
+99,93,Universite Du Quebec a Trois-Rivieres,55,10,,45
+99,97,Washington State Univ,45,,,45
+99,102,Lawrence Technological Univ,45,,,45
+99,110,US Naval Academy,45,,,45
+99,120,Universidad Autonoma Estado Mexico,55,10,,45
+99,125,South Dakota State Univ,55,10,,45
+99,131,Polytechnic Univ of Puerto Rico,55,10,,45
+106,98,Universidad Metropolitana,45,10,,35
+,15,Embry-Riddle Aero Univ - Daytona Beach,,,,
+,17,Bradley Univ,,,,
+,22,Auburn Univ,,,,
+,25,Florida A&M Univ/Florida State Univ,,,,
+,48,Vaughn College of Aeronautics,,,,
+,53,Ferris State University,,,,
+,59,Warsaw University of Technology,,,,
+,61,Queen's Univ,,,,
+,87,California State Poly Univ - Pomona,,,,
+,95,Univ of Louisville,,,,
+,96,Central Michigan Univ,,,,
+,112,Alabama A & M Univ,,,,
+,116,West Virginia Univ,,,,
+,129,California State Univ - Fullerton,,,,

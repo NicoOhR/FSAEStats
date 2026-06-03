@@ -1,0 +1,85 @@
+Place,CarNum,Team,Time,Laps,Cones,OffCourse,OtherPenalty,AdjTime,TimeScore,LapScore,EnduranceScore
+1,115,Univ of Texas - Arlington,1310.978,10,5,2,,1360.978,250.0,25,275
+2,33,Purdue Univ - W Lafayette,1391.334,10,,,,1391.334,232.4,25,257.4
+3,55,Univ of North Carolina - Charlotte,1395.896,10,,,,1395.896,229.8,25,254.8
+4,80,Univ of Calif - San Diego,1392.293,10,3,,,1398.293,228.5,25,253.5
+5,88,The Ohio State University,1414.452,10,,,,1414.452,219.5,25,244.5
+6,32,Univ of Calif - Los Angeles,1415.518,10,1,,,1417.518,217.9,25,242.9
+7,144,Kansas State Univ,1403.954,10,11,1,,1445.954,202.7,25,227.7
+8,19,Univ of Illinois - Urbana Champaign,1337.367,10,,,120,1457.367,196.7,25,221.7
+9,18,Univ of Missouri,1387.554,10,5,3,,1457.554,196.6,25,221.6
+10,14,California Polytechnic State Univ-SLO,1398.273,10,2,3,,1462.273,194.2,25,219.2
+11,82,Georgia Institute of Technology,1463.487,10,2,,,1467.487,191.5,25,216.5
+12,124,Univ of Connecticut,1341.121,10,8,7,,1497.121,176.7,25,201.7
+13,34,California State Univ - Northridge,1455.964,10,5,2,,1505.964,172.4,25,197.4
+14,53,Michigan State University,1528.812,10,2,,,1532.812,159.7,25,184.7
+15,72,Univ of Cincinnati,1418.467,10,3,6,,1544.467,154.3,25,179.3
+16,83,Western Michigan Univ,1524.195,10,5,1,,1554.195,149.9,25,174.9
+17,131,Wroclaw University of Technology,1418.913,10,1,7,,1560.913,146.8,25,171.8
+18,117,Missouri University of Science and Tech,1517.165,10,6,2,,1569.165,143.1,25,168.1
+19,99,Univ of Akron,1398.785,10,1,3,120,1580.785,138.0,25,163.0
+20,71,Oklahoma State Univ,1557.795,10,7,1,,1591.795,133.2,25,158.2
+21,17,Univ of Victoria,1469.487,10,2,,120,1593.487,132.5,25,157.5
+22,20,Clarkson University,1565.647,10,1,3,,1627.647,118.0,25,143.0
+23,92,Univ of Ottawa,1551.342,10,,5,,1651.342,108.4,25,133.4
+24,114,Saginaw Valley State Univ,1620.030,10,2,2,,1664.030,103.3,25,128.3
+25,21,Univ of Colorado - Boulder,1532.567,10,7,6,,1666.567,102.3,25,127.3
+26,110,Univ of Illinois - Chicago,1645.784,10,1,1,,1667.784,101.8,25,126.8
+27,94,Temple Univ,1659.113,10,3,2,,1705.113,87.4,25,112.4
+28,22,South Dakota School of Mines & Tech,1639.961,10,3,5,,1745.961,72.4,25,97.4
+29,27,California State Univ - Fullerton,1560.157,10,8,10,,1776.157,61.7,25,86.7
+30,127,Univ of Virginia,1749.331,10,3,3,,1815.331,48.4,25,73.4
+31,97,Univ of South Florida,1581.271,10,11,5,120,1823.271,45.8,25,70.8
+32,35,California Baptist University,1605.400,10,3,6,120,1851.400,36.6,25,61.6
+33,76,Oregon Inst of Tech,1752.562,10,,5,,1852.562,36.2,25,61.2
+34,122,Univ of Texas - Austin,1678.751,10,13,3,120,1884.751,26.1,25,51.1
+35,96,Univ of British Columbia - Okanagan,1830.651,10,1,3,,1892.651,23.7,25,48.7
+36,74,Univ of Southern California,1621.675,10,1,8,120,1903.675,20.4,25,45.4
+37,90,Sacramento State Univ,1706.119,10,13,9,,1912.119,17.8,25,42.8
+38,126,Univ of Puerto Rico-Mayaquez,1753.636,10,5,2,120,1923.636,14.4,25,39.4
+39,45,Lawrence Technological Univ,1703.283,10,13,4,120,1929.283,12.7,25,37.7
+40,66,South Dakota State Univ,1841.102,10,6,5,,1953.102,5.8,25,30.8
+41,107,Florida Atlantic Univ,1781.938,10,5,4,120,1991.938,,25,25.0
+42,26,California State Univ - Los Angeles,1854.483,10,9,6,,1992.483,,25,25.0
+43,51,Minnesota State University - Mankato,1723.622,10,,14,,2003.622,,25,25.0
+44,60,Univ of Hartford,1744.817,10,13,15,,2070.817,,25,25.0
+45,24,Colorado State University,2046.732,10,5,6,,2176.732,,25,25.0
+46,37,Michigan Tech Univ,1934.211,10,3,15,120,2360.211,,25,25.0
+47,108,Brown Univ,2202.245,10,3,8,,2368.245,,25,25.0
+,103,Univ of Calif - Berkeley,1292.646,9,5,3,30,,,18,18.0
+,36,North Carolina State Univ - Raleigh,1589.964,8,4,,,,,16,16.0
+,65,Lakehead Univ,1639.958,8,4,5,,,,16,16.0
+,29,California State Univ - Chico,1213.449,7,3,6,148,,,14,14.0
+,56,Clemson Univ,1240.719,7,2,,120,,,14,14.0
+,140,Texas A&M Univ - College Station,813.542,6,3,,,,,12,12.0
+,44,Univ of Waterloo,699.523,5,,1,,,,10,10.0
+,86,Villanova Univ,705.069,5,1,1,,,,10,10.0
+,43,Univ of Calgary,718.947,5,2,,,,,10,10.0
+,162,CEFET-MG,734.339,5,4,5,120,,,10,10.0
+,61,Kennesaw State University,736.320,5,5,,,,,10,10.0
+,13,Univ of Kansas - Lawrence,764.652,5,1,,,,,10,10.0
+,42,Univ of Maryland - College Park,787.005,5,1,1,,,,10,10.0
+,58,Drexel Univ,796.956,5,8,2,,,,10,10.0
+,111,Oakland University,798.575,5,1,,,,,10,10.0
+,113,Univ of Oklahoma,841.456,5,1,4,120,,,10,10.0
+,16,Grand Valley State Univ,845.215,5,3,,120,,,10,10.0
+,106,Old Dominion Univ,855.546,5,,1,120,,,10,10.0
+,136,Texas Tech Univ,958.646,5,3,2,,,,10,10.0
+,101,Arizona State Univ - Tempe,990.525,5,6,1,120,,,10,10.0
+,119,Univ of New Hampshire,1044.728,5,,1,,,,10,10.0
+,89,Mississippi State Univ,621.430,4,,2,,,,8,8.0
+,49,Univ of North Florida,656.678,4,5,1,,,,8,8.0
+,142,Duke Univ,660.740,4,,6,120,,,8,8.0
+,31,York College of Pennsylvania,834.563,4,1,1,,,,8,8.0
+,81,California State Poly Univ - Pomona,409.000,3,3,1,,,,6,6.0
+,57,Univ of Pittsburgh - Pittsburgh,440.090,3,1,1,120,,,6,6.0
+,134,Univ of Minnesota - Twin Cities,455.668,3,,,,,,6,6.0
+,23,Embry-Riddle Aero Univ - Daytona Beach,458.234,3,3,1,,,,6,6.0
+,73,Carleton Univ,461.591,3,1,2,120,,,6,6.0
+,141,Univ of Kentucky,474.544,3,,,,,,6,6.0
+,137,Iowa State Univ,291.255,2,,,,,,4,4.0
+,30,Missouri State University,397.170,2,,2,,,,4,4.0
+,63,Universidad Metropolitana,165.546,1,,,,,,2,2.0
+,64,Univ of Saskatchewan,0.000,0,,,,,,,0.0
+,78,Univ of Texas - Dallas,0.000,0,,3,,,,,0.0
+,121,Univ of Wisconsin - Madison,0.000,0,,,,,,,0.0

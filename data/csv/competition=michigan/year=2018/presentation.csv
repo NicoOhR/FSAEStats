@@ -1,0 +1,119 @@
+Place,CarNum,Team,Score
+1,55,Western University,75
+2,1,Universitat Stuttgart,74.3
+3,37,Univ of Illinois - Urbana Champaign,74.3
+4,109,AGH Univ of Science and Technology,74.3
+5,119,Univ of Manitoba,73.2
+6,80,National Univ of Singapore,73.0
+7,36,Louisiana State Univ,72.2
+8,3,Graz Technical Univ,71.4
+9,121,The Ohio State University,71.1
+10,60,US Naval Academy,71.0
+11,73,Univ of Akron,70.8
+12,71,Univ of Alabama - Tuscaloosa,69.0
+13,108,Northwestern Univ,69.0
+14,129,Missouri University of Science and Tech,69.0
+15,27,Univ of Florida,68.4
+16,91,Univ of North Florida,66.9
+17,8,Cornell Univ,66.8
+18,7,Univ of Minnesota - Twin Cities,66.5
+19,20,Ryerson Univ,66.5
+20,56,South Dakota School of Mines & Tech,65.8
+21,86,California State Poly Univ - Pomona,65.6
+22,21,Rensselaer Polytechnic Inst,65.5
+22,99,Villanova Univ,65.5
+24,117,Penn State Univ - Harrisburg,65.1
+25,2,Oregon State Univ,65.1
+26,30,Michigan Tech Univ,65.1
+27,10,Univ of Wisconsin - Madison,64.8
+28,106,Mississippi State Univ,63.4
+28,114,Bialystok University of Technology,63.4
+30,67,Univ of Connecticut,63.2
+31,58,Univ of British Columbia,63.1
+32,45,Univ of Maryland - College Park,63.0
+33,75,Universidad Politecnica de Valencia,62.7
+34,48,Georgia Institute of Technology,62.6
+35,82,Minnesota State University - Mankato,62.2
+36,52,Virginia Tech,61.4
+37,43,US Air Force Academy,60.9
+38,69,Univ of Saskatchewan,59.9
+39,101,Central Michigan Univ,59.6
+40,51,Concordia University,59.6
+41,9,Rochester Institute of Technology,59.3
+41,31,Auburn Univ,59.3
+43,111,Duke Univ,58.9
+44,26,Univ of Toronto,58.8
+45,107,Rutgers Univ,58.3
+46,25,Lehigh Univ,58.1
+47,135,Univ of South Florida,57.6
+48,18,Ecole De Technologie Superieure,57.0
+49,42,Brown Univ,56.0
+50,34,Univ of Missouri,55.2
+51,89,Cooper Union,55.1
+52,47,Lawrence Technological Univ,55.0
+53,49,Carleton Univ,54.4
+54,102,Technical Univ of Munich,54.3
+55,32,Grand Valley State Univ,53.8
+56,76,Universite de Sherbrooke,52.3
+57,41,Penn State Univ - University Park,51.9
+58,29,York College of Pennsylvania,51.2
+59,19,Kettering Univ,51.2
+59,40,Washington Univ - St Louis,51.2
+61,24,Tennessee Tech Univ,50.0
+62,54,Univ of Guelph,49.3
+63,127,Univ of Kansas - Lawrence,48.9
+64,126,Univ of Nebraska - Lincoln,48.3
+65,98,Purdue Univ - W Lafayette,48.0
+66,66,Florida Atlantic Univ,47.9
+67,92,Univ of Cincinnati,47.1
+68,79,Univ of North Carolina - Charlotte,46.2
+69,38,Univ of Central Florida,44.9
+70,132,Universidad Nacional Autónoma de México,44.8
+71,72,Wayne State Univ,44.8
+72,74,Columbia Univ,44.7
+73,64,Polytechnique Montréal,43.1
+74,112,Western Michigan Univ,42.9
+75,53,Georgia Southern Univ,42.3
+76,84,Worcester Polytechnic Inst,42.0
+77,35,Univ of Pittsburgh - Pittsburgh,41.3
+78,17,Purdue Univ - Northwest,41.3
+79,115,Univ of Victoria,41.2
+80,6,San Jose State University,41.2
+81,39,Univ of Toledo,40.9
+82,97,Dalhousie Univ,40.7
+83,78,Embry-Riddle Aero Univ - Daytona Beach,40.5
+84,22,Rose Hulman Inst of Tech,40.2
+85,87,Washington State Univ,39.7
+86,105,Oakland University,39.6
+87,16,Michigan State Univ,39.2
+88,77,Univ of Michigan - Dearborn,38.9
+89,122,Univ of Waterloo,38.3
+90,11,Colorado Mesa University,38.1
+91,104,Saginaw Valley State Univ,37.8
+92,134,California State Univ - Fullerton,37.7
+93,136,Faculdade de Engenharia de Sorocaba,37.5
+94,57,Florida International Univ,36.3
+95,124,Temple Univ,35.8
+96,110,Universidad Autonoma Estado Mexico,35.7
+97,83,Univ of New Hampshire,35.3
+98,81,Lakehead Univ,35.1
+99,118,Alabama A & M Univ,34.6
+100,59,Kookmin Univ,34.4
+101,94,Ferris State University,34.2
+102,15,Univ of Evansville,34.0
+103,85,Texas Tech Univ,32.9
+104,96,Bradley Univ,32.2
+105,50,Clarkson University,32.0
+106,5,Univ of Michigan - Ann Arbor,31.4
+107,103,Universite Du Quebec-Chicoutimi,30.3
+108,70,St Cloud State Univ,29.2
+109,128,South Dakota State Univ,28.2
+110,63,Univ of Hartford,26.4
+111,88,Cegep du Vieux - Montreal,26.3
+112,62,North Carolina State Univ - Raleigh,25.7
+113,68,Florida Inst of Tech,23.6
+114,46,Universidad Simon Bolivar,15.5
+,23,Old Dominion Univ,
+,44,Clemson Univ,
+,93,Kansas State Univ,
+,123,Univ of Minnesota-Duluth,

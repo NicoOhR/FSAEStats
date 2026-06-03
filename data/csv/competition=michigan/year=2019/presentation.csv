@@ -1,0 +1,121 @@
+Place,CarNum,Team,Score
+1,33,Oregon State Univ,75
+2,84,Univ of Toronto,74.9
+3,90,Coburg University of Applied Sciences,74.4
+4,85,Wroclaw University of Technology,73.1
+5,65,Lehigh Univ,71.0
+6,69,Univ of Connecticut,70.6
+7,18,Univ of Alabama - Tuscaloosa,70.2
+8,47,Ryerson Univ,69.5
+9,110,US Naval Academy,69.1
+10,123,Villanova Univ,68.7
+11,91,Georgia Institute of Technology,67.9
+12,2,Graz Technical Univ,67.0
+13,117,Columbia Univ,66.6
+14,66,Univ of Waterloo,66.6
+15,139,CEFET-MG,66.0
+16,40,Clemson Univ,65.8
+17,16,Kookmin Univ,65.3
+18,64,Univ of Maryland - College Park,65.1
+19,34,Univ of Central Florida,65.0
+20,43,Minnesota State University - Mankato,64.6
+21,11,Michigan State Univ,64.3
+22,56,National Univ of Singapore,64.3
+23,81,Northwestern Univ,63.8
+24,76,Hope College,63.8
+25,77,Oakland University,63.7
+26,23,Rensselaer Polytechnic Inst,63.0
+27,105,Worcester Polytechnic Inst,62.3
+28,14,Polytechnique Montréal,62.2
+29,19,North Carolina State Univ - Raleigh,61.7
+30,21,Univ of Florida,61.4
+31,115,Univ of British Columbia,61.3
+32,109,US Air Force Academy,61.0
+33,101,Mississippi State Univ,59.9
+34,5,Ecole De Technologie Superieure,59.5
+35,9,Univ of Michigan - Ann Arbor,59.1
+35,50,Univ of Michigan - Dearborn,59.1
+37,36,Missouri University of Science and Tech,58.9
+37,94,Saginaw Valley State Univ,58.9
+39,93,Universite Du Quebec a Trois-Rivieres,57.8
+40,6,Univ of Akron,57.1
+41,124,Univ of Nebraska - Lincoln,57.1
+42,62,Univ of Minnesota - Twin Cities,56.8
+43,89,Tennessee Tech Univ,56.6
+44,78,Temple Univ,56.4
+45,126,Univ of Kansas - Lawrence,56.2
+46,55,Rutgers Univ,55.7
+47,107,Univ of South Florida,55.6
+48,1,Universitat Stuttgart,55.1
+49,68,Penn State Univ - University Park,54.8
+50,12,Purdue Univ - W Lafayette,54.5
+51,98,Universidad Metropolitana,54.2
+52,119,Duke Univ,54.2
+53,35,Kansas State Univ,54.0
+54,29,Univ of Cincinnati,54.0
+55,26,Purdue Univ - Northwest,53.7
+56,46,San Jose State University,53.4
+57,132,Univ of Pittsburgh - Pittsburgh,53.2
+58,102,Lawrence Technological Univ,52.2
+59,80,Virginia Tech,51.9
+60,67,Univ of Guelph,51.6
+61,70,Penn State Univ - Harrisburg,51.1
+62,73,Louisiana State Univ,50.7
+63,24,Univ of Toledo,50.5
+64,72,Florida International Univ,50.0
+65,122,Florida Atlantic Univ,50.0
+66,37,Univ of Illinois - Urbana Champaign,49.9
+67,42,Univ of Kentucky,49.9
+68,97,Washington State Univ,48.6
+69,7,Carleton Univ,48.5
+69,8,Univ of Wisconsin - Madison,48.5
+71,58,Kennesaw State University,48.2
+72,125,South Dakota State Univ,47.6
+73,52,Western Michigan Univ,45.6
+74,103,Texas Tech Univ,45.4
+75,104,South Dakota School of Mines & Tech,45.3
+76,10,AGH Univ of Science and Technology,45.0
+77,86,Wayne State Univ,44.8
+78,54,Michigan Tech Univ,44.8
+79,63,Washington Univ - St Louis,43.0
+80,49,Univ of Louisiana - Lafayette,43.0
+81,108,Colorado Mesa University,42.5
+82,39,Univ of Missouri,42.0
+83,114,Binghamton Univ,41.6
+84,41,Grand Valley State Univ,41.4
+85,71,Univ of Puerto Rico-Mayaquez,40.6
+86,51,Universidad Simon Bolivar,39.8
+87,38,Brown Univ,39.6
+88,118,Cooper Union,39.6
+89,88,The Ohio State University,38.4
+90,106,Kettering Univ,37.6
+91,44,IPN - UPIITA,37.3
+92,131,Polytechnic Univ of Puerto Rico,36.0
+93,99,York College of Pennsylvania,35.6
+94,83,Univ of British Columbia - Okanagan,35.5
+95,59,Warsaw University of Technology,35.0
+96,74,Rochester Institute of Technology,34.9
+96,82,Univ of North Florida,34.9
+98,111,Lakehead Univ,33.7
+99,30,Univ of New Hampshire,33.4
+100,32,Pellissippi State Community College,33.3
+101,113,Dalhousie Univ,33.0
+102,100,Clarkson University,32.6
+103,79,Georgia Southern Univ,31.2
+104,75,Old Dominion Univ,31.1
+105,20,Florida Inst of Tech,30.9
+106,92,Univ of Victoria,30.3
+107,120,Universidad Autonoma Estado Mexico,27.1
+,15,Embry-Riddle Aero Univ - Daytona Beach,
+,17,Bradley Univ,
+,22,Auburn Univ,
+,25,Florida A&M Univ/Florida State Univ,
+,48,Vaughn College of Aeronautics,
+,53,Ferris State University,
+,61,Queen's Univ,
+,87,California State Poly Univ - Pomona,
+,95,Univ of Louisville,
+,96,Central Michigan Univ,
+,112,Alabama A & M Univ,
+,116,West Virginia Univ,
+,129,California State Univ - Fullerton,
