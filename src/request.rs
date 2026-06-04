@@ -2,13 +2,12 @@ use crate::{
     pipeline::{Pipeline, Source},
     validate::{Validate, ValidationError},
 };
-use polars::prelude::*;
 use serde::Deserialize;
 
 //requests takes a JSON request, deseralizes into the PipeLineRequest
 //and validates
 //
-//pipeline.rs does not need to check for validity at this point
+//pipeline operations do not need to check for validity after .validate is ran
 
 #[derive(Deserialize)]
 pub struct PipelineRequest {
@@ -30,12 +29,6 @@ impl PipelineRequest {
             .iter()
             .flat_map(|op| op.validate(&mut available))
             .collect()
-    }
-    pub fn resolve(&self) -> PolarsResult<DataFrame> {
-        //after validation
-        let mut accum = DataFrame::default();
-
-        Ok(accum)
     }
 }
 

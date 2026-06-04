@@ -1,11 +1,8 @@
 use hyper::{server::conn::http1, service::service_fn};
 use hyper_util::rt::TokioIo;
-use std::{net::SocketAddr, sync::OnceLock};
+use std::net::SocketAddr;
 use tokio::net::TcpListener;
-mod pipeline;
-mod request;
-mod server;
-mod validate;
+use FSAEStats::server::user_request;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
@@ -15,17 +12,14 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
         .expect("Invalid port number");
 
     let addr = SocketAddr::from(([0, 0, 0, 0], port));
-
     let listener = TcpListener::bind(addr).await?;
 
     loop {
         let (stream, _) = listener.accept().await?;
-
         let io = TokioIo::new(stream);
-
         tokio::task::spawn(async move {
             if let Err(err) = http1::Builder::new()
-                .serve_connection(io, service_fn(server::user_request))
+                .serve_connection(io, service_fn(user_request))
                 .await
             {
                 eprintln!("Error Serving Connection: {:?}", err);
