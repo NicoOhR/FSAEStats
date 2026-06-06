@@ -78,7 +78,7 @@ mod tests {
     }
 
     fn src(view: &str) -> String {
-        format!(r#"{{"view": "{view}", "years": [2024], "competitions": ["michigan_ic"]}}"#)
+        format!(r#"{{"view": "{view}", "years": [2024], "competitions": ["michigan"]}}"#)
     }
 
     fn pipeline(view: &str, ops: &str) -> String {

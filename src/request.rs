@@ -37,7 +37,7 @@ mod tests {
     use super::*;
 
     fn src(view: &str) -> String {
-        format!(r#"{{"view": "{view}", "years": [2024], "competitions": ["MichiganIc"]}}"#)
+        format!(r#"{{"view": "{view}", "years": [2024], "competitions": ["michigan"]}}"#)
     }
 
     fn request(view: &str, ops: &str) -> String {

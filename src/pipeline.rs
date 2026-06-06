@@ -109,9 +109,10 @@ pub struct WeaknessOp {
 }
 
 #[derive(Display, Deserialize, EnumString, Debug)]
+#[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum Comps {
-    MichiganIc,
+    Michigan,
     MichiganEv,
 }
 
@@ -142,7 +143,7 @@ pub enum View {
 #[derive(Deserialize)]
 pub struct Source {
     pub view: View,
-    pub years: Vec<i32>,
+    pub years: Vec<i64>,
     pub competitions: Vec<Comps>,
 }
 
@@ -375,11 +376,15 @@ impl Source {
         );
 
         let scan = |path: &str| -> PolarsResult<LazyFrame> {
-            Ok(
-                LazyFrame::scan_parquet(path.into(), ScanArgsParquet::default())?
-                    .filter(col("year").is_in(lit(years.clone()), false))
-                    .filter(col("competition").is_in(lit(comps.clone()), false)),
-            )
+            Ok(LazyFrame::scan_parquet(
+                path.into(),
+                ScanArgsParquet {
+                    hive_options: HiveOptions::new_enabled(),
+                    ..ScanArgsParquet::default()
+                },
+            )?
+            .filter(col("year").is_in(lit(years.clone()), false))
+            .filter(col("competition").is_in(lit(comps.clone()), false)))
         };
 
         let lf = match self.view {
