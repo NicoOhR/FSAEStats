@@ -3,3 +3,5 @@
 devlog.md
 *.md
 Cargo.lock
+.jukit/*
+__pycache__/*
