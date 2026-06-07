@@ -108,7 +108,7 @@ pub struct WeaknessOp {
     pub team: String,
 }
 
-#[derive(Display, Deserialize, EnumString, Debug)]
+#[derive(Clone, Display, Deserialize, EnumString, Debug)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum Comps {
@@ -119,7 +119,7 @@ pub enum Comps {
 #[derive(Deserialize)]
 pub struct Pipeline(pub Vec<PipelineOp>);
 
-#[derive(Deserialize)]
+#[derive(Clone, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum View {
     CompetitionResults,
