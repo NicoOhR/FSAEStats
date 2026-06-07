@@ -4,6 +4,7 @@ use hyper::{
     body::Bytes,
     {Method, Request, Response, StatusCode},
 };
+use polars::prelude::*;
 use serde_json::from_slice;
 
 pub async fn user_request(
@@ -33,7 +34,25 @@ async fn dispatch(
                     {"errors": op_errs.iter().map(|e| e.to_string()).collect::<Vec<_>>()});
                 return Ok(bad_request(body.to_string()));
             }
-            todo!()
+            // Polars' lazy engine spins up its own async runtime for scans, which
+            // panics if driven from inside the tokio runtime already running this
+            // handler. Run the blocking resolve+serialize work on a blocking thread.
+            let result = tokio::task::spawn_blocking(move || {
+                let mut df = request.resolve()?;
+                to_ipc_bytes(&mut df)
+            })
+            .await;
+            let bytes = match result {
+                Ok(Ok(b)) => b,
+                Ok(Err(e)) => return Ok(server_error(e.to_string())),
+                Err(e) => return Ok(server_error(e.to_string())),
+            };
+            let mut resp = Response::new(full(bytes));
+            resp.headers_mut().insert(
+                hyper::header::CONTENT_TYPE,
+                hyper::header::HeaderValue::from_static("application/vnd.apache.arrow.file"),
+            );
+            Ok(resp)
         }
         _ => {
             let mut resp = Response::new(empty());
@@ -49,10 +68,16 @@ fn bad_request(msg: String) -> Response<BoxBody<Bytes, hyper::Error>> {
     resp
 }
 
-fn good_request(msg: String) -> Response<BoxBody<Bytes, hyper::Error>> {
+fn server_error(msg: String) -> Response<BoxBody<Bytes, hyper::Error>> {
     let mut resp = Response::new(full(msg));
-    *resp.status_mut() = StatusCode::from_u16(200).unwrap_or_default();
+    *resp.status_mut() = StatusCode::INTERNAL_SERVER_ERROR;
     resp
+}
+
+fn to_ipc_bytes(df: &mut DataFrame) -> PolarsResult<Vec<u8>> {
+    let mut buf = Vec::new();
+    IpcWriter::new(&mut buf).finish(df)?;
+    Ok(buf)
 }
 
 fn full<T: Into<Bytes>>(chunk: T) -> BoxBody<Bytes, hyper::Error> {

@@ -1,7 +1,9 @@
 use crate::{
+    apply::{Apply, ApplyState},
     pipeline::{Pipeline, Source},
     validate::{Validate, ValidationError},
 };
+use polars::prelude::*;
 use serde::Deserialize;
 
 //requests takes a JSON request, deseralizes into the PipeLineRequest
@@ -29,6 +31,21 @@ impl PipelineRequest {
             .iter()
             .flat_map(|op| op.validate(&mut available))
             .collect()
+    }
+
+    /// Resolves the source into a `LazyFrame`, folds each pipeline op over it,
+    /// and collects the result into an in-memory `DataFrame`.
+    ///
+    /// Callers must run [`validate`](Self::validate) first — ops assume the
+    /// request has already passed validation.
+    pub fn resolve(&self) -> PolarsResult<DataFrame> {
+        let lf = self.src.create_frame()?;
+        let state = ApplyState { lf, src: &self.src, errs: vec![] };
+        let state = self.ops.0.iter().fold(state, |st, op| op.apply(st));
+        if let Some(err) = state.errs.into_iter().next() {
+            return Err(err);
+        }
+        state.lf.collect()
     }
 }
 
